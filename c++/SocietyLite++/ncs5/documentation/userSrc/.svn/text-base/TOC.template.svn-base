@@ -1,0 +1,11 @@
+<HTML>
+    <HEAD>
+        <TITLE>NCS User Documentation</TITLE>
+    </HEAD>
+    <BODY>
+        <HR>
+        <H1>NCS User Documentaion</H1>
+        <HR>
+        <#page Body>
+    </BODY>
+</HTML>

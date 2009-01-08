@@ -1,0 +1,10 @@
+<->
+SYN_PSG<,>N/A<,>Indicates the start of a PSG definition section<;>
+TYPE<,>name (string)<,>The name which will be used to refer to this object<;>
+PSG_FILE<,>filename (string)<,>The name of a file containing the waveform <A HREF="IPSC.txt">(example)</A><;>
+END_SYN_PSG<,>N/A<,>Indicates the end of a PSG definition section<;>
+<->
+SYN_PSG
+        TYPE                    PSGinhib
+        PSG_FILE                /home/jwk/inputFiles/IPSC.txt
+END_SYN_PSG

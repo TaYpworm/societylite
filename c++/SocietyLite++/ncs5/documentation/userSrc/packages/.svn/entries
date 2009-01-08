@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="24"
+   name=""
+   committed-date="2004-08-02T22:48:51.680150Z"
+   url="file:///home/svn/repository-new/ncs5/documentation/userSrc/packages"
+   last-author="king"
+   kind="dir"
+   uuid="49b161a2-e7c6-0310-900c-e758ba94e43e"
+   revision="48"/>
+<entry
+   committed-rev="12"
+   name="LastUpdated.object"
+   text-time="2006-06-20T07:07:24.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="b0e93f5a0a0f94b892a9c4fe9efe9ded"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:23.000000Z"/>
+<entry
+   committed-rev="12"
+   name="Navigator.object"
+   text-time="2006-06-20T07:07:24.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="f282eed6e731fa3d888a6835358b7418"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:23.000000Z"/>
+<entry
+   committed-rev="24"
+   name="printable.object"
+   text-time="2006-06-20T07:07:24.000000Z"
+   committed-date="2004-08-02T22:48:51.680150Z"
+   checksum="640580c7e7d9d2a306a1d0063c68d754"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:23.000000Z"/>
+<entry
+   committed-rev="24"
+   name="Section.object"
+   text-time="2006-06-20T07:07:24.000000Z"
+   committed-date="2004-08-02T22:48:51.680150Z"
+   checksum="58f578bb957ae357837f87570a804695"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:23.000000Z"/>
+<entry
+   committed-rev="12"
+   name="TOC.object"
+   text-time="2006-06-20T07:07:24.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="d631eff64205d4f176bc95bfbfdba253"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:23.000000Z"/>
+<entry
+   committed-rev="12"
+   name="Table.object"
+   text-time="2006-06-20T07:07:24.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="2b11a9b0ea17fadc33d432c6c2fcb2f0"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:23.000000Z"/>
+</wc-entries>

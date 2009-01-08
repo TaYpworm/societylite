@@ -1,0 +1,32 @@
+sub object_printable
+{
+    my $name = $_[0];
+    my $databasename = $_[1];
+    my $output;
+    my $count = 1;
+    my $chapterDB;
+
+    #first, general info
+
+    #then, each chapter
+    open( filehandle, $VARIABLES {"#workingdir"} . $databasename );
+    my @data = split( "<;>\n", join( "", (<filehandle>) ) );
+    close( filehandle );
+    
+    foreach my $record( @data )
+    {
+        #split each chapter line into its subsections (if any)
+        my @fields = split( "<,>", $record );
+
+        #output a heading
+        $output.='<P><H3>Chapter '.$count.':</H3></P>' . "\n";
+
+        #build the chapter as normal (except pass-in a flag of 1 ------v)
+        $output.=object_Section( "subsection", "TOC.database", $count, 1 );
+
+        #get ready for the next chapter
+        $count++;
+    }
+    
+    return $output;
+}

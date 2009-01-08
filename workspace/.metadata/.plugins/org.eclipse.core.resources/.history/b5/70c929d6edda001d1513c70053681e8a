@@ -1,0 +1,18 @@
+package com.society;
+
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+
+
+public class ProcessorObjects {
+	private byte[] sendData;
+	private ByteBuffer sendBuffer;
+
+	ProcessorObjects(int datagramSize) throws IOException {
+		sendData = new byte[datagramSize];
+		sendBuffer = ByteBuffer.wrap(sendData);
+		sendBuffer.order(ByteOrder.BIG_ENDIAN);
+	}
+}
+

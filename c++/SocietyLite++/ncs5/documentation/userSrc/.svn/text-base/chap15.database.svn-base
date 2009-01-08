@@ -1,0 +1,34 @@
+Data about cells is gathered and written to report files. Various types of data can be requested such as Voltage reports, Channel reports, etc. 
+<->
+REPORT<,>N/A<,>Indicates the start of a report definition section<;>
+TYPE<,>name (string)<,>The name which is used to refer to this object<;>
+CELLS<,>Column (string) Layer (string) CellType (string) Compartment (string)<,>The source of the report<;>
+PROB<,>value (real)<,>The probability that a qualified cell will be included in the reporting.<;>
+FREQUENCY<,>interval (integer)<,>The rate at which reports will be generated.  For example, a one (1) indicates that a report should be produced every time step.  A two (2) indicates that a report should be generated every other time step.  The total number of timesteps reported will be 1/interval.<;>
+REPORT_ON<,>name (string)<,>The <A HREF=#ReportTypes>type</A> of report to be run. (ex. VOLTAGE)<;>
+CHANNEL<,>name (string)<,>Replaces old channel report.  By giving the name of a channel owned by the target compartment,
+the values are reported in the same pattern as the old Channel Reports (<A HREF=#TYPES>see below</A>).  This differs
+from the old report in that the channel family is determined during runtime, and it does not just report on the first
+instance of that family.  Before, if there were multiple channels of the same family, the first one defined would 
+always be reported.  It is not necessary to use the REPORT_ON keyword for this report<;>
+SYNAPSE<,>type (string)<,>New USE report. By giving the type of a synapse owned by the target compartment, the USE values are reported. It is not necessary to use the REPORT_ON keyword for this report. See the Report Types section for more information.<;>
+SYNAPSE_RSE<,>type (string)<,>New RSE report. By giving the type of a synapse owned by the target compartment, the Redistribution of Synaptic Efficacy (RSE) values are reported. It is not necessary to use the REPORT_ON keyword for this report. See the Report Types section for more information.<;>
+SYNAPSE_UF<,>type (string)<,>New USE facilitation report. By giving the type of a synapse owned by the target compartment, the temporary USE value as a result of facilitation will be reported. It is not necessary to use the REPORT_ON keyword for this report. See the Report Types section for more information.<;>
+SYN_AUGMENTATION<,>type (string)<,>New SA report. By giving the type of a synapse owned by the target compartment, the Synaptic Augmentation (SA) values are reported. These value are actually the augmentation amount minus 1.0 because NCS requires the augmentation be at least 1.0. During the simulation, NCS will work with the augmentation amount greater than 1.0. For example, if the augmentation is 1.3, NCS will be using 0.3 in any formulas, and send 0.3 to the report. It is not necessary to use the REPORT_ON keyword for this report. See the Report Types section for more information.<;>
+ASCII<,>N/A or EXP<I>(optional)</I><,>Indicates that the report file should have its information written in ascii format.  If this option is not included, the files will instead be written in binary format.  The field after the ASCII keyword can usually be left blank, but if the optional word 'EXP' is included, the outputted values will use scientifc notation.  This is useful for reports with very small values that would normally be truncated by the limit of four characters placed after a decimal point.<;>
+FILENAME<,>name (string)<,>The report will be written to the filename specified<;>
+TIME_START<,>values+ (reals)<,>The times at which this reporting should begin.  There can be multiple start times<;>
+TIME_END<,>values+ (reals)<,>The times at which reporting should stop.  There can be multiple stop times.<;>
+END_REPORT<,>N/A<,>Indicates the end of a report definition section<;>
+<->
+REPORT
+	TYPE			ASSC1_Lay4_Exc-cNAC_1
+	CELLS			ASSC1	Lay4	Inh-cNAC	s1
+	PROB			1
+	REPORT_ON		VOLTAGE
+        ASCII
+	FILENAME		ASSC1_Lay4_Inh-cNAC_1.out
+	FREQUENCY		1
+	TIME_START		0
+	TIME_END		1.8	
+END_REPORT

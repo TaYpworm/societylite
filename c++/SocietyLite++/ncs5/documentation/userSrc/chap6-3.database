@@ -1,0 +1,31 @@
+A-Channels (Ka) help the cell deal with bacground noise. Has both an activation (m) and an inactivation (h) particle. 
+<->
+H_INITIAL<,>mean (real) stdev (real)<,><;>
+H_POWER<,>mean (real) stdev (real)<,><;>
+E_HALF_MIN_M<,>mean (real) stdev (real)<,><;>
+E_HALF_MIN_H<,>mean (real) stdev (real)<,><;>
+SLOPE_FACTOR_M<,>mean (real) stdev (real)<,><;>
+SLOPE_FACTOR_H<,>mean (real) stdev (real)<,><;>
+V_TAU_VALUE_M<,>values+ (real)<,><;>
+V_TAU_VOLTAGE_M<,>values+ (real)<,><;>
+V_TAU_VALUE_H<,>values+ (real)<,><;>
+V_TAU_VOLTAGE_H<,>values+ (real)<,><;>
+<->
+CHANNEL Ka
+        TYPE                            a
+        M_INITIAL                       0.0             0.0
+        H_INITIAL                       1.0             0.0
+        REVERSAL_POTENTIAL              -80             0
+        M_POWER                         1
+        H_POWER                         1
+        E_HALF_MIN_M                    11
+        E_HALF_MIN_H                    -56
+        SLOPE_FACTOR_M                  18
+        SLOPE_FACTOR_H                  18
+        UNITARY_G			0.12
+        STRENGTH                        2.5
+        V_TAU_VALUE_M                   0.0002		9999
+        V_TAU_VALUE_H                   0.03	0.08	0.13	0.18	0.23
+        V_TAU_VOLTAGE_M                 100
+        V_TAU_VOLTAGE_H                 -21	-1	10	21
+END_CHANNEL

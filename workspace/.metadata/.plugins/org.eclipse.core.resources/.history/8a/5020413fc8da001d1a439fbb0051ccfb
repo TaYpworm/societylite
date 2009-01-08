@@ -1,0 +1,59 @@
+package com.society;
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class ByteArrayTest {
+	byte[] inArray;
+	byte[] outArray;
+	ByteArray testMe;
+	@Before
+	public void setUp() throws Exception {
+		inArray = new byte[10];
+		outArray = new byte[10];
+		int i;
+		
+		for (i = 0; i < inArray.length; i++) {
+			if (i%2 == 0){
+				inArray[i] = 1;
+			}
+		}
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		inArray = null;
+		outArray = null;
+		testMe = null;
+	}
+
+	@Test
+	public void testByteArray() {
+		testMe = new ByteArray(inArray);
+		outArray = testMe.getArray();
+		assertEquals("ByteArray changed during initialization", inArray, outArray);
+	}
+
+	@Test
+	public void testCreate() {
+		testMe = ByteArray.create(inArray);
+		outArray = testMe.getArray();
+		assertEquals("ByteArray changed during initialization", inArray, outArray);
+	}
+
+	@Test
+	public void testEqualsObject() {
+		boolean out;
+		testMe = new ByteArray(inArray);
+		ByteArray trueResult = new ByteArray(inArray);
+		ByteArray falseResult = new ByteArray(new byte[10]);
+		out = testMe.equals(trueResult);
+		assertEquals("Equals should have returned true", true, out);
+		out = testMe.equals(falseResult);
+		assertEquals("Equals should have returned false", false, out);
+	}
+
+}

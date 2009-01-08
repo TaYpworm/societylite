@@ -1,0 +1,32 @@
+sub object_Navigator
+{
+    my $name = $_[0];
+    my $databasename = $_[1];
+    my $currentChapter = $_[2];
+    my $output;
+    my $count = 1;
+        
+    open( filehandle, $VARIABLES {"#workingdir"} . $databasename );
+    my @data = split( "<;>\n", join( "", (<filehandle>) ) );
+    close( filehandle );
+    
+    foreach my $record( @data )
+    {
+        my @fields = split( "<,>", $record );
+        if( $count == $currentChapter-1 )  #prev
+        {
+            $output.='<A HREF="chap'.$count.'.html">'.'Prev: '.$fields[0].'</A> ' . "\n";
+        }
+        if( $count == $currentChapter || $currentChapter == 0 && $count == $currentChapter+1 )  #TOC
+        {
+            $output.='<A HREF="TOC.html">Contents</A>'."\n";
+        }
+        if( $count == $currentChapter+1 )  #next
+        {
+            $output.='<A HREF="chap'.$count.'.html">'.'Next: '.$fields[0].'</A> ' . "\n";
+        }
+        $count++;
+    }
+#    $output.='<#tab><A HREF="chap'.$count.'.html#'.$fields[$index].'">'.$pagelink.'</A><BR>' . "\n";            
+    return $output;
+}

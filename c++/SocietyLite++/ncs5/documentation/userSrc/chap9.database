@@ -1,0 +1,25 @@
+Long Term synaptic dynamics or Hebbian learning also determines the effectiveness of a synapse. Depending on when a synapse's pre-synaptic spike occurs, there can be positive learning (the USE value is increased) or negative learning (the USE value is decreased). A time window is placed around the resulting post-synaptic spike of a cell. If the pre-synaptic spike occured before the post-synaptic spike, it was in the positive learning portion. If the pre-synaptic spike occurs after the post-synaptic spike, it was in the negative learning window. Pre-synaptic spikes occuring at the same time as post-synaptic spikes or occuring outside either window result in no change to the USE value. 
+<->
+SYN_LEARNING<,>N/A<,>Indicates the start of a Learning definition section<;>
+TYPE<,>name (string)<,>The name which will be used to refer to this object<;>
+SEED<,>value (integer)<,>The random number generator will use value as the seed<;>
+LEARNING<,>type (string)<,>The type of learning to be used. NONE<;>
+NEG_HEB_WINDOW<,>mean (real) stdev (real)<,>The length of time (in seconds) used in calculating the negative learning window<;>
+POS_HEB_WINDOW<,>mean (real) stdev (real)<,>The length of time (in seconds) used in calculating the positive learning window<;>
+POS_HEB_PEAK_DELTA_USE<,>mean (real) stdev (real)<,>The maximum change in USE due to firing within the positive learning window<;>
+NEG_HEB_PEAK_DELTA_USE<,>mean (real) stdev (real)<,>The maximum change in USE due to firing within the negative learning window<;>
+POS_HEB_PEAK_TIME<,>mean (real) stdev (real)<,>The time of peak positive learning.  Used with POS_HEB_PEAK_DELTA to compute the amount of learning at other times<;>
+NEG_HEB_PEAK_TIME<,>mean (real) stdev (real)<,>The time of peak negative learning.  Used with NEG_HEB_PEAK_DELTA to compute the amount of learning at other times<;>
+END_SYN_LEARNING<,>N/A<,>Indicates the end of a Learn definition section<;>
+<->
+SYN_LEARNING
+        TYPE                    0HEBB
+        SEED                    999999
+        LEARNING                NONE
+        NEG_HEB_WINDOW          0.04            0.0
+        POS_HEB_WINDOW          0.04            0.0
+        POS_HEB_PEAK_DELTA_USE  0.01           	0.0
+        NEG_HEB_PEAK_DELTA_USE  0.005          	0.0
+        POS_HEB_PEAK_TIME       0.01           	0.0
+        NEG_HEB_PEAK_TIME       0.01           	0.0
+END_SYN_LEARNING

@@ -1,0 +1,26 @@
+sub object_TOC
+{
+    my $name = $_[0];
+    my $databasename = $_[1];
+    my $output;
+    my $count = 1;
+    
+    open( filehandle, $VARIABLES {"#workingdir"} . $databasename );
+    my @data = split( "<;>\n", join( "", (<filehandle>) ) );
+    close( filehandle );
+    
+    foreach my $record( @data )
+    {
+        my @fields = split( "<,>", $record );
+        $output.='<A HREF="chap'.$count.'.html">'.'Chapter '.$count.': '.$fields[0].'</A><BR>' . "\n";
+        for (my $index=1; $index<@fields; $index++ )
+        {
+            my $pagelink = $fields[$index];
+            $fields[$index] =~ s/[^a-zA-Z0-9]//g;
+            $output.='<#tab><A HREF="chap'.$count.'.html#'.$fields[$index].'">'.$pagelink.'</A><BR>' . "\n";            
+        }
+        $count++;
+    }
+    
+    return $output;
+}

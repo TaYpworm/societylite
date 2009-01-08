@@ -1,0 +1,45 @@
+Activity happens within the Compartments of the Cells. 
+<->
+COMPARTMENT<,>N/A<,>Indicates the start of a Compartment defintion section<;>
+TYPE<,>name (string)<,>The name used to refer to this compartment<;>
+SEED<,>value (integer)<,>The number used to seed the random nuber generator for the compartment<;>
+SPIKESHAPE<,>name (string)<,>The name of the spike shape to use in the compartment when it reaches threshold.<;>
+SPIKE_HALFWIDTH<,>mean (real) stdev (real)<,><B>Deprecated.</B> A compartment formerly could only become active if it had a halfwidth along with a spikeshape and threshold. The halfwidth parameter is no longer used by NCS.<;>
+TAU_MEMBRANE<,>mean (real) stdev (real)<,>This value is used along with R_MEMBRANE to calculate the capacitance of the compartment.<BR><CENTER> ( Capacitance = TAU_MEMBRANE / R_MEMBRANE )</CENTER><;>
+R_MEMBRANE<,>mean (real) stdev (real)<,>This value is used along with TAU_MEMBRANE to calculate the capacitance of the compartment. <BR><CENTER> ( Capacitance = TAU_MEMBRANE / R_MEMBRANE )</CENTER>If R_MEMBRANE = 0, then Capacitance is 0.0 <;>
+THRESHOLD<,>mean (real) stdev (real)<,>When the compartment's membrane voltage reaches the threshold, it begins a spike shape<;>
+LEAK_REVERSAL<,>mean (real) stdev (real)<,>When a compartment updates its membrane voltage and there is no voltage clamp, a current leak must be calculated <BR><CENTER>Current Leak = LEAK_CONDUCTANCE * ( previous membrance voltage - LEAK_REVERSAL )</CENTER><;>
+LEAK_CONDUCTANCE<,>mean (real) stdev (real)<,>When a compartment updates its membrane voltage and there is no voltage clamp, a current leak must be calculated <BR><CENTER>Current Leak = LEAK_CONDUCTANCE * ( previous membrance voltage - LEAK_REVERSAL )</CENTER><;>
+VMREST<,>mean (real) stdev (real)<,>The voltage of a compartment will start at vmrest<;>
+CA_INTERNAL<,>mean (real) stdev (real)<,>The compartment will start with the initial CA_INTERNAL specified<;>
+CA_EXTERNAL<,>mean (real) stdev (real)<,>The compartment will start with the initial CA_EXTERNAL specified<;>
+CA_SPIKE_INCREMENT<,>mean real) stdev (real)<,>When a compartment reaches threshold, CA_INTERNAL will be increased by the CA_SPIKE_INCREMENT<;>
+CA_TAU<,>mean (real) stdev (real)<,>Used to calculate the Calcium persistance of the compartment<BR>
+                                                    <CENTER>Calcium persistance = 1.0 - dt / CA_TAU</CENTER>
+    where dt is related to the value os FSV specified in <A HREF=chap01.html>the Brain</A><BR>
+<CENTER> dt = 1 / FSV </CENTER>
+ if FSV is 0, dt = 0<BR>
+                                                    if CA_TAU is 0, Calcium persistence = 1.0<BR>
+                                                    if Calcium persistence is less than 0 or greater than 1, it will be adjusted to those bounds<BR>
+<BR>Calcium persistance affects the CA_INTERNAL <BR>
+<CENTER> CA_INTERNAL = calcium persistance * CA_INTERNAL</CENTER><;>
+CHANNEL<,>name (string)<,>The name of a channel which will be used by this compartment<;>
+END_COMPARTMENT<,>N/A<,>Indicates the end of a compartment definition section<;>
+<->
+COMPARTMENT
+        TYPE                    Soma-cNAC
+        SEED                    999999
+        SPIKESHAPE              AP_Hoff
+        SPIKE_HALFWIDTH         10              0
+        TAU_MEMBRANE            0.015           0.0
+        R_MEMBRANE              200             0.0
+        THRESHOLD               -40             0.0
+        LEAK_REVERSAL           0.0             0.0
+        LEAK_CONDUCTANCE        0.0             0.0
+        VMREST                  -65             0.0
+        CA_INTERNAL             5.0             0.0
+        CA_EXTERNAL             0.0             0.0
+        CA_SPIKE_INCREMENT      100             0.0
+        CA_TAU                  0.07            0.0
+        CHANNEL			a
+END_COMPARTMENT

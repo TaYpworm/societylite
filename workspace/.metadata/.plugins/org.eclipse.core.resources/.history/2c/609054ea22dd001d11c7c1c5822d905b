@@ -1,0 +1,13 @@
+package com.society;
+
+import java.nio.ByteBuffer;
+
+public class Btest {
+	
+	public static void main() {
+		ByteBuffer blah = ByteBuffer.allocate(5);
+		blah.limit(8);
+		System.out.println("limit: " + blah.limit());
+	}
+	
+}

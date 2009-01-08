@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="21" version="2.0">
+<workbenchAdvisor/>
+<window height="768" maximized="true" width="1024" x="0" y="0">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="96" y="26"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.cdt.managedbuilder.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="44" y="26"/>
+<coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="146" y="26"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="112" y="26"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="96" y="26"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="62" y="26"/>
+<coolItem id="org.eclipse.ui.WorkingSetActionSet" itemType="typeToolBarContribution" x="44" y="26"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="62" y="26"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="172" y="26"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1228168539489" focus="true" label="Workspace - C/C++">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
+<part id="27"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SocietyPacket.java" partName="SocietyPacket.java" path="/home/ssmith/projects/Society/project/src/com/society/SocietyPacket.java" title="SocietyPacket.java" tooltip="Society/src/com/society/SocietyPacket.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/SocietyPacket.java"/>
+</editor>
+<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StreamSocketManager.java" partName="StreamSocketManager.java" path="/home/ssmith/projects/Society/project/src/com/society/StreamSocketManager.java" title="StreamSocketManager.java" tooltip="Society/src/com/society/StreamSocketManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/StreamSocketManager.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AddressException.java" partName="AddressException.java" path="/home/ssmith/projects/Society/project/src/com/society/AddressException.java" title="AddressException.java" tooltip="Society/src/com/society/AddressException.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/AddressException.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TCPConnection.java" partName="TCPConnection.java" path="/home/ssmith/projects/Society/project/src/com/society/TCPConnection.java" title="TCPConnection.java" tooltip="Society/src/com/society/TCPConnection.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/TCPConnection.java"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Society.h" partName="Society.h" path="/home/ssmith/projects/Society/projectSociety++/Society.h" title="Society.h" tooltip="Society++/Society.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society++/Society.h"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BackboneHash.java" partName="BackboneHash.java" path="/home/ssmith/projects/Society/project/src/com/society/BackboneHash.java" title="BackboneHash.java" tooltip="Society/src/com/society/BackboneHash.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/BackboneHash.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SubscriberHash.java" partName="SubscriberHash.java" path="/home/ssmith/projects/Society/project/src/com/society/SubscriberHash.java" title="SubscriberHash.java" tooltip="Society/src/com/society/SubscriberHash.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/SubscriberHash.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CommonObjects.java" partName="CommonObjects.java" path="/home/ssmith/projects/Society/project/src/com/society/CommonObjects.java" title="CommonObjects.java" tooltip="Society/src/com/society/CommonObjects.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/CommonObjects.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Publish.java" partName="Publish.java" path="/home/ssmith/projects/Society/project/src/com/society/Publish.java" title="Publish.java" tooltip="Society/src/com/society/Publish.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Publish.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProcessorObjects.java" partName="ProcessorObjects.java" path="/home/ssmith/projects/Society/project/src/com/society/ProcessorObjects.java" title="ProcessorObjects.java" tooltip="Society/src/com/society/ProcessorObjects.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/ProcessorObjects.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Subscribe.java" partName="Subscribe.java" path="/home/ssmith/projects/Society/project/src/com/society/Subscribe.java" title="Subscribe.java" tooltip="Society/src/com/society/Subscribe.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Subscribe.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Unsubscribe.java" partName="Unsubscribe.java" path="/home/ssmith/projects/Society/project/src/com/society/Unsubscribe.java" title="Unsubscribe.java" tooltip="Society/src/com/society/Unsubscribe.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Unsubscribe.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PacketProcessor.java" partName="PacketProcessor.java" path="/home/ssmith/projects/Society/project/src/com/society/PacketProcessor.java" title="PacketProcessor.java" tooltip="Society/src/com/society/PacketProcessor.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/PacketProcessor.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Society.java" partName="Society.java" path="/home/ssmith/projects/Society/project/src/com/society/Society.java" title="Society.java" tooltip="Society/src/com/society/Society.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Society.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Addressing.java" partName="Addressing.java" path="/home/ssmith/projects/Society/project/src/com/society/Addressing.java" title="Addressing.java" tooltip="Society/src/com/society/Addressing.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Addressing.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ByteArray.java" partName="ByteArray.java" path="/home/ssmith/projects/Society/project/src/com/society/ByteArray.java" title="ByteArray.java" tooltip="Society/src/com/society/ByteArray.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/ByteArray.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Connection.java" partName="Connection.java" path="/home/ssmith/projects/Society/project/src/com/society/Connection.java" title="Connection.java" tooltip="Society/src/com/society/Connection.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Connection.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DevelUtils.java" partName="DevelUtils.java" path="/home/ssmith/projects/Society/project/src/com/society/DevelUtils.java" title="DevelUtils.java" tooltip="Society/src/com/society/DevelUtils.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/DevelUtils.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NULLConnection.java" partName="NULLConnection.java" path="/home/ssmith/projects/Society/project/src/com/society/NULLConnection.java" title="NULLConnection.java" tooltip="Society/src/com/society/NULLConnection.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/NULLConnection.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PacketException.java" partName="PacketException.java" path="/home/ssmith/projects/Society/project/src/com/society/PacketException.java" title="PacketException.java" tooltip="Society/src/com/society/PacketException.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/PacketException.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PacketManager.java" partName="PacketManager.java" path="/home/ssmith/projects/Society/project/src/com/society/PacketManager.java" title="PacketManager.java" tooltip="Society/src/com/society/PacketManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/PacketManager.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Pair.java" partName="Pair.java" path="/home/ssmith/projects/Society/project/src/com/society/Pair.java" title="Pair.java" tooltip="Society/src/com/society/Pair.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Pair.java"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SocietyHeader.h" partName="SocietyHeader.h" path="/home/ssmith/projects/Society/projectSociety++/SocietyHeader.h" title="SocietyHeader.h" tooltip="Society++/SocietyHeader.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society++/SocietyHeader.h"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PacketType.java" partName="PacketType.java" path="/home/ssmith/projects/Society/project/src/com/society/PacketType.java" title="PacketType.java" tooltip="Society/src/com/society/PacketType.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/PacketType.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Protocol.java" partName="Protocol.java" path="/home/ssmith/projects/Society/project/src/com/society/Protocol.java" title="Protocol.java" tooltip="Society/src/com/society/Protocol.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Protocol.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Object.class" partName="Object.class" title="Object.class" tooltip="java.lang.Object" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=Society/\/usr\/lib\/jvm\/java-6-sun-1.6.0.10\/jre\/lib\/rt.jar&lt;java.lang(Object.class"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServiceExistsException.java" partName="ServiceExistsException.java" path="/home/ssmith/projects/Society/project/src/com/society/ServiceExistsException.java" title="ServiceExistsException.java" tooltip="Society/src/com/society/ServiceExistsException.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/ServiceExistsException.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SocketState.java" partName="SocketState.java" path="/home/ssmith/projects/Society/project/src/com/society/SocketState.java" title="SocketState.java" tooltip="Society/src/com/society/SocketState.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/SocketState.java"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.jdt.junit.ResultView" partName="JUnit">
+<viewState failuresOnly="false" layout="1" orientation="2" ratio="500" scroll="false"/>
+</view>
+<view id="org.eclipse.cdt.ui.CView" partName="C/C++ Projects">
+<viewState horizontalPosition="0" verticalPosition="14">
+<expanded/>
+<selection/>
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.cdt.internal.ui.CView.ExecutableFilter" isEnabled="false"/>
+<child filterId="org.eclipse.cdt.internal.ui.CView.SharedFilter" isEnabled="false"/>
+<child filterId="org.eclipse.cdt.internal.ui.CView.ClosedProjectFilter" isEnabled="false"/>
+<child filterId="org.eclipse.cdt.internal.ui.CView.NonCProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.cdt.internal.ui.CView.NonCElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.cdt.ui.CView_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.cdt.internal.ui.CView.ObjectFilter" isEnabled="false"/>
+<child filterId="org.eclipse.cdt.internal.ui.CView.ArchiveFilter" isEnabled="false"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ResourceNavigator" partName="Navigator"/>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState columnWidth0="510" columnWidth1="90" columnWidth2="165" columnWidth3="507" columnWidth4="0" horizontalPosition="0" verticalPosition="0">
+<columnOrder columnOrderIndex="0"/>
+<columnOrder columnOrderIndex="1"/>
+<columnOrder columnOrderIndex="2"/>
+<columnOrder columnOrderIndex="3"/>
+<columnOrder columnOrderIndex="4"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState isWindowWorkingSet="true" layout="2" org.eclipse.jdt.ui.packages.linktoeditor="0" rootMode="1" workingSetName="">
+<customFilters userDefinedPatternsEnabled="false">&#x0A;<xmlDefinedFilters>&#x0A;<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_*$*.class" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+</views>
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspective editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.WorkingSetActionSet"/>
+<alwaysOnActionSet id="org.eclipse.update.ui.softwareUpdates"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.openExternalFile"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<view id="org.eclipse.jdt.junit.ResultView"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="left">&#x0A;<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="Hierarchy"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@16b98c3" ratio="0.75" ratioLeft="756" ratioRight="252" relationship="2" relative="left">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.2703677" ratioLeft="375" ratioRight="1012" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.7492958" ratioLeft="532" ratioRight="178" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@f70ee1" ratio="0.75" ratioLeft="567" ratioRight="189" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.WorkingSetActionSet"/>
+<alwaysOnActionSet id="org.eclipse.update.ui.softwareUpdates"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.openExternalFile"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.SearchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.CElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.make.ui.makeTargetActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.managedbuilder.ui.buildConfigActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.managedbuilder.ui.buildSelectedFilesActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.CodingActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.cdt.ui.CView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.cdt.make.ui.views.MakeView"/>
+<new_wizard_action id="org.eclipse.cdt.managedbuilder.ui.wizards.StdCWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewMakeCProjectWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.ConvertToMakeWizard"/>
+<new_wizard_action id="org.eclipse.cdt.managedbuilder.ui.wizards.StdCCWizard"/>
+<new_wizard_action id="org.eclipse.cdt.make.ui.wizards.NewMakeCCProjectWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewSourceFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewHeaderFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewClassCreationWizard"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
+<view id="org.eclipse.cdt.ui.CView"/>
+<view id="org.eclipse.ui.views.ResourceNavigator"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="org.eclipse.cdt.ui.CView" appearance="2" expanded="2">
+<page content="org.eclipse.cdt.ui.CView" label="C/C++ Projects"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="Navigator"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7496403" ratioLeft="1042" ratioRight="348" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.24964029" ratioLeft="347" ratioRight="1043" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottom" ratio="0.74944323" ratioLeft="673" ratioRight="225" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="topRight" ratio="0.7497603" ratioLeft="782" ratioRight="261" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.make.ui.views.MakeView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/StreamSocketManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/TCPConnection.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/Publish.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/Btest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/Society.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Test/Btest.java"/>
+</editors>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="994" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="1371" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="1371" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="1616" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Btest.java" index="3">
+<position info="not_deleted" x="113" y="0"/>
+</item>
+<item historyLabel="Btest.java" index="3">
+<position info="not_deleted" x="216" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Btest.java" index="3">
+<position info="not_deleted" x="214" y="0"/>
+</item>
+<item historyLabel="Society.java" index="4">
+<position/>
+</item>
+<item historyLabel="Btest.java" index="3">
+<position info="not_deleted" x="214" y="0"/>
+</item>
+<item historyLabel="Btest.java" index="3">
+<position info="not_deleted" x="75" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Society.java" index="4">
+<position/>
+</item>
+<item historyLabel="Btest.java" index="3">
+<position info="not_deleted" x="75" y="0"/>
+</item>
+<item historyLabel="Btest.java" index="3">
+<position info="not_deleted" x="211" y="0"/>
+</item>
+<item historyLabel="Btest.java" index="3">
+<position info="not_deleted" x="208" y="0"/>
+</item>
+<item historyLabel="Btest.java" index="3">
+<position info="not_deleted" x="211" y="0"/>
+</item>
+<item historyLabel="Society.java" index="4">
+<position/>
+</item>
+<item historyLabel="Btest.java" index="5">
+<position info="not_deleted" x="234" y="0"/>
+</item>
+<item historyLabel="Btest.java" index="5">
+<position info="not_deleted" x="235" y="0"/>
+</item>
+<item historyLabel="Society.java" index="4">
+<position info="not_deleted" x="466" y="0"/>
+</item>
+<item historyLabel="StreamSocketManager.java" index="0">
+<position info="not_deleted" x="2874" y="10"/>
+</item>
+<item historyLabel="TCPConnection.java" index="1">
+<position/>
+</item>
+<item historyLabel="StreamSocketManager.java" index="0">
+<position info="not_deleted" x="2874" y="10"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="1231" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="1187" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="1230" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="1371" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="1297" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="1277" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="1359" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="1362" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="1067" y="0"/>
+</item>
+<item historyLabel="Publish.java" index="2">
+<position info="not_deleted" x="1238" y="0"/>
+</item>
+<item historyLabel="StreamSocketManager.java" index="0">
+<position info="not_deleted" x="2892" y="0"/>
+</item>
+<item historyLabel="Btest.java" index="5">
+<position info="not_deleted" x="235" y="0"/>
+</item>
+<item active="true" historyLabel="StreamSocketManager.java" index="0">
+<position info="not_deleted" x="2892" y="0"/>
+</item>
+</navigationHistory>
+<stickyState>
+<perspective IMemento.internal.id="org.eclipse.cdt.ui.CPerspective"/>
+</stickyState>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Btest.java" tooltip="Test/Btest.java">
+<persistable path="/Test/Btest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Btest.java" tooltip="Society/src/com/society/Btest.java">
+<persistable path="/Society/src/com/society/Btest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SocketState.java" tooltip="Society/src/com/society/SocketState.java">
+<persistable path="/Society/src/com/society/SocketState.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServiceExistsException.java" tooltip="Society/src/com/society/ServiceExistsException.java">
+<persistable path="/Society/src/com/society/ServiceExistsException.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Object.class" tooltip="java.lang.Object">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Society/\/usr\/lib\/jvm\/java-6-sun-1.6.0.10\/jre\/lib\/rt.jar&lt;java.lang(Object.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Protocol.java" tooltip="Society/src/com/society/Protocol.java">
+<persistable path="/Society/src/com/society/Protocol.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PacketType.java" tooltip="Society/src/com/society/PacketType.java">
+<persistable path="/Society/src/com/society/PacketType.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SocietyHeader.h" tooltip="Society++/SocietyHeader.h">
+<persistable path="/Society++/SocietyHeader.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Pair.java" tooltip="Society/src/com/society/Pair.java">
+<persistable path="/Society/src/com/society/Pair.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PacketManager.java" tooltip="Society/src/com/society/PacketManager.java">
+<persistable path="/Society/src/com/society/PacketManager.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PacketException.java" tooltip="Society/src/com/society/PacketException.java">
+<persistable path="/Society/src/com/society/PacketException.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PacketAccountant.java" tooltip="Society/src/com/society/PacketAccountant.java">
+<persistable path="/Society/src/com/society/PacketAccountant.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NULLConnection.java" tooltip="Society/src/com/society/NULLConnection.java">
+<persistable path="/Society/src/com/society/NULLConnection.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DevelUtils.java" tooltip="Society/src/com/society/DevelUtils.java">
+<persistable path="/Society/src/com/society/DevelUtils.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Connection.java" tooltip="Society/src/com/society/Connection.java">
+<persistable path="/Society/src/com/society/Connection.java"/>
+</file>
+</mruList>
+</workbench>

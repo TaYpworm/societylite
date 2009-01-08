@@ -1,0 +1,61 @@
+#!/usr/bin/perl
+
+# This is a script to run ncs with ethernet on cortex.  Otherwise like the 
+# ncs5 script.  Use ethernet compile option in makefile (do full compile),
+# and run "ncs5pe" executable.
+
+require 5.002;
+use strict;
+use Cwd;
+
+my ($i, $n, $nargs, $flag, $arg, $np, $file, $cmd, $rc, $home, $cwd, 
+    $machfile, $nsleep, $usefile, @machines);
+
+$home = $ENV{"HOME"};
+$cwd  = cwd();
+print ("CWD = ", $cwd, "\n");
+
+$np     = $ARGV [0];
+$file   = $ARGV [1];
+$nsleep = $ARGV [2];
+
+$machfile = $home . "/mach.mpi";
+print ("Machine file = ", $machfile, "\n");
+$usefile  = "mach.tmp";
+
+$cmd = "/opt/mpich/gnu/bin/mpirun -nolocal -np " . $np . " -machinefile " . $usefile;
+
+$cmd = $cmd . " " . $cwd . "/ncs5pe";
+$cmd = $cmd . " " . $cwd . "/" . $file;
+$cmd = $cmd . " -d " . $cwd;
+if ($nsleep > 0)
+{
+  $cmd = $cmd . " -s " . $nsleep;
+}
+
+open (INPUT,  "<$machfile");
+@machines = <INPUT>;
+close (INPUT);
+chomp (@machines);
+
+
+open (OUTPUT, ">$usefile");
+select (OUTPUT);
+
+$n = 0;
+for ($i = 0; $i < $np; $i++)
+{
+  print (@machines [$n], "\n");
+  $n++;
+  if ($n >= $#machines)
+  {
+    $n = 0;
+  }
+}
+
+close (OUTPUT);
+
+select (STDOUT);
+
+print ("Final command is '", $cmd, "'\n");
+$rc = system ($cmd);

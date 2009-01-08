@@ -1,0 +1,59 @@
+sub object_Table
+{
+    my $name = $_[0];
+    my $databasename = $_[1];
+    my $currentChapter = $_[2];
+    my $output;
+    my $count = 1;
+    
+    open( filehandle, $VARIABLES {"#workingdir"} . $databasename );
+    my @sections = split( "<->\n", join( "", (<filehandle>) ) );
+    close( filehandle );
+    
+    my @data = split( "<;>\n", $sections[1] );
+    
+    if( @data>0 )
+    {
+        $output.="<TABLE border=2>\n";
+        $output.="<TR><TD><B>Keyword</TD><TD><B>Value</TD><TD><B>Description</TD></TR>\n";
+    }
+    
+    foreach my $record( @data )
+    {
+        $output.="<TR>";
+        my @fields = split( "<,>", $record );
+        
+        for (my $index=0; $index<@fields; $index++ )
+        {
+            if( $index == 1 ) #values column
+            {
+                my @elements = split( "<.>", $fields[$index] );
+                $output.="<TD><TABLE>";
+                for( my $valueIndex=0; $valueIndex<@elements; $valueIndex++ )
+                {
+                    my @names = split( " ", $elements[$valueIndex] );
+                    
+                    #in the event that variable name/type pairs were not delimited by the <.>,
+                    #go through and access elements by two
+                    for( my $varPair=0; $varPair<@names; $varPair+=2 )
+                    {
+                        $output.="<TR><TD>".$names[$varPair]."</TD><TD>".$names[$varPair+1]."</TD></TR>";
+                    }
+                }
+                $output.="</TABLE></TD>";
+            }
+            else
+            {
+                $output.="<TD>".$fields[$index]."</TD>";
+            }
+        }
+        $output.="</TR>\n";
+    }
+    
+    if( @data > 0 )
+    {
+        $output.="</TABLE>\n";
+    }
+    
+    return $output;
+}

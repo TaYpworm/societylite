@@ -1,0 +1,77 @@
+################################################################################
+#   LoginControl.object - Login Control (Built-in Object) in IOsity v4.0
+#   Copyright (C) 2001, 2002  Brian Westphal
+#   
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2 of the License, or
+#   (at your option) any later version.
+#   
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#   
+#   You should have received a copy of the GNU General Public License
+#   along with this program; if not, write to the Free Software
+#   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+################################################################################
+
+sub object_LoginControl ()
+{
+	my $name             = $_[ 0];
+	my $nextlocation     = $_[ 1];
+	my $title            = $_[ 2];
+	my $instructions     = $_[ 3];
+	my $buttontext       = $_[ 4];
+	my $bordercolor      = $_[ 5];
+	my $titlebgcolor     = $_[ 6];
+	my $titlefontcolor   = $_[ 7];
+	my $contentbgcolor   = $_[ 8];
+	my $contentfontcolor = $_[ 9];
+	my $textboxsize      = $_[10];
+
+	if ($instructions ne "")
+	{
+		$instructions = "<P ALIGN=JUSTIFY><FONT COLOR=" . $contentfontcolor . ">" . $instructions . "</FONT></P>";
+	}
+
+	return "<FORM ONSUBMIT=\"iosity_logincontrol_" . $name . "_submit ();\" NAME=\"iosity_logincontrol_" . $name . "_form\" ACTION=\"<#mainscript>\" METHOD=POST>
+			<INPUT TYPE=HIDDEN NAME=\"Location\" VALUE=\"\">
+			<INPUT TYPE=HIDDEN NAME=\"Parameters\" VALUE=\"\">
+
+			<INPUT TYPE=HIDDEN NAME=\"SendEvent_On\"     VALUE=\"\">
+			<INPUT TYPE=HIDDEN NAME=\"SendEvent_Object\" VALUE=\"\">
+			<INPUT TYPE=HIDDEN NAME=\"SendEvent_Event\"  VALUE=\"\">
+			<INPUT TYPE=HIDDEN NAME=\"SendEvent_Value\"  VALUE=\"\">
+
+			<SCRIPT LANGUAGE=\"JavaScript\">
+			<!--
+				function iosity_logincontrol_" . $name . "_submit ()
+				{
+					document.iosity_logincontrol_" . $name . "_form.Location.value         = \"" . $nextlocation . "\";
+					document.iosity_logincontrol_" . $name . "_form.Parameters.value       = document.iosity_form.Parameters.value;
+					document.iosity_logincontrol_" . $name . "_form.SendEvent_On.value     = \"true\";
+					document.iosity_logincontrol_" . $name . "_form.SendEvent_Object.value = \"SecurityCheck\";
+					document.iosity_logincontrol_" . $name . "_form.SendEvent_Event.value  = \"LoginAttempt\";
+					document.iosity_logincontrol_" . $name . "_form.SendEvent_Value.value  = \"\";
+				}
+			//-->
+			</SCRIPT>
+
+			<TABLE BORDER=1 BORDERCOLOR=" . $bordercolor . " CELLPADDING=4 CELLSPACING=0>
+				<TR>
+					<TD ALIGN=CENTER BGCOLOR=" . $titlebgcolor . "><FONT COLOR=" . $titlefontcolor . "><B>" . $title . "</B></FONT></TD>
+				</TR>
+				<TR>
+					<TD ALIGN=CENTER BGCOLOR=" . $contentbgcolor . ">
+						" . $instructions . "
+						<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+							<TR><TD><FONT COLOR=" . $contentfontcolor . "><B>Username:</B></TD><TD WIDTH=10>&nbsp;</TD><TD><INPUT TYPE=TEXT NAME=\"username_text\" VALUE=\"\" SIZE=" . $textboxsize . "></TD></TR>
+							<TR><TD><FONT COLOR=" . $contentfontcolor . "><B>Password:</B></TD><TD WIDTH=10>&nbsp;</TD><TD><INPUT TYPE=PASSWORD NAME=\"password_text\" VALUE=\"\" SIZE=" . $textboxsize . "> <INPUT TYPE=SUBMIT VALUE=\"" . $buttontext . "\"></TD></TR>
+						</TABLE>	
+					</TD>
+				</TR>
+			</TABLE>
+		</FORM>";
+}

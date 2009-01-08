@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="39"
+   name=""
+   committed-date="2005-08-04T17:07:47.149191Z"
+   url="file:///home/svn/repository-new/ncs5/documentation/userSrc"
+   last-author="king"
+   kind="dir"
+   uuid="49b161a2-e7c6-0310-900c-e758ba94e43e"
+   revision="48"/>
+<entry
+   committed-rev="12"
+   name="chap10.database"
+   text-time="2006-06-20T07:07:25.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="142665d7f349740cce1d6a6998c448a7"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:20.000000Z"/>
+<entry
+   committed-rev="35"
+   name="chap14-1.database"
+   text-time="2006-06-20T07:07:25.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="849cb595bd33d85c03e1811d1ed09023"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:20.000000Z"/>
+<entry
+   committed-rev="35"
+   name="chap12.database"
+   text-time="2006-06-20T07:07:25.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="e343be8a6c2e583ac83dc5c2899bdfb9"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:20.000000Z"/>
+<entry
+   committed-rev="35"
+   name="chap14.database"
+   text-time="2006-06-20T07:07:25.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="44a5b92b527675dc69485b8b97ebdc15"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:21.000000Z"/>
+<entry
+   committed-rev="35"
+   name="TOC.database"
+   text-time="2006-06-20T07:07:25.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="de49b8ae7020d9d85d70a28e29afec7f"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:21.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap2-1.database"
+   text-time="2006-06-20T07:07:25.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="ca715d076a6bb10262e2d3e7ae3b3cb6"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:21.000000Z"/>
+<entry
+   committed-rev="12"
+   name="TOC.webpage"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="05f8fb058dce7c42a6502885968480b2"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:21.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap3-2.database"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="117757a2ba7e29e9f1cd93831aaa84f6"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:21.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap2.database"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="a5d067298935e2e365e6d39027b01de2"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:21.000000Z"/>
+<entry
+   committed-rev="12"
+   name=".DS_Store"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="1be5904094fa5e52aa332151e65b8e0f"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:21.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap4.database"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="7d2d684b1070aad146cba33fce6003bd"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:21.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap6-1.database"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="d0c5843feebd50988f6f7235c4b73beb"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:21.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap6.database"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="e2696ad1ef41b6cdadf5793ab1305fd3"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:21.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap6-3.database"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="95b33f861315575d5258ed3d2106d311"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:21.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap1.webpage"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="33f7ac6b4ae411123e4c22ea80513457"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:21.000000Z"/>
+<entry
+   name="images"
+   kind="dir"/>
+<entry
+   committed-rev="12"
+   name="chap8.database"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="3f9938ed56a4cd31700ad14af88ac392"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:22.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap2.webpage"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="696d9915ce1eb977dabb011cb88e6f01"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:22.000000Z"/>
+<entry
+   committed-rev="39"
+   name="global.variables"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2005-08-04T17:07:47.149191Z"
+   checksum="fa4914b5009f3b5e0b43fc613429085f"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:23.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap3.webpage"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="038e64ae4ee7628828fa9ffad88c86e9"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:22.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap4.webpage"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="f2cea56725fd106b7ca362a1c6c17293"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:23.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap5.webpage"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="290ec2b607ffb4cdf1b01a26f4f81356"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:23.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap6.webpage"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="9cd84ddd9df0856a2bcf3f09caa0e6a2"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:23.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap7.webpage"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="99e89b1e593b26daa1784bcd37939476"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:23.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap8.webpage"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="3452f37671fd34c947798e40e0455014"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:23.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap9.webpage"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="ab2ea4475da534047dfdb53bf40cc280"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:23.000000Z"/>
+<entry
+   name="packages"
+   kind="dir"/>
+<entry
+   committed-rev="35"
+   name="chap11.database"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="3a794bcf99c3462cb61fa23fb6227d7e"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:24.000000Z"/>
+<entry
+   committed-rev="35"
+   name="chap13.database"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="f0dcd610e5429d87ba40883cef6c49a1"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:24.000000Z"/>
+<entry
+   committed-rev="35"
+   name="chap14-2.database"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="a35657bbc80cd93179c01956fd475a83"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:24.000000Z"/>
+<entry
+   committed-rev="39"
+   name="chap15-1.database"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2005-08-04T17:07:47.149191Z"
+   checksum="5cf82e9a6513f4734830f13912694f4b"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:24.000000Z"/>
+<entry
+   committed-rev="35"
+   name="chap15.database"
+   text-time="2006-06-20T07:07:26.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="cd841d0a0bc693f59b984542490b3166"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:24.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap10.webpage"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="5347916452398894f73b62cca4fb52ab"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:24.000000Z"/>
+<entry
+   committed-rev="35"
+   name="chap11.webpage"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="d8fa21f1913083331e27940508d3038d"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:24.000000Z"/>
+<entry
+   committed-rev="35"
+   name="chap12.webpage"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="2e366af5c03ea5c5bb0f73e9eece876a"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:24.000000Z"/>
+<entry
+   committed-rev="35"
+   name="chap13.webpage"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="36d1f50f7e5ec9c928ce42943e7074ea"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:24.000000Z"/>
+<entry
+   committed-rev="35"
+   name="chap14.webpage"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="8ed8d8086ad65214b32d7c232e486414"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:24.000000Z"/>
+<entry
+   committed-rev="12"
+   name="printable.webpage"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="10a82e9e0806f1f48840431feb2a280a"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:24.000000Z"/>
+<entry
+   committed-rev="35"
+   name="chap15.webpage"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="0d6f2469d9b4b4bde0b59c96e5a52c88"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:24.000000Z"/>
+<entry
+   committed-rev="21"
+   name="connectMap.html"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2004-06-02T23:48:24.175440Z"
+   checksum="13be211da2be2d5dc3b99286156dc078"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:24.000000Z"/>
+<entry
+   committed-rev="12"
+   name="printable.template"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="439c63c6caef41828314dcba6985f399"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+<entry
+   committed-rev="32"
+   name="geninfo.webpage"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2005-01-23T16:55:57.712656Z"
+   checksum="972dd2321589b88774e6fc449d9bcccd"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap3-1.database"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="f2aa0bcea67ab65350263374a408da2d"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap2-2.database"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="1f42e0e0cfc979eb19a4137da36b30a3"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+<entry
+   committed-rev="12"
+   name="TOC.template"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="4b9116646b6a43a8a69542f2267d78f2"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+<entry
+   committed-rev="38"
+   name="chap1.database"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2005-07-11T22:32:36.423370Z"
+   checksum="d100d6765f4cda634e71b00fb7f8ffa5"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+<entry
+   committed-rev="24"
+   name="stimFileInput.html"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2004-08-02T22:48:51.680150Z"
+   checksum="33f06cd7dc672a13f3a27079a7b50ee6"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+<entry
+   committed-rev="12"
+   name="Chapter.template"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="5543ab8c55748d24e0d5e9b8d62d7e88"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap3.database"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="420c2abfb97aa49115aa6f83bcd43baa"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+<entry
+   committed-rev="21"
+   name="cellOutput.html"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2004-06-02T23:48:24.175440Z"
+   checksum="9c07329a36874c174acbc041b635fc67"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+<entry
+   committed-rev="35"
+   name="chap5.database"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="bef8f71af06cf05e265e440047df57a9"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap6-2.database"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="890683158be289772c37aa3144bfa588"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+<entry
+   committed-rev="33"
+   name="chap7.database"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2005-01-24T20:59:20.355233Z"
+   checksum="a77ae0d4353a8e2a62dc0f0a2397162c"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+<entry
+   committed-rev="12"
+   name="chap9.database"
+   text-time="2006-06-20T07:07:27.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="219e1910b7e8fd4cfb102388a376c91c"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:25.000000Z"/>
+</wc-entries>

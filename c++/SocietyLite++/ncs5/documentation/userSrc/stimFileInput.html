@@ -1,0 +1,131 @@
+<HTML>
+    <HEAD>
+        <TITLE>File Based and Input Stimulus</TITLE>
+    </HEAD>
+    <BODY>
+    
+    <H1>File Based and Input stimulus</H1>
+    
+    <HR>
+    
+    The point of these stimuli is that they do not follow some regular pattern like a sine, linear, or pulse
+    stimulus would.  Because it is not regular, NCS needs to use an external source of information to
+    determine when to apply stimulus to a given set of cells.<BR><BR>
+    
+    Required elements from the Stimulus Input Block:
+    <UL>
+        <LI>TIME_FREQ_INCR</LI>
+        <LI>AMP_START</LI>
+        <LI>DYN_RANGE</LI>
+        <LI>FREQ_ROWS</LI>
+        <LI>CELLS_PER_FREQ</LI>
+        <LI>WIDTH</LI>
+        <LI>MODE</LI>
+    </UL>
+    
+    <H3>How it Works</H3>
+    New data is read in at the start of the Time Frequency Increment.
+    The data is different depending on whether the stimulus is File based or Input,
+    but regardless, the data is scaled so that a cell's firing rate falls within the
+    Dynamic Range set by the user.
+    
+    <IMG src="images/stimFileInput.jpg" height="373" width = "607" alt="Diagram Example Stimulus"><BR>
+    
+    The Time Frequency Increment is divided into Fire Windows which last 0.0025 seconds.
+    Each cell throws a new random number at the start of a Fire Window and compares the
+    number thrown with the converted data. Any cell with a random number less than the converted
+    data gets to integrate the stimulus. This integration lasts for Width seconds as input by
+    the user.
+    <BR>
+    For example, an Input stimulus receives the number 0.5 on its port which is then converted to
+    a probability of 0.125 that a cell will integrate the stimulus at the start of a Fire Window.
+    Cell 1 throws the random number 0.034, so it gets to integrate the stimulus,
+    but Cell 2 throws 0.784 so it does not.
+    
+    <H3>Converting Data to Probabilities</H3>
+    
+    There are two major influences to the probability of firing, Dynamic Range and data read from the file/port.
+    <P>
+    <B>Dynamic Range</B>
+    </P>
+    In the input file, the user specifies a Dynamic Range for integrating stimulus.  In a given second,
+    a cell would be expected to integrate the stimulus at least at the minimum rate, but no greater
+    than the maximum rate.
+    
+    For example, if the Dynamic Range was given as from 20 Hz to 80 Hz, then a cell should integrate the
+    stimulus at least 20 times in one second, but no more than 80 times in one second.
+    
+    So, if the only time a cell has the option to integrate is at the beginning of the Fire Window, and a 
+    Fire Window last 0.0025 seconds, then a cell will integrate with probability equal to 0.0025 times
+    the current value from the dynamic range (i.e between 20 and 80 Hz).  That current value is chosen based on the data.
+    <P>
+    <B>Data Read</B>
+    </P>
+    In order to determine whether the cell should use the minimum Dynamic range, the maximum Dynamic range, or
+    somewhere in between, the data is examined. In the case of file based stimulus, the entire file is read in and
+    the maximum and minimum data value are discovered.  These extrema allow every individual data value to be scaled to a
+    number from 0 to 1.  This scaled value then corresponse to some percentage of the dynamic range to use.  That is,
+    0 means that the minimum range should be used, 1 means the maximum range should be used, while 0.5 would mean to
+    use a range in the middle.<BR>
+    <BR>
+    For input stimulus, there is no way for NCS to know what the largest and smallest values would be, so it assumes
+    that it will read an already scaled value (0-1) off the port, then select the daynamic range from that.
+    
+    <H3>Integrating Stimulus</H3>
+    
+    Once the data has been converted and the approiate dynamic range selected. The probability is calculated and
+    each cell throws a random number. Cells with random numbers less than the computed probability get to integrate
+    the stimulus.  These cells will now use the AMP_START and WIDTH properties of the stimulus.
+    
+    <P>
+    <B>Amplitude</B>
+    </P>
+    When the stimulus is integrated, the value contained in AMP_START is sent to the cell.  The stimulus can be set
+    to either of two modes: CURRENT or VOLTAGE.<BR>
+    <BLOCKQUOTE>
+        <B>CURRENT</B><BR>
+        The amp specified is added to electrical current from other sources (Channels, Adjacent compartments, etc.)
+        so that the sum of all currents can be use to affect the cell's membrane voltage.<BR><BR>
+        <B>VOLTAGE</B><BR>
+        The amp specified bypasses all other electrical current and sets the cell's membrane voltage to the same
+        number (i.e. The stimulus is treated as a voltage value and not as an electrical current that must be
+        mathematically transformed into a voltage)
+        </BLOCKQUOTE>
+    <P>
+    <B>Width</B>
+    </P>
+    The stimulus will be applied for a certain number of timesteps before it shuts down and waits for the next Fire
+    Window.  The user will specify how many seconds this Width should be.
+    
+    <H3>Customizing Stimulus Further</H3>
+    The example given so far have shown only one value being read from the file or read off the port in order to
+    determine if a cell will fire.  Using FREQ_ROWS and CELLS_PER_FREQ, more values can be sent to NCS to add more
+    variance to the firing rate.
+    
+    <P>
+    <B>Frequency Rows</B>
+    </P>
+    This just means how many different values (frequencies) will be read in at the start of the Time Frequency Increment. 
+    For example, an Input stimulus can declare three FREQ_ROWS and send 0.12, 0.78, 0.43.  Some cells will
+    use the first value to establish a probability of integration, while other cells will use the second value.
+    And a third group of cells will use the final value.
+    <BLOCKQUOTE><I>
+    Historical Note: In File Based Stimulus, data for the different frequencies are laid out in columns, not rows.
+    Originally, the data was laid out in rows, but it became easier to have it laid out in columns. The variable name
+    stuck, though.<BR>
+    </I></BLOCKQUOTE>
+    <P>
+    <B>Cells Per Frequency</B>
+    </P>
+    This determines how many cells are assigned to each frequency.  Since there is only one number in CELLS_PER_FREQ
+    all frequencies will have an equal number (so a single frequency can't have 10 cells while another frequency has
+    only 5).  If there are not enough cells to split between the frequencies, that is an error. If there are cells
+    left over after dividing them among the frequencies, those cells will not be included.<BR>
+    Example:  There are 20 cells and 3 frequencies.  If the user wants 7 cells per frequency, that is an error since
+    there need to be 21 cells (3*7=21).  If the user wants 5 cells per frequency, then only 15 cells are assigned to
+    a frequency while the 5 left over cells will not be included in stimulus integrartion.
+    
+    <IMG src="images/stimFrequency.jpg" alt="Diagram multiple frequencies">
+    
+    </BODY>
+</HTML>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="12"
+   name=""
+   committed-date="2003-10-28T19:24:24.978320Z"
+   url="file:///home/svn/repository-new/ncs5/documentation/iosity4_0_5"
+   last-author="king"
+   kind="dir"
+   uuid="49b161a2-e7c6-0310-900c-e758ba94e43e"
+   revision="48"/>
+<entry
+   committed-rev="12"
+   name=".DS_Store"
+   text-time="2006-06-20T07:07:31.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="5fe72c1008eb54cdbe556d9b000c8a1b"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:28.000000Z"/>
+<entry
+   name="system"
+   kind="dir"/>
+<entry
+   committed-rev="12"
+   name="userdbeditor.pl"
+   text-time="2006-06-20T07:07:31.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="a3b83f3188ef4d6d277533238e6136bf"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:31.000000Z"/>
+<entry
+   committed-rev="12"
+   name="COPYING"
+   text-time="2006-06-20T07:07:31.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="c7a3c2bafe9aeccce5eb465e63e6bce5"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:31.000000Z"/>
+<entry
+   committed-rev="12"
+   name="precompiledir.pl"
+   text-time="2006-06-20T07:07:31.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="1bdbf9de96ab0926c80031f32aa270bf"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:31.000000Z"/>
+<entry
+   committed-rev="12"
+   name="precompile.pl"
+   text-time="2006-06-20T07:07:31.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="3360d04859878cb67822ba0dea8fa475"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:31.000000Z"/>
+<entry
+   committed-rev="12"
+   name="ncsUserDoc.tgz"
+   text-time="2006-06-20T07:07:31.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="f2cc4984fc50d84ce5ecf14eb8868b5d"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:31.000000Z"/>
+<entry
+   committed-rev="12"
+   name="csv2database.pl"
+   text-time="2006-06-20T07:07:31.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="b319c26fb61799e28b7884f2ca0d7f11"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:31.000000Z"/>
+<entry
+   committed-rev="12"
+   name="README"
+   text-time="2006-06-20T07:07:31.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="6ef253fad3e83d8766bdf6851dcef521"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:31.000000Z"/>
+</wc-entries>

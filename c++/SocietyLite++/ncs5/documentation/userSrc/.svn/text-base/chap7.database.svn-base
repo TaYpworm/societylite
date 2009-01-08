@@ -1,0 +1,32 @@
+Synapses are the connections between other cells and their compartments. When a compartment reaches threshold, it sends signals to all other compartments which it is connected to. 
+<->
+SYNAPSE<,>N/A<,>Indicates the start of a synapse definition section<;>
+TYPE<,>name (string)<,>The name which this synapse will be referred to in this simulation<;>
+SEED<,>value (integer)<,>The random number generator will be seeded with the value specified.  This number must be less than zero ( SEED < 0)<;>
+SFD_LABEL<,>name (string)<,>The short term synaptic dynamic (<A HREF="chap8.html">RSE</A>) to be used<;>
+SYN_PSG<,>name (string)<,>The synaptic waveform (<A HREF="chap10.html">PSG</A>) to be used<;>
+LEARN_LABEL<,>name (string)<,>The long term synaptic dynamic (<A HREF="chap9.html">Learn</A>) to be used<;>
+DATA_LABEL<,>name (string)<,><B>Deprecated.</B> The synaptic conductance (<A HREF="chap11.html">Data</A>) to be used<;>
+ABSOLUTE_USE<,>mean (real) stdev (real)<,>The initial value of a Synapse's USE value<;>
+RSE_INIT<,>min (real) max (real)<,>The initial value of a Synapse's RSE is one (1) by default.  This parameter will vary that value between a min and max value.  Note that the RSE can only be a value from 0.0 to 1.0.  NCS will automatically limit the RSE if it tries to exceed either of those extremes.<;>
+PREV_SPIKE_RANGE<,>min (real) max (real)<,>Synapses keep track of the time at which a last spike occurred.  When a simulation begins, the time will be zero (0) for all Synapses by default.  Using this parameter allows a Synapse to vary that previous time within a range from the min to max time (in seconds).<;>
+MAX_CONDUCT<,>mean (real) stdev (real)<,>Used with SYN_REVERSAL in calculating the current value of a PSG waveform<BR>
+<Center> I(t) = MAX_CONDUCT * CurrentPSGValue * (SYN_REVERSAL - Membrane Voltage)</CENTER><;>
+DELAY<,>mean (real) stdev (real)<,>Before a synapse will output a new waveform, it will wait for the specified DELAY to expire.  This value is given in seconds and will be converted using the <A HREF = "chap01.html">FSV</A>.<;>
+SYN_REVERSAL<,>mean (real) stdev (real)<,>Used with MAX_CONDUCT in calculating the current value of a PSG waveform<BR>
+<Center> I(t) = MAX_CONDUCT * CurrentPSGValue * (SYN_REVERSAL - Membrane Voltage)</CENTER><;>
+END_SYNAPSE<,>N/A<,>Indicates the end of a synapse definition section<;>
+<->
+SYNAPSE
+        TYPE                    ExcF2Hebb+-
+        SEED                    -999999
+        SFD_LABEL               F2
+        SYN_PSG                 PSGexcit
+        LEARN_LABEL             +-HEBB
+        MAX_CONDUCT             0.01
+        DELAY                   0.0008          0.0012
+        SYN_REVERSAL            0               0
+        ABSOLUTE_USE            0.32            0.0
+        RSE_INIT                0.5             0.8
+        PREV_SPIKE_RANGE        0.1             0.1
+END_SYNAPSE

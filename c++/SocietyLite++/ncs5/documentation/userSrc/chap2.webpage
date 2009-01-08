@@ -1,0 +1,7 @@
+Chapter
+global
+packages/Table,packages/Navigator,packages/LastUpdated,packages/Section
+#page Title<=>Chapter 2: Columns<;>
+#page Navigator<=><#Navigator "name","TOC.database",2><;>
+#page LastUpdated<=><#LastUpdated "lastupdate"><;>
+#page Body<=><#Section "name", "TOC.database", 2><;>

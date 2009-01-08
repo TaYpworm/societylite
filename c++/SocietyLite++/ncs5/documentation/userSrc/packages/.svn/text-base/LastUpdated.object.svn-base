@@ -1,0 +1,39 @@
+sub object_LastUpdated
+{
+    my $output;
+          
+    @array = localtime();
+    
+    $output.='Last updated ';
+    if( $array[6] == 0 )
+    {
+        $output.="Sunday ";
+    }
+    if( $array[6] == 1 )
+    {
+        $output.="Monday ";
+    }
+    if( $array[6] == 2 )
+    {
+        $output.="Tuesday ";
+    }
+    if( $array[6] == 3 )
+    {
+        $output.="Wednesday ";
+    }
+    if( $array[6] == 4 )
+    {
+        $output.="Thursday ";
+    }
+    if( $array[6] == 5 )
+    {
+        $output.="Friday ";
+    }
+    if( $array[6] == 6 )
+    {
+        $output.="Saturday ";
+    }
+    $output.=($array[4]+1).'/'.$array[3].'/'.($array[5]+1900)."\n";
+    
+    return $output;
+}

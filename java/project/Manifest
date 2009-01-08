@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Sealed: true
+Main-Class: com.society.Society
+Class-Path: libraries/commons-cli-1.1.jar libraries/commons-collections-3.2.1.jar

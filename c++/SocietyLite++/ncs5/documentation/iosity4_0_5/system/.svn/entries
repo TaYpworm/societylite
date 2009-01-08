@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="12"
+   name=""
+   committed-date="2003-10-28T19:24:24.978320Z"
+   url="file:///home/svn/repository-new/ncs5/documentation/iosity4_0_5/system"
+   last-author="king"
+   kind="dir"
+   uuid="49b161a2-e7c6-0310-900c-e758ba94e43e"
+   revision="48"/>
+<entry
+   name="lib.iosity.pm"
+   kind="dir"/>
+<entry
+   committed-rev="12"
+   name=".DS_Store"
+   text-time="2006-06-20T07:07:31.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="732df385ddcfcc687826e870f765e784"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:28.000000Z"/>
+<entry
+   name="data"
+   kind="dir"/>
+<entry
+   committed-rev="12"
+   name="iosity.pm"
+   text-time="2006-06-20T07:07:31.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="c98a0b53a2fcc3a3101ec09fdfa0a11a"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:30.000000Z"/>
+</wc-entries>

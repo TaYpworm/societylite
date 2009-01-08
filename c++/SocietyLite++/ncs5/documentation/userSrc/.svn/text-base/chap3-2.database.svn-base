@@ -1,0 +1,30 @@
+<->
+LAYER<,>N/A<,>Indicates the start of a fill layer section<;>
+TYPE<,>name (string)<,>The name which will be used to refer to this layer<;>
+LAYER_SHELL<,>name (string)<,>The name of the layer shell which will be used by this layer<;>
+CELL_TYPE<,>celltype (string) quantity (integer)<,>This layer is to be filled with cells of the type given and the quantity specified.  More than one CELL_TYPE line can be used to put different cell types in a layer.<;>
+CONNECT<,>celltype (string)<.>compartment (string)<.>celltype (string)<.>compartment (string)<.>synapse (string)<.>probability (real)<.>speed (integer)<,>Synapse connections within a Layer.  The source (first two) connects to the destination (second two) with the synapse type specified.  Connections are made randomly with the probability specified.  The speed indicates how quickly the destination will receive the signal from the source.<;>
+END_LAYER<,>N/A<,>Indicates the end of a fill layer section<;>
+<->
+LAYER
+        TYPE                    layer_A
+        LAYER_SHELL             layer_shell_A
+        CELL_TYPE               Excitatory      1000
+        CELL_TYPE               Inhibitory      250
+        CONNECT
+                                Excitatory      s1
+                                Excitatory      s1
+                                ExcitF2Hebb0    0.1             3
+        CONNECT
+                                Excitatory      s1
+                                Inhibitory      s1
+                                ExcitF2Hebb0    0.1             3
+        CONNECT
+                                Inhibitory      s1
+                                Excitatory      s1
+                                InhibF1Hebb0    0.05            3
+        CONNECT
+                                Inhibitory      s1
+                                Inhibitory      s1
+                                InhibF1Hebb0    0.05            3
+END_LAYER

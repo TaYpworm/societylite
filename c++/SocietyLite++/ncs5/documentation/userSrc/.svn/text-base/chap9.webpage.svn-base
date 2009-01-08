@@ -1,0 +1,7 @@
+Chapter
+global
+packages/Table,packages/Navigator,packages/LastUpdated,packages/Section
+#page Title<=>Chapter 9: Long Term Synaptic Dynamics<;>
+#page Navigator<=><#Navigator "name","TOC.database",9><;>
+#page LastUpdated<=><#LastUpdated "lastupdate"><;>
+#page Body<=><#Section "subsection","TOC.database",9><;>

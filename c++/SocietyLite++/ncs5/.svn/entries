@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="48"
+   name=""
+   committed-date="2005-11-21T22:03:05.691700Z"
+   url="file:///home/svn/repository-new/ncs5"
+   last-author="pqm"
+   kind="dir"
+   uuid="49b161a2-e7c6-0310-900c-e758ba94e43e"
+   revision="48"/>
+<entry
+   committed-rev="35"
+   name="MessageBus.cpp"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="d10b1eec16d0f3923d6aa201ed095407"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:08.000000Z"/>
+<entry
+   committed-rev="20"
+   name="DoStim.cpp"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2004-05-18T21:25:08.475803Z"
+   checksum="f4a2afd66d0354cd5dade518481a1305"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:08.000000Z"/>
+<entry
+   committed-rev="45"
+   name="Output.cpp"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="89711758b58b71f94c3d5915338ee612"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:08.000000Z"/>
+<entry
+   committed-rev="20"
+   name="Managers.h"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2004-05-18T21:25:08.475803Z"
+   checksum="14b565773988205e7c661746e9b6baa3"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:08.000000Z"/>
+<entry
+   committed-rev="14"
+   name="get_svn_revision"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2003-11-20T18:57:02.404474Z"
+   checksum="bca9c5db9e862664fc517705f670e221"
+   last-author="james"
+   kind="file"
+   prop-time="2006-06-20T07:07:08.000000Z"/>
+<entry
+   committed-rev="15"
+   name="ActiveSyn.cpp"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2003-11-25T18:39:15.275745Z"
+   checksum="0228bc1c5400be3eb8d92ba98425ffef"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:08.000000Z"/>
+<entry
+   committed-rev="22"
+   name="NodeInfo.h"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2004-07-19T19:06:37.381100Z"
+   checksum="8e227df89eace762a0ed30d9a57d765c"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:08.000000Z"/>
+<entry
+   committed-rev="44"
+   name="SaveStruct.h"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2005-10-27T20:17:38.649255Z"
+   checksum="2a02a416432798203c114857f253b791"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:08.000000Z"/>
+<entry
+   committed-rev="1"
+   name="Distributor.cpp"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="f1ba1db47797cdc0ae658321e0c11081"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:09.000000Z"/>
+<entry
+   committed-rev="1"
+   name="memstat.cpp"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="2de5ead5e42a9597bcf2a54f8a1c52e6"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:09.000000Z"/>
+<entry
+   committed-rev="35"
+   name="BuildBrain.cpp"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="a17f524a4c5f7150042ba4ee7135cd95"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:09.000000Z"/>
+<entry
+   committed-rev="1"
+   name="Memory.h"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="d479f6815ccc27ed6741bbc99e2c0690"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:09.000000Z"/>
+<entry
+   committed-rev="1"
+   name="MessageManager.cpp"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="d694f253f0fa6cd15f53e5bb7b6e2a45"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:09.000000Z"/>
+<entry
+   committed-rev="44"
+   name="Report.h"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2005-10-27T20:17:38.649255Z"
+   checksum="f4917b7253ca4c1baa7184aeb9f1e89b"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:09.000000Z"/>
+<entry
+   committed-rev="1"
+   name="Port.cpp"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="f02567849a4f1c2f22c5161ddb1d8287"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:09.000000Z"/>
+<entry
+   committed-rev="43"
+   name="LoadStruct.cpp"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="a1b6e3a834f9c9659f85905ff2b174f4"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:09.000000Z"/>
+<entry
+   committed-rev="38"
+   name="Stimulus.cpp"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2005-07-11T22:32:36.423370Z"
+   checksum="37df1cc200e4e2a814dcf47b7690a60c"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:09.000000Z"/>
+<entry
+   committed-rev="1"
+   name="QQ.h"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="4e1000e8ed1d4780530a24ae585517c0"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:09.000000Z"/>
+<entry
+   committed-rev="48"
+   name="Synapse.h"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2005-11-21T22:03:05.691700Z"
+   checksum="b78631966fc32d12e93d49ada1bde429"
+   last-author="pqm"
+   kind="file"
+   prop-time="2006-06-20T07:07:09.000000Z"/>
+<entry
+   committed-rev="1"
+   name="memstruct.h"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="2a523b06dd1d7f49831cef75975f48f8"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:09.000000Z"/>
+<entry
+   name="voServer"
+   kind="dir"/>
+<entry
+   committed-rev="1"
+   name="debug.h"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="9a9c6eeb9950c411afab5e3c39152432"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:12.000000Z"/>
+<entry
+   committed-rev="49"
+   name="Makefile"
+   text-time="2006-06-20T07:08:12.000000Z"
+   committed-date="2006-06-20T08:40:34.098659Z"
+   checksum="477992dd17c15ac4516ac155aedf16b9"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:12.000000Z"
+   revision="49"/>
+<entry
+   committed-rev="20"
+   name="DoReport.cpp"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2004-05-18T21:25:08.475803Z"
+   checksum="92a489ff5dc7521cc3fa660cb0661db5"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:12.000000Z"/>
+<entry
+   committed-rev="45"
+   name="Connector.h"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="0bf1c5b4af0560a0c2264772fd8cb332"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:12.000000Z"/>
+<entry
+   committed-rev="43"
+   name="NodeInfo.cpp"
+   text-time="2006-06-20T07:08:41.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="10ba3e96344c84b2bae389d23745e628"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:12.000000Z"/>
+<entry
+   committed-rev="44"
+   name="MessageBus.h"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2005-10-27T20:17:38.649255Z"
+   checksum="387a1ae528fdb7b1c442afcc8134e3a9"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:12.000000Z"/>
+<entry
+   committed-rev="35"
+   name="SaveStruct.cpp"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="9b0808cb08c6f067f1df836e266e8878"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:12.000000Z"/>
+<entry
+   committed-rev="44"
+   name="Output.h"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2005-10-27T20:17:38.649255Z"
+   checksum="6dc013c6e6c9b526472974cc59de97a7"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:12.000000Z"/>
+<entry
+   committed-rev="33"
+   name="SynapseDef.h"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2005-01-24T20:59:20.355233Z"
+   checksum="8bd150fb5a18593f2e23bdf02cd96ed0"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:12.000000Z"/>
+<entry
+   committed-rev="1"
+   name="Abort.cpp"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="5d5adb757e864e2c2ce325dd43a0dbb9"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:12.000000Z"/>
+<entry
+   committed-rev="45"
+   name="CellManager.cpp"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="60846afda85e67f301500c26a1a27c10"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="45"
+   name="Report.cpp"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="511ae98bb1bb4b2551f48bb739a0ab59"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="4"
+   name="Packet.h"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2003-09-23T22:09:51.876675Z"
+   checksum="1db712940741b8648914798b48f747b7"
+   last-author="james"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="1"
+   name="kf"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="936d174e9d56a375ae709a36cf98338b"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="1"
+   name="memstat.h"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="f7c07a225b05994027d8bad05bf7b476"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="33"
+   name="Random.cpp"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2005-01-24T20:59:20.355233Z"
+   checksum="a37e15404abf27d7408bf4ac41477816"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="1"
+   name="QQ.cpp"
+   text-time="2006-06-20T07:07:33.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="8597bc5440c8a2d519f432531f096fd3"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="43"
+   name="Cell.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="d8586a6f7decb4bd27038f3aa3666b81"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="22"
+   name="Port.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2004-07-19T19:06:37.381100Z"
+   checksum="7d2995389e2b12901b2d222df47c0004"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="44"
+   name="LoadStruct.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2005-10-27T20:17:38.649255Z"
+   checksum="624cdbfd1c7b73f327e0ba13b8289316"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="19"
+   name="SendList.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2004-03-16T22:26:16.677713Z"
+   checksum="a72f5f5642c23070e99014c2f8e0bb64"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="44"
+   name="version.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2005-10-27T20:17:38.649255Z"
+   checksum="95e8e78417b7df8a79451b2d5a488a4c"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="1"
+   name="KillFile.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="893db6361f56ea8118db2d9264aaf017"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="43"
+   name="Augmentation.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="65776079ffd323ca97af6aca72f01a9d"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="45"
+   name="SynapseDef.cpp"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="55cfe5aed1499a0710651eb6e17a1a1e"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="16"
+   name="CircleList.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2003-11-25T18:41:10.121550Z"
+   checksum="9c1523dfe6477d12ae163d01f6f0abd4"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="1"
+   name="DoReport.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="16782c783a4a38d95251f24d36988e36"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="22"
+   name="Input.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2004-07-19T19:06:37.381100Z"
+   checksum="7830d523202d5a3d9d097f8a36df0603"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="1"
+   name="dprintf.cpp"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="8de4bd1d72eb93536c8bf52d7d9a1c66"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="19"
+   name="Locator.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2004-03-16T22:26:16.677713Z"
+   checksum="000438543bd3cc3eda3e5cc49b490134"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="45"
+   name="Channel.cpp"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="c75267936a780a680ae40c95663b37fe"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:13.000000Z"/>
+<entry
+   committed-rev="35"
+   name="doc++"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="da2216618ba17d49dd098383aa560bf2"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:14.000000Z"/>
+<entry
+   committed-rev="22"
+   name="CellManager.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2004-07-19T19:06:37.381100Z"
+   checksum="8fe3ef2e719e9d1c856a762053e23519"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:14.000000Z"/>
+<entry
+   committed-rev="43"
+   name="Cell.cpp"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="b3a4571672c8ffecfb58af398436b8cd"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:14.000000Z"/>
+<entry
+   committed-rev="1"
+   name="RandomManager.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="a8cb5d0930940590df97ee1262598955"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:14.000000Z"/>
+<entry
+   committed-rev="40"
+   name="defines.h"
+   text-time="2006-06-20T07:07:34.000000Z"
+   committed-date="2005-08-04T22:31:23.243622Z"
+   checksum="73256b0bade1f75459842a1dc3f3cd5c"
+   last-author="pqm"
+   kind="file"
+   prop-time="2006-06-20T07:07:14.000000Z"/>
+<entry
+   committed-rev="35"
+   name="main.cpp"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="ca513c1345e029ce0f376e6c6d8173c7"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:14.000000Z"/>
+<entry
+   committed-rev="33"
+   name="Random.h"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2005-01-24T20:59:20.355233Z"
+   checksum="2ef65d32bad38f63c182a2323fa29817"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:14.000000Z"/>
+<entry
+   committed-rev="36"
+   name="ncs5"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2005-05-02T16:39:01.419740Z"
+   checksum="af6c6bff87a359f3964d945439ce2c74"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:14.000000Z"/>
+<entry
+   name="parse"
+   kind="dir"/>
+<entry
+   committed-rev="1"
+   name="list"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="4c874f32916526d0b6d5baa7799a38f3"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:18.000000Z"/>
+<entry
+   committed-rev="1"
+   name="KillFile.cpp"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="ea55c6a3e8804b6e32da2d63a0bc4e73"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:18.000000Z"/>
+<entry
+   committed-rev="43"
+   name="Augmentation.cpp"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="3d751dfc17475a9f3c15ed17995e2eac"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:18.000000Z"/>
+<entry
+   committed-rev="43"
+   name="ncs5e"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="537b84f69400b847b51e76068132f6ad"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:18.000000Z"/>
+<entry
+   committed-rev="28"
+   name="CircleList.cpp"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2004-08-27T01:44:51.642346Z"
+   checksum="4381c6d15e20221e99f67bf06735c493"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:18.000000Z"/>
+<entry
+   committed-rev="43"
+   name="Compartment.h"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="a0ec04919507f73e7ceb453eab44e953"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:18.000000Z"/>
+<entry
+   committed-rev="22"
+   name="Input.cpp"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2004-07-19T19:06:37.381100Z"
+   checksum="638e6dee7bf793509f09e891dadbec96"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:18.000000Z"/>
+<entry
+   committed-rev="44"
+   name="Brain.h"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2005-10-27T20:17:38.649255Z"
+   checksum="bac698750ae2a7627523d985d39743ea"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:18.000000Z"/>
+<entry
+   committed-rev="14"
+   name="ActiveSynPtr.h"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2003-11-20T18:57:02.404474Z"
+   checksum="b6675a07291071f79c3ee2ee4c305b5c"
+   last-author="james"
+   kind="file"
+   prop-time="2006-06-20T07:07:18.000000Z"/>
+<entry
+   committed-rev="1"
+   name="DoStim.h"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="2130e4fd4cd1d8c86ffe1756153f56cd"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:18.000000Z"/>
+<entry
+   committed-rev="1"
+   name="Memory.cpp"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="b9b94e752977e54c0c82f06c0e5b0417"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:18.000000Z"/>
+<entry
+   committed-rev="1"
+   name="ActiveSyn.h"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="c26bbe06a833c8d60b6195c5efebe889"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:19.000000Z"/>
+<entry
+   committed-rev="1"
+   name="RandomManager.cpp"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="d6c5e6f2a6ccf93309035323896631a5"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:19.000000Z"/>
+<entry
+   committed-rev="12"
+   name="README"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="c64170edd6e99e825d7c3d449eeb028a"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:19.000000Z"/>
+<entry
+   committed-rev="19"
+   name="Channel.h"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2004-03-16T22:26:16.677713Z"
+   checksum="d154edb688bd88bf25a9fd9191f99770"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:19.000000Z"/>
+<entry
+   committed-rev="38"
+   name="InitStruct.h"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2005-07-11T22:32:36.423370Z"
+   checksum="247afc4b5b404847209ff0e99b79a5b1"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:19.000000Z"/>
+<entry
+   committed-rev="1"
+   name="File.cpp"
+   text-time="2006-06-20T07:07:35.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="e75c7c08e27d9acf8104ef7fa0a406fc"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:19.000000Z"/>
+<entry
+   committed-rev="1"
+   name="InputInfo.h"
+   text-time="2006-06-20T07:07:36.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="64543d06415072c4ac70f71c51f3457b"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:19.000000Z"/>
+<entry
+   committed-rev="1"
+   name="BuildBrain.h"
+   text-time="2006-06-20T07:07:36.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="61dd905b3308706d0741741281a58f8a"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:19.000000Z"/>
+<entry
+   committed-rev="48"
+   name="Synapse.cpp"
+   text-time="2006-06-20T07:07:36.000000Z"
+   committed-date="2005-11-21T22:03:05.691700Z"
+   checksum="fa1891e5cce7848fb76464f80b494cb2"
+   last-author="pqm"
+   kind="file"
+   prop-time="2006-06-20T07:07:19.000000Z"/>
+<entry
+   committed-rev="45"
+   name="MessageManager.h"
+   text-time="2006-06-20T07:07:36.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="628ecbac02afdd55e911bf2b3846c8d1"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:19.000000Z"/>
+<entry
+   name="documentation"
+   kind="dir"/>
+<entry
+   committed-rev="45"
+   name="Message.h"
+   text-time="2006-06-20T07:07:36.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="b04f79cc313a29af5b8a07663f7389f0"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:32.000000Z"/>
+<entry
+   committed-rev="43"
+   name="Compartment.cpp"
+   text-time="2006-06-20T07:07:36.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="171a1902294797806ed9b9ac810da849"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:32.000000Z"/>
+<entry
+   committed-rev="44"
+   name="Connector.cpp"
+   text-time="2006-06-20T07:07:36.000000Z"
+   committed-date="2005-10-27T20:17:38.649255Z"
+   checksum="6be0589bf70c6a2e272c1ac0ce821ebf"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:32.000000Z"/>
+<entry
+   committed-rev="35"
+   name="GCList.h"
+   text-time="2006-06-20T07:07:36.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="c17346f9475e7cfc07cf60281f15d757"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:32.000000Z"/>
+<entry
+   committed-rev="20"
+   name="Stimulus.h"
+   text-time="2006-06-20T07:07:36.000000Z"
+   committed-date="2004-05-18T21:25:08.475803Z"
+   checksum="ab6e7e345cfe53c66dc600fbb9fb59b7"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:32.000000Z"/>
+<entry
+   committed-rev="14"
+   name="Options.cpp"
+   text-time="2006-06-20T07:07:36.000000Z"
+   committed-date="2003-11-20T18:57:02.404474Z"
+   checksum="a2f6e57cb2122ecfcf211a3d382ba451"
+   last-author="james"
+   kind="file"
+   prop-time="2006-06-20T07:07:32.000000Z"/>
+<entry
+   committed-rev="45"
+   name="Brain.cpp"
+   text-time="2006-06-20T07:07:36.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="84a959f8c8f80ad77781ccfd984d1fa7"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:32.000000Z"/>
+</wc-entries>

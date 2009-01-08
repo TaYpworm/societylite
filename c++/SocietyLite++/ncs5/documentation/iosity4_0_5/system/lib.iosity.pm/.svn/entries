@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="12"
+   name=""
+   committed-date="2003-10-28T19:24:24.978320Z"
+   url="file:///home/svn/repository-new/ncs5/documentation/iosity4_0_5/system/lib.iosity.pm"
+   last-author="king"
+   kind="dir"
+   uuid="49b161a2-e7c6-0310-900c-e758ba94e43e"
+   revision="48"/>
+<entry
+   committed-rev="12"
+   name="fileio.pm"
+   text-time="2006-06-20T07:07:29.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="3c4b0cf0a7f3c5adb1fd3d060a070741"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:28.000000Z"/>
+<entry
+   committed-rev="12"
+   name="location.pm"
+   text-time="2006-06-20T07:07:29.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="6ee0996b381a6c1add20f902f3662dc8"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:28.000000Z"/>
+<entry
+   committed-rev="12"
+   name="objects.pm"
+   text-time="2006-06-20T07:07:29.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="88c3426b0004812eb57ce8027ad5bd64"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:28.000000Z"/>
+<entry
+   committed-rev="12"
+   name="parameters.pm"
+   text-time="2006-06-20T07:07:29.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="8e3ffc4c0d848a9ad226d4d50b69cb2c"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:28.000000Z"/>
+</wc-entries>

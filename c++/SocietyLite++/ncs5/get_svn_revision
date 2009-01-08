@@ -1,0 +1,64 @@
+#!/usr/bin/perl
+
+# This is a script to get the svn revision number and use it to make a version.h
+# file that can be included in ncs.
+# NOTE: to get the correct revision number in an executable, you must of course
+# do a make AFTER committing changes to svn. - JF
+
+require 5.002;
+use strict;
+
+my ($i, $rev, $oldrev, $rdate, $rtime, $line, @lines, @words);
+
+# get revision number from svn
+
+@lines = `svn info`;
+chomp (@lines);
+
+foreach $line (@lines)
+{
+  @words = split (" ", $line);
+  if ($words [0] eq "Revision:")
+  {
+    $rev = $words [1];
+  }
+  if ($words [0] eq "Last")
+  {
+    if (($words [1] eq "Changed") && ($words [2] eq "Date:"))
+    {
+      $rdate = $words [3];
+      $rtime = $words [4];
+    }
+  }
+}
+
+# get current rev from version.h
+
+open (INPUT, "<version.h");
+@lines = <INPUT>;
+close (INPUT);
+chomp (@lines);
+
+foreach $line (@lines)
+{
+# print ("Line = '", $line, "'\n");
+  @words = split (" ", $line);
+# print ("word = '", $words [4], "'\n");
+  if ($words [4] eq "rev")
+  {
+    $oldrev = $words [5];
+  }
+}
+
+print ("rev = ", $rev, ", oldrev = ", $oldrev, "\n");
+
+if ($rev ne $oldrev)
+{
+  open (OUTPUT, ">version.h");
+  select (OUTPUT);
+  print ("#define VERSION \"NCS4, svn rev ", $rev. " on ", $rdate, " at ", $rtime, "\"\n");
+  close (OUTPUT);
+
+  select (STDOUT);
+  print ("version.h updated\n");
+}

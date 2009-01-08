@@ -1,0 +1,151 @@
+package com.society;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.nio.ByteBuffer;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
+import java.nio.channels.SocketChannel;
+import java.util.Iterator;
+
+public class StreamSocketManager implements Runnable {
+	private int recvBufferSize;
+	private CommonObjects shared;
+	private ServerSocketChannel server;
+	private Selector selector;
+	private SelectionKey serverKey;
+	private byte[] recvData;
+	private ByteBuffer recvBuffer;
+	
+	StreamSocketManager(CommonObjects shared) throws IOException {
+		this.shared = shared;
+		selector = Selector.open();
+		
+		server = ServerSocketChannel.open();
+		server.configureBlocking(false);
+		server.socket().bind(new InetSocketAddress(shared.getTCPListenPort()));
+		recvBufferSize = server.socket().getReceiveBufferSize();
+		
+		serverKey = server.register(selector, SelectionKey.OP_ACCEPT);
+		
+		recvData = new byte[recvBufferSize];
+		recvBuffer = ByteBuffer.wrap(recvData);
+//		recvBuffer = ByteBuffer.allocateDirect(recvBufferSize);
+//		recvBuffer.order(ByteOrder.BIG_ENDIAN);
+	}
+
+	public void run() {
+		Iterator iter;
+		SelectionKey key;
+		SocketChannel client;
+		int bytesRead;
+		int bytesRemaining = 0;
+		SocietyPacket outPacket = null;
+		
+		for ( ; ; ) {
+			try {
+				selector.select();
+				iter = selector.selectedKeys().iterator();
+
+				while (iter.hasNext()) {
+					key = (SelectionKey) iter.next();
+					iter.remove();
+
+					if (key == serverKey) {
+						if (key.isAcceptable()) {
+							client = server.accept();
+							client.configureBlocking(false);
+//							SelectionKey clientkey = client.register(selector, SelectionKey.OP_READ);
+							client.register(selector, SelectionKey.OP_READ);
+							shared.activeConnections.add(client);
+						}
+					} else {
+						if (key.isValid() && key.isReadable()) {
+							client = (SocketChannel) key.channel();
+							recvBuffer.clear();
+							bytesRead = client.read(recvBuffer);
+							
+							//System.out.println("bytesRead: " + bytesRead);
+							
+							if (bytesRead == -1) {
+								// find client in tables and remove
+								System.out.println("num connections" + shared.activeConnections.size());
+								shared.activeConnections.remove(client);
+								System.out.println("num connections" + shared.activeConnections.size());
+								client.close();
+								key.cancel();
+							} else {
+								recvBuffer.flip();
+
+								while (recvBuffer.remaining() > 0) {
+									if (outPacket == null) {
+
+										//System.out.println("start " + recvBuffer.remaining());
+
+										recvData = new byte[SocietyPacket.headerSize];
+										recvBuffer.get(recvData, 0, recvData.length);
+
+										//System.out.println("++" + DevelUtils.byteArrayToHexString(recvData));
+
+										outPacket = new SocietyPacket(recvData.length, recvData, Protocol.TCP);
+
+										bytesRemaining = outPacket.payloadSize;
+										//System.out.println("bremaining: " + bytesRemaining);
+										//System.out.println("rremaining: " + recvBuffer.remaining());
+										if (bytesRemaining > 0) {
+											if (bytesRemaining > recvBuffer.remaining()) {
+												recvData = new byte[recvBuffer.remaining()];
+											} else {
+												recvData = new byte[bytesRemaining];	
+											}
+											client.read(recvBuffer);
+											recvBuffer.flip();
+											recvBuffer.get(recvData, 0, recvData.length);
+											outPacket.appendToPayload(recvData);
+											bytesRemaining -= recvData.length;
+										}
+										//System.out.println("bremaining: " + bytesRemaining);
+										//System.out.println("rremaining: " + recvBuffer.remaining());
+									} else {
+										if (bytesRemaining < recvBuffer.remaining()) {
+											recvData = new byte[bytesRemaining];
+										} else {
+											recvData = new byte[recvBuffer.remaining()];	
+										}
+										recvBuffer.get(recvData, 0, recvData.length);
+										outPacket.appendToPayload(recvData);
+										bytesRemaining -= recvData.length;
+										//System.out.println("++bremaining: " + bytesRemaining);
+										//System.out.println("++rremaining: " + recvBuffer.remaining());
+									}
+
+									if (bytesRemaining == 0) {
+										outPacket.priority -= 1;
+										if (outPacket.priority > -1) {
+											shared.societyMessageQueue.add(Pair.create(outPacket, client));
+											System.out.println("size: " + shared.societyMessageQueue.size());
+//											outPacket = null;
+											bytesRemaining = 0;
+											System.out.println(DevelUtils.byteArrayToHexString(outPacket.data));
+										}
+										outPacket = null;
+										
+									}
+									//System.out.println("final " + recvBuffer.remaining());
+								}
+								recvBuffer.clear();
+							} 
+						} 
+					}
+				} 
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (PacketException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}	
+}

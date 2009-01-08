@@ -1,0 +1,14 @@
+<->
+COLUMN_SHELL<,>N/A<,>Indicates the start of a Column Shell definition area<;>
+TYPE<,>name (string)<,>The name which is used to refer to this object<;>
+WIDTH<,>value (real)<,>The width (or radius) of the column (units?)<;>
+HEIGHT<,>value (real)<,>The height of the column (units?)<;>
+LOCATION<,>x (real) y (real)<,>The x, y coordinates of the column<;>
+END_COLUMN_SHELL<,>N/A<,>Indicates the end of a column shell definition section<;>
+<->
+COLUMN_SHELL
+        TYPE                    VIshell
+        WIDTH                   300
+        HEIGHT                  800
+        LOCATION                0               800
+END_COLUMN_SHELL

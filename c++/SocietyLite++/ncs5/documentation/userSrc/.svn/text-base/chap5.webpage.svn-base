@@ -1,0 +1,7 @@
+Chapter
+global
+packages/Table,packages/Navigator,packages/LastUpdated,packages/Section
+#page Title<=>Chapter 5: Compartments<;>
+#page Navigator<=><#Navigator "name","TOC.database",5><;>
+#page LastUpdated<=><#LastUpdated "lastupdate"><;>
+#page Body<=><#Section "subsection","TOC.database",5><;>

@@ -1,0 +1,73 @@
+################################################################################
+#   ObjectBasecode.object - Object Code Foundation (Built-in Object) in
+#   IOsity v4.0
+#   Copyright (C) 2001, 2002  Brian Westphal
+#   
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2 of the License, or
+#   (at your option) any later version.
+#   
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#   
+#   You should have received a copy of the GNU General Public License
+#   along with this program; if not, write to the Free Software
+#   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+################################################################################
+
+#Parsing parameters from $VARIABLES {"#PARAM Parameters"} - occurs onload
+if (!exists ($VARIABLES {"#PARAM Location"})) { $VARIABLES {"#PARAM Location"} = ""; }
+
+if (exists ($VARIABLES {"#PARAM Parameters"}))
+{
+	my @params = split (",", $VARIABLES {"#PARAM Parameters"});
+	foreach my $param (@params)
+	{
+		my @parse = split ("=", $param);
+
+		$parse[0] =~ s/\+/ /g;
+		$parse[0] =~ s/%(..)/pack("c", hex($1))/ge;
+		$parse[1] =~ s/\+/ /g;
+		$parse[1] =~ s/%(..)/pack("c", hex($1))/ge;
+		$VARIABLES {"#PARAM " . $parse[0]} = $parse[1];
+	}
+}
+$VARIABLES {"#PARAM Parameters"} = "";
+
+sub AddParameter ()
+{
+	if ($VARIABLES {"#PARAM Parameters"} ne "")
+	{
+		 $VARIABLES {"#PARAM Parameters"} .= ",";
+	}
+	$VARIABLES {"#PARAM Parameters"} .= $_[0] . "=" . $_[1];
+}
+
+sub object_ObjectBasecode ()
+{
+	return "<SCRIPT LANGUAGE=\"JavaScript\">
+		<!--
+			function SendEvent (object, event, value)
+			{
+				document.iosity_form.SendEvent_On.value     = \"true\";
+				document.iosity_form.SendEvent_Object.value = object;
+				document.iosity_form.SendEvent_Event.value  = event;
+				document.iosity_form.SendEvent_Value.value  = value;
+				document.iosity_form.submit ();
+			}
+		//-->
+		</SCRIPT>
+
+		<FORM NAME=\"iosity_form\" ACTION=\"<#mainscript>\" METHOD=POST>
+			<INPUT TYPE=HIDDEN NAME=\"Location\"   VALUE=\"<#PARAM Location>\">
+			<INPUT TYPE=HIDDEN NAME=\"Parameters\" VALUE=\"<#PARAM Parameters>\">
+
+			<INPUT TYPE=HIDDEN NAME=\"SendEvent_On\"     VALUE=\"\">
+			<INPUT TYPE=HIDDEN NAME=\"SendEvent_Object\" VALUE=\"\">
+			<INPUT TYPE=HIDDEN NAME=\"SendEvent_Event\"  VALUE=\"\">
+			<INPUT TYPE=HIDDEN NAME=\"SendEvent_Value\"  VALUE=\"\">
+		</FORM>";
+}

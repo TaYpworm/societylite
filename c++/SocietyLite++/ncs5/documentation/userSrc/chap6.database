@@ -1,0 +1,15 @@
+Channels line the cell membrane and influence the cell's behavior. There are many types of channels. So far, three channels from the K+ family have been implemented in NCS. These are the m-channel, the a-channel, and the ahp-channel abbreviated Km, Ka, and Kahp, respectively. 
+<->
+CHANNEL<,>family (string)<,>Starts a channel definition section.  The family value given indicates what kind of channel is to be created.<BR>  The current available choices are Km, Ka, and Kahp.  Each has some exclusive parameters listed in each's subsection.<BR> More families will be added at a later date.<;>
+TYPE<,>name (string)<,>The name which this channel will be refered to in the input file<;>
+M_INITIAL<,>mean (real) stdev (real)<,>The activating (m) value of the channel<;>
+M_POWER<,>mean (real) stdev (real)<,>When the m value is used, it is raised by the M_POWER<BR>
+<CENTER>m^M_POWER</CENTER><;>
+REVERSAL_POTENTIAL<,>mean (real) stdev (real)<,>Used in calculating a channel's current status.<BR>
+ Its contribution to the equations is determined by Channel type<;>
+UNITARY_G<,>mean (real) stdev (real)<,>Used in calculating a channel's current status.<BR>
+ Is used as a multiplier for all Channels.<;>
+STRENGTH<,>mean (real) stdev (real)<,>Used in calculating a channel's current status.<BR>
+ Is used as a multiplier for all Channels.<;>
+END_CHANNEL<,>N/A<,>Indicates the completion of a channel definition section.<;>
+<->

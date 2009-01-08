@@ -1,0 +1,255 @@
+package com.society;
+
+import static org.junit.Assert.*;
+
+import java.util.Arrays;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class SocietyPacketTest {
+	byte identRight;
+	byte identWrong;
+	short packetType;
+	int sequenceNumber;
+	byte priority;
+	byte moreFragments;
+	int payloadSize;
+	byte[] source;	
+	byte[] data;
+	Addressing testDigest;
+	
+	SocietyPacket control;
+	
+	
+	@Before
+	public void setUp() throws Exception {
+		identRight = (byte) 0xAA;
+		identWrong = (byte) 0xAF;
+		packetType = (short) PacketType.Hello.ordinal();
+		sequenceNumber = 2;
+		priority = (byte) 0x02;
+		moreFragments = (byte) 0x01;
+		
+		testDigest = new Addressing();
+		source = testDigest.digest("test");
+		
+		payloadSize = 6789;
+		data = new byte[payloadSize];
+		for(int i = 0; i < payloadSize; i++) {
+			if (i % 2 == 0) {
+				data[i] = (byte) 1;
+			}
+		}
+		control = SocietyPacket.create(payloadSize + SocietyPacket.headerSize);
+		control.ident = identRight;
+		control.packetType = packetType;
+		control.payloadSize = payloadSize;
+		control.sequenceNumber = sequenceNumber;
+		control.priority = priority;
+		control.moreFragments = moreFragments;
+		control.source = source;
+		control.data = data;
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		testDigest = null;
+		source = null;
+		data = null;
+	}
+
+	@Test
+	public void testCreateByteArray() {
+		try {
+			SocietyPacket testMe = SocietyPacket.create(control.serialize(), Protocol.NULL);
+			checkPacketConsistency(testMe);
+		} catch (PacketException e) {
+			fail("Packet creation should not have failed");
+		}
+		try {
+			SocietyPacket.create(new byte[12], Protocol.NULL);
+			fail("Create should have thrown exception: initializing array is smaller than a Society header");
+		} catch (PacketException e) {
+			// Expected behavior
+		}
+		
+		try {
+			SocietyPacket.create(new byte[33], Protocol.NULL);
+			fail("Create should have thrown exeption: initializing array is not a SocietyPacket type");
+		} catch (PacketException e) {
+			// Expected behavior
+		}
+	}
+
+	@Test
+	public void testCreateInt() {
+		
+		SocietyPacket testMe;
+		try {
+			testMe = SocietyPacket.create(1234);
+			assertEquals("ident is not equal", SocietyPacket.identifier, testMe.ident);
+			assertEquals("packetSize is not equal", 1234, testMe.getPacketSize());
+			assertEquals("payloadSize is not equal", 1234 - SocietyPacket.headerSize, testMe.payloadSize);
+			assertEquals("data size not equal", 1234 - SocietyPacket.headerSize, testMe.data.length);
+		} catch (PacketException e) {
+			// TODO Auto-generated catch block
+			fail("Should not have failed");
+		}
+		try {
+			testMe = SocietyPacket.create(10);
+			fail("Should have thrown");
+		} catch (PacketException e) {
+		}
+	}
+
+	@Test
+	public void testCreateIntByteArray() {
+		SocietyPacket testMe;
+		try {
+			testMe = SocietyPacket.create(control.getPacketSize(), control.serialize(), Protocol.NULL);
+			checkPacketConsistency(testMe);
+		} catch (PacketException e) {
+			fail("Packet creation should not have failed");
+		}
+		try {
+			testMe = SocietyPacket.create(control.getPacketSize() + 100, control.serialize(), Protocol.NULL);
+			// More tests here
+		} catch (PacketException e) {
+			fail("Packet creation should not have failed");
+		}
+		try {
+			testMe = SocietyPacket.create(20, new byte[10], Protocol.NULL);
+			fail("Packet creation should have failed");
+		} catch (PacketException e) {
+		}
+		try {
+			testMe = SocietyPacket.create(6788, control.serialize(), Protocol.NULL);
+			fail("Packet creation should have failed");
+		} catch (PacketException e) {
+		}
+		try {
+			testMe = SocietyPacket.create(50, new byte[40], Protocol.NULL);
+			fail("Packet creation should have failed (not a Society packet");
+		} catch (PacketException e) {
+		}
+	}
+
+	@Test
+	public void testAppendToPayload() {
+		byte[] one, two;
+		one = new byte[5010];
+		two = new byte[1779];
+		System.arraycopy(control.data, 0, one, 0, 5010);
+		System.arraycopy(control.data, 5010, two, 0, 1779);
+		SocietyPacket testMe;
+		try {
+			testMe = SocietyPacket.create(payloadSize + SocietyPacket.headerSize);
+			assertEquals("Appended data not equal", 5010, testMe.appendToPayload(0, one));
+			assertEquals("Appended data not equal", 1779, testMe.appendToPayload(0, two));
+			testMe.ident = identRight;
+			testMe.packetType = packetType;
+			testMe.payloadSize = payloadSize;
+			testMe.sequenceNumber = sequenceNumber;
+			testMe.priority = priority;
+			testMe.moreFragments = moreFragments;
+			testMe.source = source;
+			checkPacketConsistency(testMe);
+			
+			testMe = SocietyPacket.create(payloadSize + SocietyPacket.headerSize);
+		} catch (PacketException e) {
+			// TODO Auto-generated catch block
+			fail("Should not have failed");
+		}
+		
+		one = new byte[8192];
+		for(int i = 0; i < 8192; i++) {
+			if (i % 2 == 0) {
+				one[i] = (byte) 1;
+			}
+		}
+		byte[] pack0 = new byte[4096 - SocietyPacket.headerSize];
+		byte[] pack1 = new byte[4096 - SocietyPacket.headerSize];
+		byte[] pack2 = new byte[4096 - SocietyPacket.headerSize];
+		
+		int bytesLeft = 8192;
+		System.arraycopy(one, 0, pack0, 0, pack0.length);
+		bytesLeft -= pack0.length;
+		System.arraycopy(one, pack0.length, pack1, 0, pack1.length);
+		bytesLeft -= pack1.length;
+		System.arraycopy(one, pack0.length * 2, pack2, 0, bytesLeft);
+		
+		try {
+			SocietyPacket packet0 = SocietyPacket.create(4096);
+			SocietyPacket packet1 = SocietyPacket.create(4096);
+			SocietyPacket packet2 = SocietyPacket.create(4096);
+			
+			int offset = packet0.appendToPayload(0, one);
+			offset += packet1.appendToPayload(offset, one);
+			offset += packet2.appendToPayload(offset, one);
+			assertEquals("Offset not equal", 8192, offset);
+			assertEquals("packet0 data not equal", true, Arrays.equals(pack0, packet0.data));
+			assertEquals("packet1 data not equal", true, Arrays.equals(pack1, packet1.data));
+			assertEquals("packet2 data not equal", true, Arrays.equals(pack2, packet2.data));
+		} catch (PacketException e) {
+			fail("Should not have failed");
+		}
+		
+	}
+
+	@Test
+	public void testSerialize() {
+		try {
+			SocietyPacket testMe = SocietyPacket.create(control.serialize(), Protocol.NULL);
+			checkPacketConsistency(testMe);
+		} catch (PacketException e) {
+			fail("Should not have failed");
+		}
+		
+	}
+
+	@Test
+	public void testPad() {
+		byte[] newData = new byte[8192 - SocietyPacket.headerSize];
+		System.arraycopy(control.data, 0, newData, 0, control.data.length);
+		SocietyPacket testMe;
+		try {
+			testMe = SocietyPacket.create(control.serialize(), Protocol.NULL);
+			testMe.pad(8192);
+			assertEquals("Data not equal", true, Arrays.equals(newData, testMe.data));
+		} catch (PacketException e) {
+			fail("Should not have failed");
+		}
+		try {
+			testMe = SocietyPacket.create(4096);
+			testMe.pad(16);
+			fail("Should have thrown exception");
+		} catch(PacketException e) {
+		}
+	}
+
+	@Test
+	public void testIsSocietyPacket() {
+		try {
+			SocietyPacket testMe = SocietyPacket.create(control.serialize(), Protocol.NULL);
+			assertEquals("Is a society packet", true, testMe.isSocietyPacket());
+			testMe.ident = identWrong;
+			assertEquals("Is not a society packet", false, testMe.isSocietyPacket());
+		} catch (PacketException e) {
+			fail("Should not have thrown exception");
+		}
+	}
+
+	public void checkPacketConsistency(SocietyPacket testMe) {
+		assertEquals("Ident is not equal", control.ident, testMe.ident);
+		assertEquals("packetType is not equal", control.packetType, testMe.packetType);
+		assertEquals("payloadSize is not equal", control.payloadSize, testMe.payloadSize);
+		assertEquals("sequenceNumber is not equal", control.sequenceNumber, testMe.sequenceNumber);
+		assertEquals("priority is not equal", control.priority, testMe.priority);
+		assertEquals("moreFragments is not equal", control.moreFragments, testMe.moreFragments);
+		assertEquals("source is not equal", true, Arrays.equals(control.source, testMe.source));
+		assertEquals("data is not equal", true, Arrays.equals(control.data, testMe.data));
+	}
+}

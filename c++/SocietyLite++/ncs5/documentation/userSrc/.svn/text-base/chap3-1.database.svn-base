@@ -1,0 +1,12 @@
+<->
+LAYER_SHELL<,>N/A<,>Indicates the start of a layer shell definition section<;>
+TYPE<,>name (string)<,>The name which will be used to refer to this layer shell<;>
+LOWER<,>value (real)<,>Layers are placed in columns based on percentages.  The LOWER value represents where on the Column this Layer will begin.  Ex. A value of 35 means that the Layer will begin at .35*the Column's height<;>
+UPPER<,>value (real)<,>Layers are placed in columns based on percentages.  The UPPER value represents where on the Column this Layer will end.  Ex. A value of 35 means that the Layer will end at .35*the Column's height.<;>
+END_LAYER_SHELL<,>N/A<,>Indicates the End of a layer shell definition section<;>
+<->
+LAYER_SHELL
+        TYPE                    layer_shell_A
+        LOWER                   0
+        UPPER                   35
+END_LAYER_SHELL

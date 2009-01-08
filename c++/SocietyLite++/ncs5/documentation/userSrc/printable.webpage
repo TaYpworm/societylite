@@ -1,0 +1,6 @@
+printable
+global
+packages/Table,packages/Navigator,packages/LastUpdated,packages/printable,packages/Section
+#page Navigator<=><#Navigator "name","TOC.database",0><;>
+#page LastUpdated<=><#LastUpdated "lastupdate"><;>
+#page FullText<=><#printable "printable","TOC.database"><;>

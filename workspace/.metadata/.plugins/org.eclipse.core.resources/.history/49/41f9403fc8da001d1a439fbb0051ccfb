@@ -1,0 +1,62 @@
+package com.society;
+
+import static org.junit.Assert.*;
+
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.UnknownHostException;
+import java.util.ArrayList;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class BackboneHashTest {
+	BackboneHash control;
+	Addressing address;
+	
+	@Before
+	public void setUp() throws Exception {
+		control = new BackboneHash();
+		address = new Addressing();
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		control = null;
+		address = null;
+	}
+	
+	@Test
+	public void testPutBackbone() throws UnknownHostException {
+		UDPConnection UDPCon = new UDPConnection(address.digest("test"), new InetSocketAddress(InetAddress.getByName("192.168.0.1"), 12345));
+		control.putBackbone(address.digest("test"), UDPCon);
+		assertEquals("Number of backbones not equal", 1, control.numBackbones(address.digest("test")));
+		
+//		Should fail under this condition in future versions
+		control.putBackbone(address.digest("test"), UDPCon);
+		assertEquals("Number of backbones not equal", 2, control.numBackbones(address.digest("test")));
+	}
+
+	@Test
+	public void testGetBackbones() throws UnknownHostException {
+		UDPConnection UDPCon = new UDPConnection(address.digest("test"), new InetSocketAddress(InetAddress.getByName("192.168.0.1"), 12345));
+		control.putBackbone(address.digest("test"), UDPCon);
+		control.putBackbone(address.digest("test"), UDPCon);
+		
+		ArrayList<Connection> compare = new ArrayList<Connection>();
+		compare.add(UDPCon);
+		compare.add(UDPCon);
+		assertEquals("Lists of backbones not equal", true, compare.equals(control.getBackbones(address.digest("test"))));
+	}
+
+	@Test
+	public void testRemoveBackbones() throws UnknownHostException {
+		UDPConnection UDPCon = new UDPConnection(address.digest("test"), new InetSocketAddress(InetAddress.getByName("192.168.0.1"), 12345));
+		control.putBackbone(address.digest("test"), UDPCon);
+		control.putBackbone(address.digest("test"), UDPCon);
+		
+		assertEquals("List should be empty", 2, control.removeBackbones(address.digest("test")));
+	}
+
+}

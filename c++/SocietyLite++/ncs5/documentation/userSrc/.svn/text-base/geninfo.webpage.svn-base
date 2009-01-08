@@ -1,0 +1,41 @@
+Chapter
+global
+packages/Table,packages/Navigator,packages/LastUpdated,packages/Section
+#page Title<=>General Information<;>
+#page Navigator<=><#Navigator "name","TOC.database",0><;>
+#page LastUpdated<=><#LastUpdated "lastupdate"><;>
+#page Body<=>
+
+<P><B>Overview</B></P>
+<P>
+NCS is a brain simulator that allows large networks of many biologically realistic neurons to be constructed.  These networks are synaptically connected using an integrate-and-fire technique as described by the Hodkin-Huxley model. Recent experimental data suggests that spike-timing and membrane dynamics of biological neurons may encode information in a way not achievable using artificial neural networks (ANNs) or machine learning algorithms ( Mass, Bishop, et al. 1999).
+<BR><BR>
+NCS has been used to study multiple sensory pathways (audio and visual) simultaneously in order to cull out the synergistic properties common across modalities.  It has been used with the goal in mind of achieving some understanding of the organization principles of brain physiology that underlie human behavior, looking for insight about the sensory integration needed for higher-level processing.  Using multimodal investigations may take researchers a step closer to determining the high-level processes that occur in the brain, where higher-level processes include processes beyond the primary sensory areas (Maciokas, 2003).
+<BR><BR>
+For a more thorough description of NCS as used in research, please see our <A HREF="http://brain.cs.unr.edu/FILES_PHP/show_papers.php">papers & publications</A>.
+</P>
+
+<B>Putting comments into the input file</B><BR>
+<P>Comments can be made within the input file which NCS will ignore and skip over.  Comments are made using the pound symbol (#) and everything after them is ignored until the next line</P>
+
+<U>Example</U><BR>
+<PRE>
+
+#---This is a comment
+
+</PRE><BR>
+
+<B>Including other files</B><BR>
+<P>If you want to break up the input into multiple files, use the INCLUDE keyword followed by the name of the other file.  The INCLUDE keyword may be put anywhere inside the file as long as it is outside a block.
+</P>
+
+<TABLE>
+<TR><TD>INCLUDE<TD> name (string)<TD>Instructs NCS to also take input from the name of the file given</TR>
+</TABLE>
+
+<B>Units</B><BR>
+<P>
+When using NCS, many parameters have units in the real world. For example, electrical currents are used extensively in NCS and would use Amps.  These could be milliAmps, microAmp, nanoAmps, etc.  This distinction between different Amps (or any other unit) should not matter as long as they are used consistently.  As an additional note, in some places of the documentation, recommended units are specified.  These are the usits used typically by the University of Nevada, Reno, and may be ignored.
+</P>
+<BR>
+<;>

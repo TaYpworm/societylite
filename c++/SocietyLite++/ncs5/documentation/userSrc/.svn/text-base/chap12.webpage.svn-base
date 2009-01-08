@@ -1,0 +1,7 @@
+Chapter
+global
+packages/Table,packages/Navigator,packages/LastUpdated,packages/Section
+#page Title<=>Chapter 12: Synaptic Conductance<;>
+#page Navigator<=><#Navigator "name","TOC.database",12><;>
+#page LastUpdated<=><#LastUpdated "lastupdate"><;>
+#page Body<=><#Section "subsection","TOC.database",12><;>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="44"
+   name=""
+   committed-date="2005-10-27T20:17:38.649255Z"
+   url="file:///home/svn/repository-new/ncs5/parse"
+   last-author="king"
+   kind="dir"
+   uuid="49b161a2-e7c6-0310-900c-e758ba94e43e"
+   revision="48"/>
+<entry
+   committed-rev="40"
+   name="parse.y"
+   text-time="2006-06-20T07:07:16.000000Z"
+   committed-date="2005-08-04T22:31:23.243622Z"
+   checksum="db913f470f7ca87d998eea75dccb0df1"
+   last-author="pqm"
+   kind="file"
+   prop-time="2006-06-20T07:07:14.000000Z"/>
+<entry
+   committed-rev="1"
+   name="options.h"
+   text-time="2006-06-20T07:07:16.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="52083136896d4383e076c98aa993457b"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:14.000000Z"/>
+<entry
+   committed-rev="43"
+   name="proto.h"
+   text-time="2006-06-20T07:07:16.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="ca59dc9821f2e4abc96299220043579c"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:14.000000Z"/>
+<entry
+   committed-rev="43"
+   name="elements.c"
+   text-time="2006-06-20T07:07:16.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="80fc2584c84d7b71537cd1a7be7b3fd5"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="39"
+   name="defines.c"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2005-08-04T17:07:47.149191Z"
+   checksum="e3cc71467c2f0ac63a231447a89fde55"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="1"
+   name="maintst.c"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="f3eb4b8cfbc635006e7c3f03f50cc0b1"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="1"
+   name="elements.h"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="b56e36d181a848b398f7a476593d265a"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="35"
+   name="SymTree.c"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="674118d4898993a7c0f9bb3a9e64319e"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="1"
+   name="tdump.c"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="fcf9448c72f9ad3bcfb14a03f2b611a6"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="41"
+   name="ParseInput.c"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2005-08-08T23:33:33.802624Z"
+   checksum="bac43062243b32a476eb71312aede14c"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="1"
+   name="exist.c"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="d958a1f14c1f0b6abd432f98b7e0fb8c"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="44"
+   name="Makefile"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2005-10-27T20:17:38.649255Z"
+   checksum="6c92e7bb3c781cfc3ad5d467bfb9901c"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="1"
+   name="SymTree.h"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="d40b0ab9e087679f4cde277fa22ee873"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="1"
+   name="tree.c"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="728aed6b88170070b2e192b46fde0eea"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="43"
+   name="share.c"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="e016216834380dfc66e8294f05eae409"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="35"
+   name="input.h"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="0281110aacb6a6d38e7640796f855cb4"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="1"
+   name="tree.h"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="bf184e5fdb0fa0d6dfc4261404b7f9ab"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="1"
+   name="dump.c"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="6d317ebd56e3bd1f6788e05183c3224e"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="1"
+   name="printerr.c"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="15d0f68a76a70384caaf43bebf620688"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:15.000000Z"/>
+<entry
+   committed-rev="35"
+   name="arrays.h"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="68e01d2653662c56d915b5a8e0bd9aa1"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:16.000000Z"/>
+<entry
+   committed-rev="43"
+   name="ConvertIn.c"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="6fd62b012f2a35060ea5f732f8c8fd02"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="dump.h"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="190e7796c3f207020094f31fa9f74e85"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:16.000000Z"/>
+<entry
+   committed-rev="28"
+   name="FileStack.h"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2004-08-27T01:44:51.642346Z"
+   checksum="526e6a898f57187d3bf38d5b8f2eb832"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:16.000000Z"/>
+<entry
+   committed-rev="43"
+   name="ReadFile.c"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="694e7349b32b4945ce1e212a506c7d3b"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:16.000000Z"/>
+<entry
+   committed-rev="22"
+   name="list.c"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2004-07-19T19:06:37.381100Z"
+   checksum="ad50e8c676ddd6b8a239d61fccf3f789"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="ReadFile.h"
+   text-time="2006-06-20T07:07:18.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="c7c1543459027ed13f0046dd6629a1a5"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:16.000000Z"/>
+<entry
+   committed-rev="19"
+   name="list.h"
+   text-time="2006-06-20T07:07:17.000000Z"
+   committed-date="2004-03-16T22:26:16.677713Z"
+   checksum="6a0c502bb74a17348145cf63d0a750d6"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="file.h"
+   text-time="2006-06-20T07:07:18.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="0559e57b670a955bd3b5494720679d69"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:16.000000Z"/>
+<entry
+   committed-rev="35"
+   name="connect.c"
+   text-time="2006-06-20T07:07:18.000000Z"
+   committed-date="2005-03-17T20:55:36.790443Z"
+   checksum="2092dce11b6f58f38b0cec453fb98c5a"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:16.000000Z"/>
+<entry
+   committed-rev="1"
+   name="NameDefine.c"
+   text-time="2006-06-20T07:07:18.000000Z"
+   committed-date="2003-09-09T16:00:41.320286Z"
+   checksum="60b78e68b107518ffb3734cb5ff813c4"
+   last-author="svn"
+   kind="file"
+   prop-time="2006-06-20T07:07:16.000000Z"/>
+<entry
+   committed-rev="20"
+   name="FromLoadConvertIn.c"
+   text-time="2006-06-20T07:07:18.000000Z"
+   committed-date="2004-05-18T21:25:08.475803Z"
+   checksum="b2bbc35e38f0fc1c215fa738d3b54211"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:16.000000Z"/>
+<entry
+   committed-rev="40"
+   name="scan.l"
+   text-time="2006-06-20T07:07:18.000000Z"
+   committed-date="2005-08-04T22:31:23.243622Z"
+   checksum="f8e5fb19d544b132580c9ce657ee01cb"
+   last-author="pqm"
+   kind="file"
+   prop-time="2006-06-20T07:07:16.000000Z"/>
+</wc-entries>

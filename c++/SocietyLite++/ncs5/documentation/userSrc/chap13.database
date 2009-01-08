@@ -1,0 +1,11 @@
+When a compartment reaches threshold, it goes through a spike shape. This spike shape is considered a binary event due to its short duration 
+<->
+SPIKESHAPE<,>N/A<,>Indicates the start of a spike shape definition section<;>
+TYPE<,>name (string)<,>The name which will be used to refer to this object<;>
+VOLTAGES<,>values+ (reals)<,>The sequence of voltages to go through during a spike<;>
+END_SPIKESHAPE<,>N/A<,>Indicates the end of a spike shpe definition section<;>
+<->
+SPIKESHAPE
+        TYPE     AP_Hoff 
+        VOLTAGES -38 -35 -30 -20 -7 15 30 20 7 -8 -16 -22 -28 -33 -37 -40 -43 -45 -47 -49 -50
+END_SPIKESHAPE

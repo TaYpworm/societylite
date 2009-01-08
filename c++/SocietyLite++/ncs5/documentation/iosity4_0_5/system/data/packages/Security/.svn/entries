@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="12"
+   name=""
+   committed-date="2003-10-28T19:24:24.978320Z"
+   url="file:///home/svn/repository-new/ncs5/documentation/iosity4_0_5/system/data/packages/Security"
+   last-author="king"
+   kind="dir"
+   uuid="49b161a2-e7c6-0310-900c-e758ba94e43e"
+   revision="48"/>
+<entry
+   committed-rev="12"
+   name=".DS_Store"
+   text-time="2006-06-20T07:07:30.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="eebe2f41d9c79f66abe9bbb705acce8e"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:30.000000Z"/>
+<entry
+   committed-rev="12"
+   name="SecurityCheck.object"
+   text-time="2006-06-20T07:07:30.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="b83e4ec3306cb211363712335692e350"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:30.000000Z"/>
+<entry
+   committed-rev="12"
+   name="LoginControl.object"
+   text-time="2006-06-20T07:07:30.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="ebeffa1173d21f3ed21dafa0f7855f3a"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:30.000000Z"/>
+</wc-entries>

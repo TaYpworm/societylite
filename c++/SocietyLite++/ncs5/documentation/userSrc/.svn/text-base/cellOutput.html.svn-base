@@ -1,0 +1,58 @@
+<HTML>
+    <HEAD>
+        <TITLE>NCS Cell Coordinate Output</TITLE>
+    </HEAD>
+    <BODY>
+        <H2>Cell Position Output</H2>
+        <IMG src="images/position.png" align=right>
+        
+        When NCS required the distance between cells (for the computation of synaptic delays), the cells
+        needed to be assigned specific coordinates (x,y,z).  Cells are assigned their positions based on 
+        information from the input file.
+        
+        <H4>Column</H4>
+        The Column has an x, y coordinate pair for the center of the base<BR>
+        It also has width and height parameters. Width establishes the maximum
+        distance a cell can be from the center of the column. Height will be used
+        in conjunction with Layer parameters.
+        
+        <H4>Layer</H4>
+        The Layer puts limits on the height parameter of the Column.  It applies Upper and
+        Lower percentages to select a subset of the Column's height and limit a cell's z coordinate
+        to that subset.
+        
+        <H3>File Format</H3>
+        
+        <P>
+        Cluster names (Column Layer Cell)<BR>
+        Quantity<BR>
+        X1 Y1 Z1<BR>
+        X2 Y2 Z2<BR>
+        ...<BR>
+        </P>
+        
+        <H3>Sample Output</H3>
+        
+        <PRE>
+        AI_2 layer_A Excitatory
+        10
+        152.269189 84.083425 211.794936
+        171.985571 16.366993 107.380582
+        189.563639 89.994746 202.344912
+        25.150990 117.324285 176.857721
+        -31.719749 33.850431 182.425201
+        97.212167 85.557043 213.415451
+        195.109449 -11.024221 20.352047
+        132.736399 25.471048 76.973915
+        50.911572 109.898811 69.170888
+        141.460928 -10.055996 232.670297
+
+        AI_2 layer_B Excitatory s1
+        4
+        105.177596 49.708121 190.202994
+        206.749577 92.703610 107.559801
+        167.834700 26.900750 261.714011
+        42.969735 173.131987 196.333366
+        </PRE>
+    </BODY>
+</HTML>

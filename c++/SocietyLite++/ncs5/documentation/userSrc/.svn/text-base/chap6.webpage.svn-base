@@ -1,0 +1,7 @@
+Chapter
+global
+packages/Table,packages/Navigator,packages/LastUpdated,packages/Section
+#page Title<=>Chapter 6: Channels<;>
+#page Navigator<=><#Navigator "name","TOC.database",6><;>
+#page LastUpdated<=><#LastUpdated "lastupdate"><;>
+#page Body<=><#Section "subsection","TOC.database",6><;>

@@ -1,0 +1,294 @@
+package com.society;
+
+import java.lang.System;
+import java.util.Arrays;
+
+public class SocietyPacket {
+	static final int headerSize = 37;
+	static final byte identifier = (byte) 0xAA;
+	private int		packetSize;
+	private boolean headerInitialized	= false;
+	private int dataPosition;
+	private Protocol receivingProtocol;
+	
+	public byte 	ident				=	0;
+	public short 	packetType			= 	0;
+	public int		sequenceNumber		=	0;
+	public byte		priority			=	0;
+	public byte		moreFragments		= 	0;
+	public int		fragmentOffset		= 	0;
+	public int		payloadSize			=	0;
+	public byte[]	source				=	new byte[20];	
+	public byte[]	data;
+	
+	SocietyPacket() {
+		ident = (byte) 0xAA;
+		dataPosition = 0;
+		receivingProtocol = Protocol.NULL;
+	}
+	
+	SocietyPacket(int packetSize) throws PacketException {
+		if (packetSize < SocietyPacket.headerSize)
+			throw new PacketException("Packet size is too small");
+		ident = (byte) 0xAA;
+		this.packetSize = packetSize;
+		payloadSize = this.packetSize - headerSize;
+		data = new byte[payloadSize];
+		dataPosition = 0;
+		headerInitialized = true;
+		this.receivingProtocol = Protocol.NULL;
+	}
+	
+	SocietyPacket(byte[] byteArray, Protocol receivingProtocol) throws PacketException {
+		this(byteArray.length, byteArray, receivingProtocol);
+	}
+	
+	SocietyPacket(int arrayLength, byte[] byteArray, Protocol receivingProtocol) throws PacketException {
+		if (arrayLength < SocietyPacket.headerSize)
+			throw new PacketException("Packet size too small");
+		if (arrayLength < byteArray.length)
+			throw new PacketException("Packet size less than size of initializing array");
+		if (!isByteIdentifier(byteArray[0]))
+			throw new PacketException("Not a Society packet");
+		deserialize(byteArray);
+//		initHeader(byteArray);
+//		arrayLength -= headerSize;
+////		this.packetSize = packetSize;
+////		payloadSize = this.packetSize - headerSize;
+//		if (arrayLength > 0) {
+//			initPayload(headerSize, byteArray);
+//		}
+		this.receivingProtocol = receivingProtocol;
+	}
+	
+	static SocietyPacket create(byte[] byteArray, Protocol receivingProtocol) throws PacketException {
+		return new SocietyPacket(byteArray, receivingProtocol);
+	}
+	
+	static SocietyPacket create(int packetSize) throws PacketException {
+		return new SocietyPacket(packetSize);
+	}
+	
+	static SocietyPacket create(int packetSize, byte[] byteArray, Protocol receivingProtocol) throws PacketException {	
+		return new SocietyPacket(packetSize, byteArray, receivingProtocol);
+	}
+
+	
+	int appendToPayload(int offset, final byte[] byteArray) {
+		if (headerInitialized) {
+			if ((payloadSize - dataPosition) < (byteArray.length - offset)) {
+				// off by one?
+				int appendSize = payloadSize - dataPosition;
+				System.arraycopy(byteArray, offset, data, dataPosition, payloadSize - dataPosition);
+				dataPosition += appendSize;
+				return appendSize;
+			} else {
+				int appendSize = byteArray.length - offset;
+				System.arraycopy(byteArray, offset, data, dataPosition, byteArray.length - offset);
+				dataPosition += appendSize;
+				return appendSize;
+			}
+		}
+		return 0;
+	}
+	
+	int appendToPayload(byte[] byteArray) {
+		if (headerInitialized) {
+			System.out.println("HEADER OK");
+			System.out.println("p-d: " + (payloadSize - dataPosition) + "bl: " + byteArray.length);
+		}
+		if (headerInitialized && (payloadSize - dataPosition) >= byteArray.length) {
+			System.arraycopy(byteArray, 0, data, dataPosition, byteArray.length);
+			dataPosition += byteArray.length;
+			return byteArray.length;
+		}
+		return 0;
+	}
+	
+	byte[] serialize() {
+		byte[] byteArray = new byte[packetSize];
+		int offset = 0;
+		int n;
+		
+		byteArray[0] = ident;
+		offset++;
+		
+		for (n = offset; n < offset + 2; n++) {
+			byteArray[n] = (byte) ((packetType >> (8 - (n - offset) * 8)) & 0xFF);
+		}
+		offset = n;
+		
+		for (n = offset; n < offset + 4; n++) {
+			byteArray[n] = (byte) ((sequenceNumber >> (24 - (n-offset) * 8)) & 0xFF);
+		}
+		offset = n;
+		
+		byteArray[offset] = priority;
+		offset++;
+		
+		byteArray[offset] = moreFragments;
+		offset++;
+		
+		for (n = offset; n < offset + 4; n++) {
+			byteArray[n] = (byte) ((fragmentOffset >> (24 - (n-offset) * 8)) & 0xFF);
+		}
+		offset = n;
+		
+		for (n = offset; n < offset + 4; n++) {
+			byteArray[n] = (byte) ((payloadSize >> (24 - (n-offset) * 8)) & 0xFF);
+		}
+		offset = n;
+		
+		System.arraycopy(source, 0, byteArray, offset, source.length);
+		offset += source.length;
+		System.arraycopy(data, 0, byteArray, offset, data.length);
+	
+		return byteArray;
+	}
+	
+	void deserialize(byte[] byteArray) {
+		int offset = 0;
+		int n;
+
+		ident |= byteArray[0];
+		offset++;
+
+		for (n = offset; n < offset + 2; n++) {
+			packetType |= byteArray[n] & 0xFF;
+			if (n < offset + 1)
+				packetType <<= 8;
+		}
+		offset = n;
+
+		for (n = offset; n < offset + 4; n++) {
+			sequenceNumber |= byteArray[n] & 0xFF;
+			if (n < offset + 3)
+				sequenceNumber <<= 8;
+		}
+		offset = n;
+
+		priority = byteArray[offset];
+		offset++;
+
+		moreFragments = byteArray[offset];
+		offset++;
+
+		for (n = offset; n < offset + 4; n++) {
+			fragmentOffset |= byteArray[n] & 0xFF;
+			if (n < offset + 3)
+				fragmentOffset <<= 8;
+		}
+		offset = n;
+		
+		for (n = offset; n < offset + 4; n++) {
+			payloadSize |= byteArray[n] & 0xFF;
+			if (n < offset + 3)
+				payloadSize <<= 8;
+		}
+		offset = n;
+
+		System.arraycopy(byteArray, offset, source, 0, source.length);
+		offset += source.length;
+
+		data = new byte[payloadSize];
+		headerInitialized = true;
+		packetSize = headerSize + payloadSize;
+		dataPosition = 0;
+		
+		if (byteArray.length > headerSize) {
+			System.arraycopy(byteArray, headerSize, data, 0, byteArray.length - headerSize);
+			dataPosition += byteArray.length - headerSize;
+		}
+	}
+	
+	int pad(int desiredPacketSize) throws PacketException {
+		if (desiredPacketSize < packetSize) 
+			throw new PacketException("Desired packet size smaller than current packet size");
+		packetSize = desiredPacketSize;
+		payloadSize = desiredPacketSize - headerSize;
+		byte [] tmp = data;
+		data = new byte[payloadSize];
+		System.arraycopy(tmp, 0, data, 0, tmp.length);
+		return packetSize;
+	}
+	
+	static boolean isByteIdentifier(byte identByte) {
+		int result = identByte ^ identifier;
+		if (result != 0)
+			return false;
+		return true;
+	}
+	
+	int getPacketSize() {
+		return packetSize;
+	}
+	
+	Protocol getReceivingProtocol() {
+		return receivingProtocol;
+	}
+	
+	boolean isSocietyPacket() {
+		int result = ident ^ identifier;
+		if (result != 0)
+			return false;
+		return true;
+	}
+	
+	@Override
+	public int hashCode() {
+		final int PRIME = 31;
+		int result = super.hashCode();
+		result = PRIME * result + Arrays.hashCode(data);
+		result = PRIME * result + dataPosition;
+		result = PRIME * result + fragmentOffset;
+		result = PRIME * result + (headerInitialized ? 1231 : 1237);
+		result = PRIME * result + packetSize;
+		result = PRIME * result + packetType;
+		result = PRIME * result + payloadSize;
+		result = PRIME * result + ((receivingProtocol == null) ? 0 : receivingProtocol.hashCode());
+		result = PRIME * result + sequenceNumber;
+		result = PRIME * result + Arrays.hashCode(source);
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		final SocietyPacket other = (SocietyPacket) obj;
+		if (!Arrays.equals(data, other.data))
+			return false;
+		if (dataPosition != other.dataPosition)
+			return false;
+		if (fragmentOffset != other.fragmentOffset)
+			return false;
+		if (headerInitialized != other.headerInitialized)
+			return false;
+		if (ident != other.ident)
+			return false;
+		if (moreFragments != other.moreFragments)
+			return false;
+		if (packetSize != other.packetSize)
+			return false;
+		if (packetType != other.packetType)
+			return false;
+		if (payloadSize != other.payloadSize)
+			return false;
+		if (priority != other.priority)
+			return false;
+		if (receivingProtocol == null) {
+			if (other.receivingProtocol != null)
+				return false;
+		} else if (!receivingProtocol.equals(other.receivingProtocol))
+			return false;
+		if (sequenceNumber != other.sequenceNumber)
+			return false;
+		if (!Arrays.equals(source, other.source))
+			return false;
+		return true;
+	}
+}

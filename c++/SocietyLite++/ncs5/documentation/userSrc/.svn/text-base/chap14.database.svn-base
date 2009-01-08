@@ -1,0 +1,6 @@
+The cells being simulated from the brain need to receive outside information such as visual, audio, etc.
+This information would normally come from other parts of the brain, but if these areas are not being simulated, then the stimulus object allows for signals to be injected into the simulation. See Bottom of page for additional information.
+<->
+<->
+<->
+stimFileInput.html

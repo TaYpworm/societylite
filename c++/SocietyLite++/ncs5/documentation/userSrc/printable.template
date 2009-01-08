@@ -1,0 +1,13 @@
+<HTML>
+    <HEAD>
+        <TITLE>NCS User Documentation</TITLE>
+    </HEAD>
+    <BODY>
+        <#page Navigator>
+        <HR>
+        <#page FullText>
+        <#page Navigator>
+        <HR>
+        <#page LastUpdated>
+    </BODY>
+</HTML>

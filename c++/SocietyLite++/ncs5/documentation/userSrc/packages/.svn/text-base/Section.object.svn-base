@@ -1,0 +1,107 @@
+sub object_Section
+{
+    my $name = $_[0];
+    my $databasename = $_[1];
+    my $currentChapter = $_[2];
+    my $flag = $_[3];
+    my $output;
+    my $count = 1;
+    
+    #for each section of the chapter, output a desc, a table, and an example
+    
+    open( filehandle, $VARIABLES {"#workingdir"} . $databasename );
+    my @data = split( "<;>\n", join( "", (<filehandle>) ) );
+    close( filehandle );
+    
+    foreach my $record( @data )
+    {
+        if( $count == $currentChapter )
+        {
+            my @fields = split( "<,>", $record );
+            #$output.='<A HREF="chap'.$count.'.html">'.'Chapter '.$count.': '.$fields[0].'</A><BR>' . "\n";
+            # the main section
+            my $chapterDB = "chap".$currentChapter.".database";
+            open( filehandle, $VARIABLES {"#workingdir"} . $chapterDB );
+            my @section = split(  "<->\n", join ( "", (<filehandle>) ) );
+            close( filehandle );
+            
+            $output.=$section[0]."<HR>";
+            
+            if( $section[1] eq "" )
+            {
+            }
+            else
+            {
+                $output.=object_Table( "table", $chapterDB, $currentChapter );
+            }
+            if( $section[2] eq "" )
+            {
+            }
+            else
+            {
+                $output.="<P><U>Example</U></P>";
+                $output.="<PRE>".$section[2]."</PRE><HR>";
+            }
+            
+            #additional subsections (if any)
+            for (my $index=1; $index<@fields; $index++ )
+            {
+                #the anchor into this part of the page
+                my $pagelink = $fields[$index];
+                $fields[$index] =~ s/[^a-zA-Z0-9]//g;
+                $output.="<P>\n".'<A NAME="'.$fields[$index].'">'.'<B>'.$pagelink."</B></A>\n</P>";
+                
+                my $chapterDB = "chap".$currentChapter."-".$index.".database";
+                open( filehandle, $VARIABLES {"#workingdir"} . $chapterDB );
+                my @section = split(  "<->\n", join ( "", (<filehandle>) ) );
+                close( filehandle );
+                
+                # description
+                $output.=$section[0]."<HR>";
+
+                # keywords and values
+                $output.=object_Table( "table", $chapterDB, $currentChapter );
+
+                # is there an example?
+                if( $section[2] eq "" )
+                {
+                }
+                else
+                {
+                    $output.="<P><U>Example</U></P>";
+                    $output.="<PRE>".$section[2]."</PRE>";
+                }
+                $output.="<HR>";
+
+                # if I made a section[3], what would I do with it?
+                # if it contained a list of additional webpages and images,
+                #  those could be copied over to the output dir
+                # but for the printable version, they would not be correctly placed
+                # e.g. stimulus subsection 1 has a bonus page, but there is a subsection 2
+                #  that should be printed before that bonus page is printed to the printable doc
+            }
+
+            #section[3] of the parent chapter (i.e. not a subsection)
+            # do I still have access to my section[*]? Was it overwritten?
+            if( $section[3] eq "" )
+            {}
+            else
+            {
+              if( $flag == 1 ) #outputing for the printable
+              {
+                my @bonusFiles = split( "\n", $section[3] );
+                foreach my $bonus( @bonusFiles )
+                {
+                  #print file to printable html
+                  open( filehandle, $VARIABLES {"#workingdir"} . $bonus );
+                  $output.=join( "", (<filehandle>) );
+                  close( filehandle );
+                }
+              }
+            }
+        }
+        $count++;
+    }
+    
+    return $output;
+}

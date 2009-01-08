@@ -1,0 +1,52 @@
+package com.society;
+import static org.junit.Assert.*;
+
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class CommonObjectsTest {
+	CommonObjects master, test;
+
+	@Before
+	public void setUp() throws Exception {
+		master = CommonObjects.getInstance();
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		master = test = null;
+	}
+	
+	@Test
+	public void testGetInstance() {
+		test = CommonObjects.getInstance();
+		assertSame("Singleton pattern broken: two distinct CommonObjects exist", master, test);
+	}
+
+	@Test
+	public void testInitialize() throws NoSuchAlgorithmException, IOException {
+		master.initialize(10000, 10001, 10002, 10003, "localhost");
+		assertEquals("DatagramSize set/get incorrect", 10000, master.getDatagramSize());
+		assertEquals("UDPListenPort set/get incorrect", 10001, master.getUDPListenPort());
+		assertEquals("TCPListenPort set/get incorrect", 10002, master.getTCPListenPort());
+		assertEquals("mcastListenPort set/get incorrect", 10003, master.getMcastListenPort());
+		assertEquals("mcastIface set/get incorrect", "localhost", master.getMcastIface());
+	}
+
+	@Test
+	public void testGetTerminateFlag() {
+		assertEquals("TerminateFlag get incorrect", false, master.getTerminateFlag());
+	}
+
+	@Test
+	public void testSetTerminateFlag() {
+		master.setTerminateFlag(true);
+		assertEquals("TerminateFlag set incorrect", true, master.getTerminateFlag());
+	}
+
+}

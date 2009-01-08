@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="43"
+   name=""
+   committed-date="2005-10-04T21:12:13.047290Z"
+   url="file:///home/svn/repository-new/ncs5/documentation"
+   last-author="king"
+   kind="dir"
+   uuid="49b161a2-e7c6-0310-900c-e758ba94e43e"
+   revision="48"/>
+<entry
+   name="userDoc"
+   kind="dir"/>
+<entry
+   name="userSrc"
+   kind="dir"/>
+<entry
+   name="iosity4_0_5"
+   kind="dir"/>
+<entry
+   committed-rev="43"
+   name="Makefile"
+   text-time="2006-06-20T07:07:32.000000Z"
+   committed-date="2005-10-04T21:12:13.047290Z"
+   checksum="9637ef980fb0489a8d4d4c48fa54de99"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:31.000000Z"/>
+</wc-entries>

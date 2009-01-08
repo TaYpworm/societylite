@@ -1,0 +1,17 @@
+package com.society;
+
+public class SocketState {
+	int bytesRemaining;
+	
+	SocketState() {
+		bytesRemaining = 0;
+	}
+	
+	public int getBytesRemaining() {
+		return bytesRemaining;
+	}
+	
+	public void setBytesRemaining(int remaining) {
+		bytesRemaining = remaining;
+	}
+}

@@ -1,0 +1,35 @@
+
+Notes concerning generating the user documentation
+--------------------------------------------------
+
+The documentation can be generated using the Makefile by invoking
+
+make docs
+
+This will go into the directory: "documentation" and invoke a perl script.
+This script will take templates and data in the subdirectory "userSrc" to
+generate HTML pages which will be written to the subdirectory "userDoc"
+
+Required User Interaction
+--------------------------------------------------
+
+This build instruction is not completely self sufficient, yet.  To generate
+the documentation correctly, one file must be edited to specify the
+complete path to the documentation source files.
+
+This file is "userSrc/global.variables"
+
+There will be a line that looks similar to:
+
+#workingdir<=>/home/username/ncs/documentation/userSrc/<;>
+
+change the path to the current location, save the file, and then go back and invoke
+make docs.  
+
+After generation
+--------------------------------------------------
+
+After generating the documents, they can be uploaded to a server and viewed
+through any web browser.
+
+

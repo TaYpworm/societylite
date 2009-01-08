@@ -1,0 +1,19 @@
+Deprecated. General information to be used by a synapse.  These values have been added directly to the primary Synapse object.
+<->
+SYN_DATA<,>N/A<,>Indicates the start of a Data definition section<;>
+TYPE<,>name (string)<,>The name which will be used to refer to this object<;>
+SEED<,>value (integer)<,>The random number generator will use the value as the seed<;>
+MAX_CONDUCT<,>value (real)<,>Used with SYN_REVERSAL in calculating the current value of a PSG waveform<BR>
+<Center> I(t) = MAX_CONDUCT * CurrentPSGValue * (SYN_REVERSAL - Membrane Voltage)</CENTER><;>
+DELAY<,>mean (real) stdev (real)<,>Before a synapse will output a new waveform, it will wait for the specified DELAY to expire.  This value is given in seconds and will be converted using the <A HREF = "chap01.html">FSV</A>.<;>
+SYN_REVERSAL<,>mean (real) stdev (real)<,>Used with MAX_CONDUCT in calculating the current value of a PSG waveform<BR>
+<Center> I(t) = MAX_CONDUCT * CurrentPSGValue * (SYN_REVERSAL - Membrane Voltage)</CENTER><;>
+END_SYN_DATA<,>N/A<,>Indicates the end of a Data definition section<;>
+<->
+SYN_DATA
+        TYPE                    Data3
+        SEED                    999999
+        MAX_CONDUCT             0.005
+        DELAY                   0.0008             0
+        SYN_REVERSAL            -90             0
+END_SYN_DATA

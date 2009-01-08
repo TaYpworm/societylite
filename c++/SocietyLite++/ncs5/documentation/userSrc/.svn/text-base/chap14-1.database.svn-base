@@ -1,0 +1,46 @@
+<->
+STIMULUS<,>N/A<,>Indicates the beginning of a stimulus definition section<;>
+TYPE<,>name (string)<,>The name which will be used to refer to this object<;>
+MODE<,>name (string)<,>The mode of the stimulus. Choices are: <BR><BR>
+MODE_CURRENT which declares the stimulus as a current (I)<BR>
+MODE_VOLTAGE which declares the stimulus as a voltage (V)<BR><;>
+PATTERN<,>name (string)<,>The type of stimulus: <A HREF="stimFileInput.html">FILE_BASED, INPUT (i.e. over sockets )</A>, SINE, LINEAR, PULSE<;>
+FILENAME<,>name (string)<,>For file based stimulus, the name of source file<BR>For input stimulus, the location of the server (e.g. cortex.cs.unr.edu) <;>
+PORT<,>integer<,>The socket port used for input stimulus that NCS will receive stimulus data<;>
+TIME_FREQ_INCREMENT<,>time (real) freq (real)<,>The time value is used in setting up firing windows; it is the amount of real time each timestep corresponds to. freq is currently not used<;>
+FREQ_ROWS<,>value (integer)<,>The number of frequencies bins (Each frequency will actually be a <em>column</em> in the stimulus file.  The reason the keyword is FREQ_ROWS is because originally the frequencies were laid out as rows.  The stimulus file has since been rotated 90 degrees so that the number of rows now corresponds to the number of timesteps the stimulus file will cover. )<;>
+CELLS_PER_FREQ<,>value (integer)<,>The number of cells assigned to each frequency bin (Recall that the frequencies are the number of columns in the input file)<;>
+DYN_RANGE<,>min (real) max (real)<,>The minimum and maximum firing rates of the cells given in Hertz<;>
+TIMING<,>name (string)<,>values available are:<BR><BR>
+ EXACT<BR>
+ URAND<BR>
+ POISSON<;>
+SAMESEED<,>YES/NO<,>Not currently used by NCS<;>
+AMP_START<,>value (real)<,>The starting amplitude of a stimulus<;>
+AMP_END<,>value (real)<,>When certain stimulus types finish, they will have this final amplitude value.<;>
+PHASE<,>value (real)<,>For SINE stimulus, this specifies the starting angle is an angle other than zero (0) is desired<;>
+VERT_TRANS<,>value (real)<,>For SINE stimulus, this is a vertical translation of the sine wave<;>
+WIDTH<,>value (real)<,>For PULSE stimulus, the WIDTH determines the length of time the pulse lasts.  This is given in secondes, uses <A HREF="chap1.html">FSV</A> to convert to timesteps<;>
+TIME_START<,>values+ (real)<,>The times when the stimulus should begin.  A stimulus may have multiple start and end times. <;>
+TIME_END<,>values+ (real)<,>The times when the stimulus should cease.  A stimulus may have multiple start and end times.<;>
+FREQ_START<,>value (real)<,>The starting Frequency of a stimulus.  Used to calculate how many pulses will exist which in turn is used to calculate the change in AMP over the course of execution<;>
+END_STIMULUS<,>N/A<,>Indicates the end of a stimulus definition section<;>
+<->
+STIMULUS
+        TYPE                    Stim_AI1
+        MODE                    CURRENT
+        PATTERN                 FILE_BASED
+        FILENAME                /home/jwk/bigThing/JM/JM_gasbombs_120x160_AI5.stm
+        TIME_FREQ_INCREMENT     0.005    1
+        FREQ_ROWS               1
+        CELLS_PER_FREQ          64
+        DYN_RANGE               1 77.3043
+        TIMING                  EXACT
+        SAMESEED                NO
+        AMP_START               10
+        AMP_END                 10
+        WIDTH                   0.001
+        TIME_START              0.2
+        TIME_END                1.8
+        FREQ_START              9999
+END_STIMULUS

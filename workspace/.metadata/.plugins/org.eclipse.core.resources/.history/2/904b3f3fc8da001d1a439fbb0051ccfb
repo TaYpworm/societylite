@@ -1,0 +1,58 @@
+package com.society;
+
+import static org.junit.Assert.*;
+
+import java.security.NoSuchAlgorithmException;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class AddressingTest {
+	Addressing testMe;
+	// Hashed value = "test"
+	final byte[] testDigest = {
+			(byte) 0xa9,
+			(byte) 0x4a,
+			(byte) 0x8f,
+			(byte) 0xe5,
+			(byte) 0xcc,
+			(byte) 0xb1,
+			(byte) 0x9b,
+			(byte) 0xa6,
+			(byte) 0x1c,
+			(byte) 0x4c,
+			(byte) 0x08,
+			(byte) 0x73,
+			(byte) 0xd3,
+			(byte) 0x91,
+			(byte) 0xe9,
+			(byte) 0x87,
+			(byte) 0x98,
+			(byte) 0x2f,
+			(byte) 0xbb,
+			(byte) 0xd3};
+	
+	@Before
+	public void setUp() throws Exception {
+		testMe = new Addressing();
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		testMe = null;
+	}
+
+	@Test
+	public void testAddressing() throws NoSuchAlgorithmException {
+		testMe = new Addressing();
+	}
+
+	@Test
+	public void testDigest() {
+		byte[] outDigest = testMe.digest("test");
+		System.out.println(testMe.digest("test").toString());
+		assertEquals("Digests are not equal", testDigest, outDigest);
+	}
+
+}

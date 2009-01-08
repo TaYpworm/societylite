@@ -1,0 +1,13 @@
+A definined Stimulus may be injected multiple times and to differnt destinations. Each injection of a Stimulus requires a separate Stimlus Inject definition. 
+<->
+STIMULUS_INJECT<,>N/A<,>Indicates the start of a stimulus inject definition section<;>
+TYPE<,>name (string)<,>The name which will be used to refer to this object<;>
+STIM_TYPE<,>name (string)<,>The name of the stimulus this injection is for<;>
+INJECT<,>Column (string) Layer (string) CellType (string) Compartment (string) Probability (real)<,>The destination of the stimulus<;>
+END_STIMULUS_INJECT<,>N/A<,>Indicates the end of a stimulus inject definition section<;>
+<->
+STIMULUS_INJECT
+        TYPE                    StimInject_AI1
+        STIM_TYPE               Stim_AI1
+        INJECT                  AI1  Lay4    Exc-cNAC        s1      1
+END_STIMULUS_INJECT

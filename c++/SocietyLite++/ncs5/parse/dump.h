@@ -1,0 +1,14 @@
+#define DMP_BRAIN    0x0001
+#define DMP_CSHELL   0x0002
+#define DMP_COLUMN   0x0004
+#define DMP_LSHELL   0x0008
+#define DMP_LAYER    0x0010
+#define DMP_CELL     0x0020
+#define DMP_COMPART  0x0040
+#define DMP_CHANNEL  0x0080
+#define DMP_SYNAPSE  0x0100
+#define DMP_SPIKE    0x0200
+#define DMP_STIMULUS 0x0400
+#define DMP_STINJECT 0x0800
+#define DMP_REPORT   0x1000
+

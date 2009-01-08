@@ -1,0 +1,31 @@
+package com.society;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class TCPConnectionTest {
+	TCPConnection control;
+	
+	@Before
+	public void setUp() throws Exception {
+		control = new TCPConnection(new byte[20], null);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		control = null;
+	}
+
+	@Test
+	public void testTCPConnection() {
+		assertEquals("TCP packet type incorrect", Protocol.TCP, control.type);
+	}
+
+	@Test
+	public void testGetChannel() {
+		assertEquals("TCP channel not equal", null, control.getChannel());
+	}
+}

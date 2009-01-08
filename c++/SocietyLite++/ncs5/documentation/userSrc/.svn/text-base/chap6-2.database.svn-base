@@ -1,0 +1,21 @@
+AHP-Channels or After Hyper Polarization Channels (Kahp) are voltage independant but Calcium dependant. 
+<->
+SEED<,>value (integer)<,>The seed to be used to generate random numbers for this channel object<;>
+CA_SCALE_FACTOR<,>mean (real) stdev (real)<,><;>
+CA_EXP_FACTOR<,>mean (real) stdev (real)<,><;>
+CA_HALF_MIN<,>mean (real) stdev (real)<,><;>
+CA_TAU_SCALE_FACTOR<,>mean (real) stdev (real)<,><;>
+<->
+CHANNEL Kahp
+        TYPE                            ahp1
+        SEED                            999999
+        M_INITIAL                       0.0             0.0
+        REVERSAL_POTENTIAL              -80             0 
+        M_POWER                         2
+        UNITARY_G			6
+        STRENGTH                        0.00015
+        CA_SCALE_FACTOR                 0.000125
+        CA_EXP_FACTOR                   2
+        CA_HALF_MIN                     2.5
+        CA_TAU_SCALE_FACTOR             0.01
+END_CHANNEL

@@ -1,0 +1,79 @@
+package com.society;
+
+import java.io.IOException;
+//import java.net.InetSocketAddress;
+//import java.net.UnknownHostException;
+//import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.nio.ByteBuffer;
+import java.nio.channels.SocketChannel;
+
+public class Publish extends PacketProcessor {
+	
+	public Publish() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
+
+	@Override
+	public void process(SocietyPacket inPacket, SocketChannel conn) {
+		int sendBufferSize, offset, bytesToSend, bytesSent;
+		byte[] sendData;
+		ByteBuffer sendBuffer;
+		ArrayList<SocketChannel> subscribers;
+		// clean up
+		
+		System.out.println("In publish");
+		System.out.println("payloadSize: " + inPacket.data.length);
+		System.out.println((char)inPacket.data[0] + " " + (char)inPacket.data[320*240*4-1]);
+		
+		subscribers = shared.subscribers.getSubscribers(inPacket.source);
+		if (subscribers != null) {
+			try {
+				for (SocketChannel sub: subscribers) {
+					if (sub.isOpen()) {
+						sendBufferSize = sub.socket().getSendBufferSize();
+//						sendData = new byte[sendBufferSize];
+						sendBuffer = ByteBuffer.allocate(sendBufferSize);
+//						sendBuffer = ByteBuffer.wrap(sendData);
+						sendData = inPacket.serialize();
+						bytesToSend = sendData.length;
+						offset = 0;
+						
+						while (bytesToSend != 0) {
+							sendBuffer.clear();
+							if (bytesToSend > sendBufferSize) {
+								sendBuffer.put(sendData, offset, sendBufferSize);
+								offset += sendBufferSize;
+								bytesToSend -= sendBufferSize;
+							} else {
+								sendBuffer.put(sendData, offset, bytesToSend);
+								offset += bytesToSend;
+								bytesToSend -= bytesToSend;
+							}
+							sendBuffer.flip();
+							
+							byte[] tmp = sendBuffer.array();
+							for (int i=0; i<tmp.length; i++) {
+								if (tmp[i] != ((offset+i)%26 + 97)) {
+									System.out.println((char)((offset+i)%26+97) + " " + (char)tmp[i]);
+//									System.out.println("problem");
+								}
+							}
+							
+							bytesSent = sub.write(sendBuffer);
+//							System.out.println(bytesSent);
+						}
+					} else {
+						shared.subscribers.removeSubscriber(sub);
+					}
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} else {
+			System.out.println("no subscribers");
+		}
+		inPacket = null;
+	}
+}

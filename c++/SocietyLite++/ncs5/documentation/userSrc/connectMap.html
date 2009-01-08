@@ -1,0 +1,60 @@
+<HTML>
+    <HEAD>
+        <TITLE>NCS Connect Map Output</TITLE>
+    </HEAD>
+    <BODY>
+
+    <H2>Connect Maps in NCS</H2>
+
+    <IMG src="images/connect.png" align=right>
+
+    After synaptic connections have been made, NCS can output a data file
+    containing a map of connections between the various cell clusters in the simulation.
+    
+    This file will be named job.synapse.dat, where "job" is the name given in the JOB field
+    of the Brain Block.
+    
+    <H3>File Format</H3>
+        
+    Source Names( Column, Layer, Cell, Compartment )<BR>
+    Destination Names( Column, Layer, Cell, Compartment )<BR>
+    Synapse Name<BR>
+    Source Quantity Destination Quantity<BR>
+    Connection Matrix<BR>
+    
+    <H3>Connection Matrix</H3>
+    
+    <P>The connections are laid out in a matrix format.  The columns correspond to
+    source cells while the rows correspond to the destination cells.  Entries will either
+    be a zero (0) or a one (1), where zero represents no connection between the cells while
+    a one represents a connection.  Note: The source and destination clusters may represent
+    the same cluster.  If that is the case, a single cell will not be allowed to connect to
+    itself.
+    </P>
+    
+    <IMG src="images/layout.png">
+    
+    <H3>Sample Output</H3>
+    
+    <PRE>
+    AI_2 layer_A Excitatory s1
+    AI_2 layer_B Excitatory s1
+    ExcitSyn1
+    10 4
+    0110100110
+    1010010011
+    0100110100
+    1001001001
+
+    AI_2 layer_A Excitatory s1
+    AI_2 layer_B Excitatory s1
+    ExcitSyn1
+    10 4
+    0100110100
+    0101001010
+    1010100101
+    0101011010
+    </PRE>
+
+    </BODY>
+</HTML>

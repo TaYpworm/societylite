@@ -1,0 +1,81 @@
+Chapter
+global
+packages/Table,packages/Navigator,packages/LastUpdated,packages/Section
+#page Title<=>Chapter 14: Stimulus<;>
+#page Navigator<=><#Navigator "name","TOC.database",14><;>
+#page LastUpdated<=><#LastUpdated "lastupdate"><;>
+#page Body<=><#Section "subsection","TOC.database",14>
+<U>Notes</U><BR>
+File based Stimulus:<BR>
+<BR>Consider a stimulus input file with, say, 129 lines with 429 elements per
+line.  The 129 lines correspond to 129 Fourier frequency bins. The first
+samples in each line corresponds to the first Fourier window time, the
+second samples in each line corresponds to the second time step, and so
+on.  The samples represent arbitrarily scaled energy values.<BR>
+<BR>
+When ncs reads the file in, it scales this input to probabilities,
+0 to 1.0.<BR>
+<BR>
+CELLS_PER_FREQ gives the number of cells in each frequency bin (line in
+the input file) in the cortex column.  For the example above, if
+CELLS_PER_FREQ is 10 then the column should have 10 x 129 = 1290 total
+cells.  [It's not clear what happens if the numbers don't agree, but it
+may result in a crash if the number of cells is smaller than the
+CELLS_PER_FREQ x frequency bins (129 in this example).]<BR>
+<BR>
+The TIME_FREQ_INCREMENT specifies how much real time each time step
+(column in the input file) corresponds to.  For audio data Fourier
+windowed in 2.5 ms chunks, as was the case in earlier runs, the
+TIME_FREQ_INCREMENT would be .0025.  The TIME_FREQ_INCREMENT is, or
+should be, used to back-calculate the spiking probability per time step,
+as described below.<BR>
+<BR>
+The DYN_RANGE settings describes the minimum and maximum firing rate of
+the cells in Hz.  400 is a high value biologically, which corresponds
+to a 2.5 ms cycle time, but 400 has been used in past runs.<BR>
+<BR>
+The somewhat tricky calculation for determining the probability of each
+cell in a CELLS_PER_FREQ bin firing then goes like this.  Let's consider
+first the frequency bin and timestep of maximum energy in the input file.
+We want to arrange things so that each cell in the CELLS_PER_FREQ bin for
+that frequency and *for those simulation timesteps within that
+TIME_FREQ_INCREMENT time* will fire with a probablity such that the rate
+of firing will be the maximum value specified in the dynamic range (400 Hz
+in our examples).  For that frequency bin and timestep in the input that
+has a half-of-maximum energy (scaled probability of .5), we calculate a
+firing probability for the cells so that during simulation time steps in
+the TIME_FREQ_INCREMENT corresponding to that input sample, the cells in
+the corresponding CELLS_PER_FREQ bin in the column will fire at half the
+dynamic range maximum.<BR>
+<BR>
+It is not known what the second number on the TIME_FREQ_INCREMENT
+specifies.  If anyone knows what this is, please let me know.  [Dr.
+Goodman says it is ignored presently.]<BR>
+<BR>
+The AMP_START, AMP_END, and WIDTH describe the pulse that is applied
+if a cell is firing.
+</P>
+<P>
+Another File Based Description:<BR>
+<BR>
+Given a text file,<BR>
+The columns will represent the different frequencies<BR>
+<&nbsp>freq_1 freq_2 ... freq_n<BR>
+<BR>
+The rows are the data such that 1 data row * time_freq_incr = total time of the stimulus<BR>
+<&nbsp>data_row_1 ...<BR>
+<&nbsp>data_row_2 ...<BR>
+<&nbsp>...<BR>
+<&nbsp>data_row_m ...<BR>
+<BR>
+Example:<BR>
+A textfile has 400 columns, 100 rows<BR>
+A simuluation has 1200 cells and wants to inject stimulus every 2.5 ms<BR>
+To inject all cells:<BR>
+<&nbsp>FREQ_ROWS 400<BR>
+<&nbsp>CELLS_PER_FREQ 3<BR>
+<&nbsp>TIME_FREQ_INCREMENT 0.0025 1.00<BR>
+</P>
+
+<HR>
+<;>

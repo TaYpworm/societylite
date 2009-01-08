@@ -1,0 +1,13 @@
+TOC
+global
+packages/TOC,packages/LastUpdated
+#page Body<=>
+    <A HREF="geninfo.html">General Information</A><BR>
+    <#TOC "tableofcontents", "TOC.database">
+    <BR>
+    <A HREF="printable.html">Printable Version</A><BR>
+    <A HREF="1column.in">Complete Example</A><BR>
+    <HR>
+    <#LastUpdated "lastupdate">
+<;>
+

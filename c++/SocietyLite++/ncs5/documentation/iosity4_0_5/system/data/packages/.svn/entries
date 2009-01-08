@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="12"
+   name=""
+   committed-date="2003-10-28T19:24:24.978320Z"
+   url="file:///home/svn/repository-new/ncs5/documentation/iosity4_0_5/system/data/packages"
+   last-author="king"
+   kind="dir"
+   uuid="49b161a2-e7c6-0310-900c-e758ba94e43e"
+   revision="48"/>
+<entry
+   committed-rev="12"
+   name=".DS_Store"
+   text-time="2006-06-20T07:07:30.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="7c988c996dd079780cf0f3eafad9d4d2"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:29.000000Z"/>
+<entry
+   committed-rev="12"
+   name="ObjectBasecode.object"
+   text-time="2006-06-20T07:07:30.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="8b7d28a0b398c512b5b0b695b8b86be0"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:30.000000Z"/>
+<entry
+   name="Security"
+   kind="dir"/>
+</wc-entries>

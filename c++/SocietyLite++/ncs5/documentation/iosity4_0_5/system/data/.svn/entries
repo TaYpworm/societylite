@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="12"
+   name=""
+   committed-date="2003-10-28T19:24:24.978320Z"
+   url="file:///home/svn/repository-new/ncs5/documentation/iosity4_0_5/system/data"
+   last-author="king"
+   kind="dir"
+   uuid="49b161a2-e7c6-0310-900c-e758ba94e43e"
+   revision="48"/>
+<entry
+   committed-rev="12"
+   name="ProcessingError.webpage"
+   text-time="2006-06-20T07:07:30.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="464515c237b39909d6d6955cfe48a05e"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:29.000000Z"/>
+<entry
+   committed-rev="12"
+   name=".DS_Store"
+   text-time="2006-06-20T07:07:30.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="5cc7b1b1e41a719cdfa80029efed2395"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:29.000000Z"/>
+<entry
+   committed-rev="12"
+   name="SecurityBreach.webpage"
+   text-time="2006-06-20T07:07:30.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="6329ee4a9cb689c1bff9c724538f9b61"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:29.000000Z"/>
+<entry
+   committed-rev="12"
+   name="BrokenLink.webpage"
+   text-time="2006-06-20T07:07:30.000000Z"
+   committed-date="2003-10-28T19:24:24.978320Z"
+   checksum="4dd3d55a55a061d42641bbc4357b6996"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:29.000000Z"/>
+<entry
+   name="packages"
+   kind="dir"/>
+</wc-entries>

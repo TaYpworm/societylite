@@ -1,0 +1,29 @@
+#!/usr/bin/perl
+
+# This script kills parts of an ncs job that are left running on the other 
+# compute nodes if one node crashes.  It reads the "kill file" generated 
+# by the ncs program, and uses the node names and pids there to issue ssh
+# commands.
+
+require 5.002;
+use strict;
+
+my ($i, $cmd, $host, $pid, $killfile, @lines, $line, @words);
+
+$killfile = $ARGV [0];
+print ("killfile = '", $killfile, "'\n");
+
+open (INPUT, "<$killfile");
+@lines = <INPUT>;
+close (INPUT);
+chomp (@lines);
+
+foreach $line (@lines)
+{
+  @words = split (" ", $line);
+  $cmd = "ssh " . $words [0] . " 'kill " . $words [1] . "'";
+  print ("Killing process ", $words [1], " on node ", $words [0], "...\n");
+  system ($cmd);
+}
+
+system ("rm $killfile");

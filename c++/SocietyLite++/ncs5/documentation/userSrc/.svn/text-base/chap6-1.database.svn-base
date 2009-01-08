@@ -1,0 +1,17 @@
+M-Channels (Km) have only an activation particle (m). Inhibits its parent cell from reaching threshold. 
+<->
+E_HALF_MIN_M<,>mean (real) stdev (real)<;>
+SLOPE_FACTOR_M<,>(real) (real) (real)<;>
+TAU_SCALE_FACTOR_M<,>mean (real) stdev (real)<;>
+<->
+CHANNEL Km
+        TYPE                            m
+        M_INITIAL                       0.0             0.0
+        REVERSAL_POTENTIAL              -80             0
+        M_POWER                         1
+        E_HALF_MIN_M                    -44
+        SLOPE_FACTOR_M                  40 	20	8.8
+        TAU_SCALE_FACTOR_M              0.303
+        UNITARY_G			5
+        STRENGTH                        0.00015
+END_CHANNEL

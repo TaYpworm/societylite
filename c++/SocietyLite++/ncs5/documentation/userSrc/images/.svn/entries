@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="24"
+   name=""
+   committed-date="2004-08-02T22:48:51.680150Z"
+   url="file:///home/svn/repository-new/ncs5/documentation/userSrc/images"
+   last-author="king"
+   kind="dir"
+   uuid="49b161a2-e7c6-0310-900c-e758ba94e43e"
+   revision="48"/>
+<entry
+   committed-rev="24"
+   name="layout.png"
+   text-time="2006-06-20T07:07:22.000000Z"
+   committed-date="2004-08-02T22:48:51.680150Z"
+   checksum="c696ce1bc780e9e132a298f59bf42242"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:21.000000Z"/>
+<entry
+   committed-rev="24"
+   name="position.png"
+   text-time="2006-06-20T07:07:22.000000Z"
+   committed-date="2004-08-02T22:48:51.680150Z"
+   checksum="4f819c7433a3e9ac12d987e0b2465ca2"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:22.000000Z"/>
+<entry
+   committed-rev="24"
+   name="stimFileInput.jpg"
+   text-time="2006-06-20T07:07:22.000000Z"
+   committed-date="2004-08-02T22:48:51.680150Z"
+   checksum="c6f2c27eda956002dc818412a49b6d85"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:22.000000Z"/>
+<entry
+   committed-rev="24"
+   name="connect.png"
+   text-time="2006-06-20T07:07:22.000000Z"
+   committed-date="2004-08-02T22:48:51.680150Z"
+   checksum="8bc21b3e412922e2c01e6fb77f254170"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:22.000000Z"/>
+<entry
+   committed-rev="24"
+   name="stimFrequency.jpg"
+   text-time="2006-06-20T07:07:22.000000Z"
+   committed-date="2004-08-02T22:48:51.680150Z"
+   checksum="0c95b1aee6b0468134460637dd080500"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:22.000000Z"/>
+</wc-entries>

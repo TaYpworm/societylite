@@ -1,0 +1,55 @@
+<->
+VOLTAGE<,><,>The voltage of a compartment's membrane<;>
+NET_CURRENT<,><,>The net current of the compartment<;>
+STIM_CURRENT<,><,>The total stimulus current of the compartment<;>
+SYN_CURRENT<,><,>The total synapse current of the compartment<;>
+LEAK_CURRENT<,><,>the current leak of the compartment<;>
+ADJ_CURRENT<,><,>The total adjacent compartment current of the compartment<;>
+CHANNEL_CURRENT<,><,>The total channel current of the compartment<;>
+FIRE_COUNT<,><,>Count of all cells in a timestep that have reached the peak of a spike<;>
+CHANNEL_KM<,><,>Km Channels produce (5) values
+<UL>
+    <LI>affect of activation particle (m): m^mPower
+    <LI>activation particle (m): base value
+    <LI>m-infinity (m_oo)
+    <LI>t_m
+    <LI>The channel current (I)
+</UL>
+This Report has been deprecated. Use CHANNEL_RPT instead.<;>
+CHANNEL_KA<,><,>Ka Channels produce eight (8) values
+<UL>
+    <LI>affect of activation (m) and inactivation (h) particles:  m^mPower * h^hPower
+    <LI>activation particle (m): base value 
+    <LI>m-infinity (m_oo)
+    <LI>t_m
+    <LI>inactivation particle (h): base value 
+    <LI>h-infinity (h_oo)
+    <LI>t_h
+    <LI>The channel current (I)
+</UL>
+This Report has been deprecated. Use CHANNEL_RPT instead<;>
+CHANNEL_KAHP<,><,>Kahp Channels produce seven (7) values
+<UL>
+    <LI>affect of activation particle (m): m^mPower
+    <LI>activation particle (m): base value
+    <LI>m-infinity (m_oo)
+    <LI>t_m
+    <LI>Calcium Internal
+    <LI>funct_m
+    <LI>The channel current (I)
+</UL>
+This Report has been deprecated. Use CHANNEL_RPT instead
+<;>
+SYNAPSE_USE<,><,>The value of a synapse's USE at the reporting timestep.<BR>Must use SYNAPSE keyword and specifying the synapse type desired.  This will report on every synapse matching that type.  Note that this may report on synapses that come from multiple sources if the synapse type is used in multiple connect statements.  As with other reports, each line is one time step.  The synapses belonging to each compartment stay together, but there may be a variable number.  For example, compartment 0 may have 2 synapses, compartment 1 may have 3, compartment 2 may have 0, etc.
+The Utilization of Synaptic Efficacy of a syanpse. USE represents long-term learning in a compartment. A higher USE value results in the release of more neurotransmitters, thereby amplifying a signal whereas a lower USE value results in the release of less neurotransmitters, thereby dampening a signal. 
+<;>
+SYNAPSE_RSE<,><,>The value of a synapse's RSE value at the reporting timestep.<BR>Must use SYNAPSE_RSE keyword with the name of a synapse type defined. This will report on every synapse matching that type.  Note that this may report on synapses that come from multiple sources if the synapse type is used in multiple connect statements. As with other reports, each line is one time step.  The synapses belonging to each compartment stay together, but there may be a variable number.  For example, compartment 0 may have 2 synapses, compartment 1 may have 3, compartment 2 may have 0, etc.
+<;>
+SYNAPSE_UF<,><,>The value of a synapse's temporarily modified USE value as a result of facilitation.<BR>Must use SYNAPSE_UF keyword with the name of a synapse type defined. This will report on every synapse matching that type.  Note that this may report on synapses that come from multiple sources if the synapse type is used in multiple connect statements. As with other reports, each line is one time step.  The synapses belonging to each compartment stay together, but there may be a variable number.  For example, compartment 0 may have 2 synapses, compartment 1 may have 3, compartment 2 may have 0, etc.
+<;>
+SYNAPSE_SA<,><,>The value of a synapse's Augmentation value. Note: The value reported is one less than the actual value.  This is because during a simulation, the augmentation must be at least 1, so only the remaining amount is used in formulas. Example, if the augmentation is 1.3, on 0.3 will be reported.<BR>Must use SYN_AUGMENTATION keyword with the name of a synapse type defined. This will report on every synapse matching that type.  Note that this may report on synapses that come from multiple sources if the synapse type is used in multiple connect statements. As with other reports, each line is one time step.  The synapses belonging to each compartment stay together, but there may be a variable number.  For example, compartment 0 may have 2 synapses, compartment 1 may have 3, compartment 2 may have 0, etc.
+<;>
+CHANNEL_RPT<,><,>Replaces old channel reports. The final report's layout will be the same as the old corresponding family report (KM, KA, KAHP).  The family is determined during runtime.
+Must include CHANNEL keyword with name of a channel type defined.
+<;>
+<->

@@ -1,0 +1,22 @@
+<->
+SYN_FACIL_DEPRESS<,>N/A<,>Indicates the start of a RSE definition section<;>
+TYPE<,>name (string)<,>The name which is used to refer to this RSE<;>
+SEED<,>value (integer)<,>The random number generator for this object will use the seed specified<;>
+SFD<,>name (string)<,>The RSE function to use in the synapse. Choices are:<BR>
+NONE - assumes no RSE is being calcuated<BR>
+DEPR - assumes depression but no facilitation<BR>
+FACIL - assumes facilitation but no depression<BR>
+BOTH - has both facilitation and depression<;>
+FACIL_TAU<,>mean (real) stdev (real)<,>The initial value of the facilitation tau.<BR>
+ Used in determining how much neuro transmitters are released with each spike<;>
+DEPR_TAU<,>mean (real) stdev (real)<,>The initial value of the depression time constant.<BR>
+ Used in determining how much neuro transmitters are released with each spike<;>
+END_SYN_FACIL_DEPRESS<,>N/A<,>Indicates the end of a RSE definition section<;>
+<->
+SYN_FACIL_DEPRESS
+        TYPE                    F1
+        SEED                    999999
+        SFD                     FACIL
+        FACIL_TAU               0.376           0.0
+        DEPR_TAU                0.045           0.0
+END_SYN_FACIL_DEPRESS

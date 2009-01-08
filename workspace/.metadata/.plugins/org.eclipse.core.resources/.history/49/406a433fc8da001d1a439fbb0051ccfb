@@ -1,0 +1,124 @@
+package com.society;
+
+import static org.junit.Assert.*;
+
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.UnknownHostException;
+import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class SubscriberHashTest {
+	SubscriberHash control;
+	Addressing address;
+	
+	@Before
+	public void setUp() throws Exception {
+		control = new SubscriberHash();
+		address = new Addressing();
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		control = null;
+		address = null;
+	}
+
+	@Test
+	public void testPutSubscriberByteArrayConnection() throws UnknownHostException, NoSuchAlgorithmException {
+		NULLConnection NULLCon = new NULLConnection(address.digest("test3"));
+		
+		byte[] service = address.digest("service");
+		control.putSubscriber(service, NULLCon);
+		assertEquals("Number of subscribers not equal", 1, control.numSubscribers(service));
+		assertEquals("Number of services not equal", 1, control.numServices());
+	}
+
+	@Test
+	public void testPutSubscriberCollectionOfbyteConnection() throws UnknownHostException, NoSuchAlgorithmException {
+		ArrayList<byte[]> services = new ArrayList<byte[]>();
+		services.add(address.digest("service0"));
+		services.add(address.digest("service1"));
+		services.add(address.digest("service2"));
+		
+//		These should not be valid tests
+//		Fix this in later version
+//		control.putSubscriber(services, UDPCon);
+//		assertEquals("Number of subscribers not Equal", 2, control.numSubscribers(address.digest("service0")));
+//		assertEquals("Number of subscribers not Equal", 2, control.numSubscribers(address.digest("service1")));
+//		assertEquals("Number of subscribers not Equal", 2, control.numSubscribers(address.digest("service2")));
+//		assertEquals("Number of services not equal", 3, control.numServices());
+	}
+
+	@Test
+	public void testGetTCPConnections() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetUDPConnections() throws UnknownHostException, NoSuchAlgorithmException {
+//		UDPConnection UDPCon = new UDPConnection(address.digest("test"), new InetSocketAddress(InetAddress.getByName("192.168.0.1"), 12345));
+//		ArrayList<Connection> compare = new ArrayList<Connection>();
+//		compare.add(UDPCon);
+//		control.putSubscriber(address.digest("test"), UDPCon);
+//		ArrayList<Connection> connects = control.getUDPConnections(address.digest("test"));
+//		assertEquals("Number of UDP connections not equal", 1, connects.size());
+//		assertEquals("Lists not equal", true, connects.equals(compare));
+//		
+//		this should fail, fix in later version
+//		compare.add(UDPCon);
+//		control.putSubscriber(address.digest("test"), UDPCon);
+//		assertEquals("Number of UDP connections not equal", 2, connects.size());
+//		assertEquals("Lists not equal", true, connects.equals(compare));
+	}
+
+	@Test
+	public void testGetMcastConnections() throws UnknownHostException, NoSuchAlgorithmException {
+//		ArrayList<Connection> connects0 = control.getMcastConnections(address.digest("test"));
+//		assertEquals("Number of services not equal", 0, control.numServices());
+//		assertEquals("Number of mcast connections not equal", null, connects0);
+//		
+//		ArrayList<Connection> connects1;
+//		MCASTConnection MCASTCon = new MCASTConnection(address.digest("test"), new InetSocketAddress(InetAddress.getByName("192.168.0.1"), 12345));
+//		control.putSubscriber(address.digest("test"), MCASTCon);
+//		connects0 = new ArrayList<Connection>();
+//		connects0.add(MCASTCon);
+//		connects1 = control.getMcastConnections(address.digest("test"));
+//		assertEquals("Number of mcast connections not equal", 1, connects1.size());
+//		assertEquals("Lists not equal", true, connects0.equals(connects1));
+//		
+//		control.putSubscriber(address.digest("test"), MCASTCon);
+//		connects0.add(MCASTCon);
+//		connects1 = control.getMcastConnections(address.digest("test"));
+//		assertEquals("Number of mcast connections not equal", 2, connects1.size());
+//		assertEquals("Lists not equal", true, connects0.equals(connects1));
+	}
+
+	@Test
+	public void testGetSubscribers() throws UnknownHostException, NoSuchAlgorithmException {
+//		UDPConnection UDPCon = new UDPConnection(address.digest("test"), new InetSocketAddress(InetAddress.getByName("192.168.0.1"), 12345));
+//		control.putSubscriber(address.digest("test"), UDPCon);
+//		ArrayList<Connection> connects = control.getSubscribers(address.digest("test"));
+//		assertEquals("Number of subscriber connections not equal", 1, connects.size());
+//		
+////		this should fail, fix in later version
+//		control.putSubscriber(address.digest("test"), UDPCon);
+//		connects = control.getSubscribers(address.digest("test"));
+//		assertEquals("Number of subscriber connections not equal", 2, connects.size());
+	}
+
+	@Test
+	public void testRemoveSubscriber() throws UnknownHostException, NoSuchAlgorithmException {
+//		UDPConnection UDPCon = new UDPConnection(address.digest("test"), new InetSocketAddress(InetAddress.getByName("192.168.0.1"), 12345));
+//		control.putSubscriber(address.digest("test"), UDPCon);
+//		control.putSubscriber(address.digest("test"), UDPCon);
+//		assertEquals("Number removed subscribers not equal", 2, control.removeSubscriber(address.digest("test"), Protocol.UDP));
+//		ArrayList<Connection> connects = control.getUDPConnections(address.digest("test"));
+//		assertEquals("Number of connections not equal", 0, connects.size());
+	}
+
+}

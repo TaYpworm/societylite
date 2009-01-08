@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="47"
+   name=""
+   committed-date="2005-11-04T18:04:24.798128Z"
+   url="file:///home/svn/repository-new/ncs5/voServer"
+   last-author="king"
+   kind="dir"
+   uuid="49b161a2-e7c6-0310-900c-e758ba94e43e"
+   revision="48"/>
+<entry
+   committed-rev="46"
+   name="connection.cpp"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2005-11-02T23:37:42.305990Z"
+   checksum="bdd7da8f70ada315399293eb15bc60f7"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:09.000000Z"/>
+<entry
+   committed-rev="45"
+   name="singlestream.h"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="60d9f114fe6dc575e5e554f373b63808"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="25"
+   name="config.txt"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2004-08-03T17:34:39.230471Z"
+   checksum="61e856c1345e9615b8b9b50a3545f145"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="25"
+   name="ourhdr.c"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2004-08-03T17:34:39.230471Z"
+   checksum="c4b99b55108d24d4a9c845db876b85d4"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="45"
+   name="storage.cpp"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="fbf9519c62f231d73adb680da48e28fa"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="47"
+   name="connection.h"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2005-11-04T18:04:24.798128Z"
+   checksum="d255fd95eeeecf6b6e2462b736ba4683"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="45"
+   name="serverconsts.h"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="2484b07511ffa3bfeb7e0351ea334d3d"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="25"
+   name="open.h"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2004-08-03T17:34:39.230471Z"
+   checksum="f437d655bd143bd0f234b6f05c3f0847"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="25"
+   name="socket_accept.c"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2004-08-03T17:34:39.230471Z"
+   checksum="dc96aa50524c47ab46b4750b80da7480"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="45"
+   name="servertype.cpp"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="5a54d279e28704a0c964d36daae9dffb"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="25"
+   name="ourhdr.h"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2004-08-03T17:34:39.230471Z"
+   checksum="b63bea9b2ef477d90611ded12db52f2f"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="29"
+   name="storage.h"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2004-11-23T17:47:44.696139Z"
+   checksum="3b2acbe4c070232067e1ad997070c1dd"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="45"
+   name="servermain.cpp"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="77486cd3e7fec2224477e25d2811b054"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="29"
+   name="server.scripts"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2004-11-23T17:47:44.696139Z"
+   checksum="248083e82e77b357e72f2b8c4ccbca98"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="25"
+   name="socket_accept.h"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2004-08-03T17:34:39.230471Z"
+   checksum="4a259521e4fa13d9c036e160389816b4"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="26"
+   name="servertype.h"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2004-08-04T23:38:59.916251Z"
+   checksum="2e8441a436409ed6513661c9eed20bba"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="45"
+   name="manage_server.c"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="97cbe6ce7117f57931cdb7b235c8bf75"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="29"
+   name="manage_server.h"
+   text-time="2006-06-20T07:07:11.000000Z"
+   committed-date="2004-11-23T17:47:44.696139Z"
+   checksum="cfea4ec38f8b0467919d2bf500f6a29e"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="45"
+   name="server_listen.c"
+   text-time="2006-06-20T07:07:12.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="6fc99e896c923d61edc9c313b63c9ef6"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="45"
+   name="server.apps"
+   text-time="2006-06-20T07:07:12.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="d6fbb8cf41da367b8e66156dbaeb55e4"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="45"
+   name="reportinfo.cpp"
+   text-time="2006-06-20T07:07:12.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="2013f51dc7eba0021baee3fc15250a69"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:10.000000Z"/>
+<entry
+   committed-rev="25"
+   name="csopen.c"
+   text-time="2006-06-20T07:07:12.000000Z"
+   committed-date="2004-08-03T17:34:39.230471Z"
+   checksum="ff767892e892b29df1a2b3b0f1dd3ed3"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:11.000000Z"/>
+<entry
+   committed-rev="25"
+   name="server_listen.h"
+   text-time="2006-06-20T07:07:12.000000Z"
+   committed-date="2004-08-03T17:34:39.230471Z"
+   checksum="f3c61b8c31a9c36e8e3047d09ac14026"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:11.000000Z"/>
+<entry
+   committed-rev="25"
+   name="empty.txt"
+   text-time="2006-06-20T07:07:12.000000Z"
+   committed-date="2004-08-03T17:34:39.230471Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:11.000000Z"/>
+<entry
+   committed-rev="29"
+   name="reportinfo.h"
+   text-time="2006-06-20T07:07:12.000000Z"
+   committed-date="2004-11-23T17:47:44.696139Z"
+   checksum="f601240dc785d7d6c1f6a436b04a6887"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:11.000000Z"/>
+<entry
+   committed-rev="29"
+   name="Makefile"
+   text-time="2006-06-20T07:07:12.000000Z"
+   committed-date="2004-11-23T17:47:44.696139Z"
+   checksum="58e00fad7577ee012d313bb5f984357e"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:11.000000Z"/>
+<entry
+   committed-rev="45"
+   name="singlestream.cpp"
+   text-time="2006-06-20T07:07:12.000000Z"
+   committed-date="2005-11-02T23:25:41.592120Z"
+   checksum="9fca5546d9bdbe1dfa7a2f4c712cafdf"
+   last-author="king"
+   kind="file"
+   prop-time="2006-06-20T07:07:11.000000Z"/>
+</wc-entries>

@@ -1,0 +1,56 @@
+This is the top level structure in the simulator. This will contain some values to define the simulation as a whole such as the amount of time being simulated and random seed. <br>During input, the Brain Section will also provide a preliminary outline of other structures to be used in the simulation.  The overall structure of the input file is to describe different aspects within the brain as blocks of text.  The NCS parser recognizes keywords and creates structures within the model as defined within the blocks.  These keywords and their associated parameters are described in the user documentation located on <a href="http://brain.unr.edu/ncsDocs/ncsUser/TOC.html">brain.unr.edu/ncsDocs/ncsUser/TOC.html</a> <br>The order of the blocks is not important as long as the blocks are complete.  <br>Also, the input file can be split up into several files and included using the INCLUDE keyword.  The only restriction is that the INCLUDE statement be located outside of any block structure. <br>The maximum number of characters allowed within a string value is currently 128 characters.  Numbers are transformed into their appropriate type, float, double, etc.
+<->
+BRAIN<,>N/A<,>REQUIRED: Indicates the start of a Brain definition block.<;>
+TYPE<,>name (string)<,>REQUIRED: The name of this Brain configuration.  Currently used by the Server program (port-based IO) to create and manage the ports.<;>
+JOB<,>name (string)<,>REQUIRED: Job Name
+Any files generated during the simulation will be given the JOB string as a prefix followed by a period or a dash (depending on the version of NCS used) then whatever the filename is to be called (ex. myJob.report1 or myJob-report1 ) <br>By default JOB is the string "job".<;>
+DURATION<,>value (real)<,>REQUIRED: Duration of the simulation in seconds.<br>The amount of time, in seconds, which will be simulated. <br>This value is multiplied by the FSV to determine the number of timesteps for the simulation.<;>
+FSV<,>value (integer)<,>REQUIRED: FSV = Frequency of Sampling Value<br>Default value is 1<br>Typical Value is 10,000<br>This scales DURATION to set the number of DoThink loop timesteps the simulation will run. <br>(ex. DURATION = 1.8, FSV = 10000, timesteps = 1.8*10000 = 18000 )<;>
+INTERACTIVE<,>YES/NO<,>Currently not implemented<;>
+SEED<,>value (integer)<,>Random Number Generator Seed Value<br>This value should be a negative integer. (ex. -999) This sets the seed to be used by the brain's random number generator.  This seed is used for the connectivity wthin the brain block as well as the connections between layers and within layers<br>Note: This SEED value is not responsible for other areas that utilize their own seeds. (ex. COMPARTMENT, CHANNEL, SYNAPSE, SYN_FACIL_DEPRESS, LEARNING (hebbian)<br>SYN_DATA(deprecated),<br>STIMULUS)<;>
+DISTANCE<,>YES/NO<,>Distance Toggle<br>Flag to indicate that cells should be assigned specific coordinates so that synaptic delays can be calculated based on distance between the source and destination cells. Set to NO by default.<br>This value must be YES if you want to set OUTPUT_CELLS, OUTPUT_CONNECT_MAP to YES or use the Decay Step Value within a CONNECT statement<;>
+COLUMN_TYPE<,>name (string)<,>Column Creation<br>Alerts the simulator to expect a column(s) to be defined with the name given. If a column is defined without being listed in the Brain section, that column will be ignored and not generated in the resulting brain model structure.<br>Can have multiple values listed.<;>
+STIMULUS_INJECT<,>name (string)<,>Stimulus Injection Creation<br>Alerts the simulator to expect a stimulus to be defined with the name given. If a stimulus is defined without being listed in the Brain section, that stimulus will be ignored and not generated in the resulting brain model structure.<br>Can have multiple values listed.<;>
+REPORT<,>name (string)<,>Report Creation<br>Alerts the simulator to expect a report to be defined with the name given. If a report is defined without being listed in the Brain section, that report will be ignored and not generated in the resulting brain model structure.<br>Can have multiple values listed.<;>
+CONNECT<,>Column (string)<.>Layer (string)<.>CellType (string)<.>Compartment (string)<.>Column (string)<.>Layer (string)<.>CellType (string)<.>Compartment (string)<.>SynpaseType (string)<.>Probability (real)<.>Speed (real)<,>Intercolumn Connection Creation<br>Synapse connections between Columns. Signifies that synapse connections of the type specified should be made from the source (the first four parameters) to the destination (the next four params). <br>SynapseType is the Type value from the SYNAPSE block of the desired synapse to be used in this connection.<br>Probability determines how many connections are made randomly.<br>The speed indicates how quickly the destination cell will receive a signal from the source cell in millimeters per millisecond (mm/ms).<br>Can have multiple values listed.<;>
+CONNECT<,>Column (string)<.>Layer (string)<.>CellType (string)<.>Compartment (string)<.>Column (string)<.>Layer (string)<.>CellType (string)<.>Compartment (string)<.>SynpaseType (string)<.>Probability (real)<.>Decay_Step (real)<.>Speed (real)<,>Intercolumn Connection Creation with Decaying Distance Effects<br>Definitions are the same as above with the following exception:<br>If DISTANCE is set to YES, then connections are made based on a decaying probability based on distance.<br>The probability is at its maximum (the value given) if there is no distance between the source and destination cell. As the distance increases by the Decay Step, the probability exponentially decays. <br>If DISTANCE is set to NO, then probability is used as a constant for all connections and the Decay Step value is ignored.<;>
+RECURRENT<,>ColumnA (string)<.>LayerA (string)<.>CellTypeA (string)<.>CompartmentA (string)<.>ColumnB (string)<.>LayerB (string)<.>CellTypeB (string)<.>CompartmentB (string)<.>SynpaseType (string)<.>ProbabilityAtoB (real)<.>ProbabilityBtoA (real)<,>Establishes that two previous CONNECT statments are recurrent with each other.  This means that as the two cell groups are connected, a minimum percentage of cells have both forward connections and reverse connections. The first group listed (Column, Layer, Cell, Cmp) is designated group A while the second group (Column, Layer, Cell, Cmp) is designated group B. The previous CONNECT statements need to use these two groups with A connecting to B in one, and B connecting to A in another (order of appearance does not matter). Both these CONNECT statements must use the specified synapse. The Probability values indicate that a minimum percentage of connections made must be recurrent.  For example, if ProbabilityAtoB is 0.5, then 50% of the cells with connections from A to B will also have a returning connection from the same cells in B to A.<;>
+SAVE<,>filename (string) value (real) <,>Brain State Save<br>Specifies that the brain simulation should save the entire current state to the file name specified at the time (seconds) given.  The file will save by default to your current working directory unless a full path is specified.<;>
+LOAD<,>filename (string)<,>Brain State Load File<br>A brain saved in the file specified will be restored to run with new stimulus and reports.  The file will load by default from your current working directory unless a full path is specified.<;>
+OPTION<,>WARNINGS_OFF<,>Disables simple warning messages.  Warnings are on by default<;>
+OUTPUT_CELLS<,>YES/NO<,>Output Cell Locations<br>Flag to indicate that cell positions should be output to the file job.cells.dat in the current working directory.<br>See <a href="http://brain.unr.edu/ncsDocs/ncsUser/cellOutput.html">NCS Cell Coordinate Output</a> for more details.<br>Set to NO by default.<;>
+OUTPUT_CONNECT_MAP<,>YES/NO<,>Output Synapse Locations<br>Flag to indicate that synaptic connections should be output to the file job.synapse.dat in the current working directory.<br>See <a href= "http://brain.unr.edu/ncsDocs/ncsUser/connectMap.html">NCS Connect Map Output </a>for more details. <br>Set to NO by default.<;>
+END_BRAIN<,>N/A<,>REQUIRED: Indicates the end of a Brain definition section.<;>
+<->
+
+The following BRAIN block would create a 3-column brain with two different stimulii.  There are two intercolumn connections. <br>It would output two different reports. Distance and output is off for this run.
+BRAIN
+    TYPE               Brain1Col
+    JOB                BinRep
+    DURATION           1.8
+    FSV                10000
+    INTERACTIVE        NO
+    SEED               -999
+    DISTANCE           NO
+
+    COLUMN_TYPE        AI1
+    COLUMN_TYPE        AI2
+    COLUMN_TYPE        ASSC1
+
+    STIMULUS_INJECT    StimInject_AI3
+    STIMULUS_INJECT    StimInject_AI1Clear
+
+    REPORT             AI1_Lay3_Exc-cNAC_1
+    REPORT             AI1_Lay4_Exc-cNAC_1
+
+    CONNECT            AI1    Lay3    Exc-cNAC    s1
+                       AI2    Lay3    Inh-cNAC    s1
+                       ExcF2Hebb0	    0.05        3
+    CONNECT            AI2    Lay3    Exc-cNAC    s1
+                       AI1    Lay3    Inh-cNAC    s1
+                       ExcF2Hebb0     0.05        3
+        
+    SAVE               Brain1Col.sav  1.0
+    OUTPUT_CELLS       NO
+    OUTPUT_CONNECT_MAP NO
+END_BRAIN

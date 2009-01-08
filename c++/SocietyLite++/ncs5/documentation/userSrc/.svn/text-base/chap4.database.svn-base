@@ -1,0 +1,12 @@
+Cells form a container for the compartments 
+<->
+CELL<,>N/A<,>Indicates the start of a cell definition section<;>
+TYPE<,>name (string)<,>the name which will be used to refer to this Cell type<;>
+COMPARTMENT<,>name (string)<.>label (string)<.>x (real)<.>y (real)<,>name is a compartment defined in the input file (where the charateristics of that type of compartment are defined), label is a tag that will be used to refer to this compartment when assigning this compartment to other objects such as stimulus, x and y are the relative coordinates of the compartment in the cell.<;>
+CONNECT<,>Compartment (string)<.>Compartment (string)<.>Speed (integer)<.>G (real)<,>Connections between Compartments.  The source (first) connects to the destination (second).  The connections have the speed specified.  G???<;>
+END_CELL<,>N/A<,>Indicates the end of a cell definition section<;>
+<->
+CELL
+        TYPE                    Exc-cNAC
+        COMPARTMENT             Soma-cNAC       s1      0       0
+END_CELL
