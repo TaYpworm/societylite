@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="21" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -64,10 +64,10 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SocietyPacket.java" partName="SocietyPacket.java" path="/home/ssmith/projects/Society/project/src/com/society/SocietyPacket.java" title="SocietyPacket.java" tooltip="Society/src/com/society/SocietyPacket.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SocietyPacket.java" partName="SocietyPacket.java" path="/home/ssmith/projects/Society/java/project/src/com/society/SocietyPacket.java" title="SocietyPacket.java" tooltip="Society/src/com/society/SocietyPacket.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/SocietyPacket.java"/>
 </editor>
-<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StreamSocketManager.java" partName="StreamSocketManager.java" path="/home/ssmith/projects/Society/project/src/com/society/StreamSocketManager.java" title="StreamSocketManager.java" tooltip="Society/src/com/society/StreamSocketManager.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StreamSocketManager.java" partName="StreamSocketManager.java" path="/home/ssmith/projects/Society/java/project/src/com/society/StreamSocketManager.java" title="StreamSocketManager.java" tooltip="Society/src/com/society/StreamSocketManager.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/StreamSocketManager.java"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AddressException.java" partName="AddressException.java" path="/home/ssmith/projects/Society/project/src/com/society/AddressException.java" title="AddressException.java" tooltip="Society/src/com/society/AddressException.java" workbook="DefaultEditorWorkbook">
@@ -88,7 +88,7 @@
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CommonObjects.java" partName="CommonObjects.java" path="/home/ssmith/projects/Society/project/src/com/society/CommonObjects.java" title="CommonObjects.java" tooltip="Society/src/com/society/CommonObjects.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/CommonObjects.java"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Publish.java" partName="Publish.java" path="/home/ssmith/projects/Society/project/src/com/society/Publish.java" title="Publish.java" tooltip="Society/src/com/society/Publish.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Publish.java" partName="Publish.java" path="/home/ssmith/projects/Society/java/project/src/com/society/Publish.java" title="Publish.java" tooltip="Society/src/com/society/Publish.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Publish.java"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProcessorObjects.java" partName="ProcessorObjects.java" path="/home/ssmith/projects/Society/project/src/com/society/ProcessorObjects.java" title="ProcessorObjects.java" tooltip="Society/src/com/society/ProcessorObjects.java" workbook="DefaultEditorWorkbook">
@@ -154,7 +154,7 @@
 <viewState failuresOnly="false" layout="1" orientation="2" ratio="500" scroll="false"/>
 </view>
 <view id="org.eclipse.cdt.ui.CView" partName="C/C++ Projects">
-<viewState horizontalPosition="0" verticalPosition="14">
+<viewState horizontalPosition="0" verticalPosition="0">
 <expanded/>
 <selection/>
 <customFilters userDefinedPatternsEnabled="false">
@@ -219,7 +219,7 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -413,13 +413,9 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/Btest.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/Society.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Test/Btest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/SocietyPacket.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/Publish.java"/>
 </editors>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
 <item historyLabel="Publish.java" index="2">
 <position/>
 </item>
@@ -561,8 +557,14 @@
 <item historyLabel="Btest.java" index="5">
 <position info="not_deleted" x="235" y="0"/>
 </item>
-<item active="true" historyLabel="StreamSocketManager.java" index="0">
+<item historyLabel="StreamSocketManager.java" index="0">
 <position info="not_deleted" x="2892" y="0"/>
+</item>
+<item historyLabel="SocietyPacket.java" index="6">
+<position/>
+</item>
+<item active="true" historyLabel="Publish.java" index="7">
+<position info="not_deleted" x="864" y="0"/>
 </item>
 </navigationHistory>
 <stickyState>

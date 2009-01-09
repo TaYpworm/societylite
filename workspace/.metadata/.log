@@ -616,3 +616,31 @@ org.eclipse.swt.SWTException: Invalid thread access
 	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:4024)
 	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:113)
+!SESSION 2009-01-09 09:56:02.062 -----------------------------------------------
+eclipse.buildId=M20070212-1330
+java.version=1.6.0_10
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.osgi 2 1 2009-01-09 09:56:08.974
+!MESSAGE NLS missing message: initializer_error in: org.eclipse.core.internal.runtime.messages
+
+!ENTRY org.eclipse.osgi 2 1 2009-01-09 09:56:08.974
+!MESSAGE NLS missing message: fileInitializer_fileNotFound in: org.eclipse.core.internal.runtime.messages
+
+!ENTRY org.eclipse.osgi 2 1 2009-01-09 09:56:08.975
+!MESSAGE NLS missing message: fileInitializer_IOError in: org.eclipse.core.internal.runtime.messages
+
+!ENTRY org.eclipse.osgi 2 1 2009-01-09 09:56:08.975
+!MESSAGE NLS missing message: fileInitializer_missingFileName in: org.eclipse.core.internal.runtime.messages
+
+!ENTRY org.eclipse.core.resources 4 567 2009-01-09 09:56:10.325
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2009-01-09 09:56:10.325
+!MESSAGE The project description file (.project) for Society is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.ui.ide 4 4 2009-01-09 09:57:03.708
+!MESSAGE Problems occurred opening the selected resources.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2009-01-09 09:57:03.708
+!MESSAGE The project description file (.project) for Society is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.

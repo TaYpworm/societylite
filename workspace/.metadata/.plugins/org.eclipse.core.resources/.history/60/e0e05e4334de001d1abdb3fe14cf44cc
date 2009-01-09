@@ -25,13 +25,11 @@ public class Publish extends PacketProcessor {
 		subscribers = shared.subscribers.getSubscribers(inPacket.source);
 		if (subscribers != null) {
 			try {
-				sendData = inPacket.serialize();
-				sendBuffer = ByteBuffer.wrap(sendData);
 				for (SocketChannel sub: subscribers) {
 					if (sub.isOpen()) {
-						sendBuffer.clear();
 						sendBufferSize = sub.socket().getSendBufferSize();
-						
+						sendData = inPacket.serialize();
+						sendBuffer = ByteBuffer.wrap(sendData);
 						if (sendBuffer.capacity() > sendBufferSize) {
 							sendBuffer.limit(sendBufferSize);
 						}						

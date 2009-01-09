@@ -1,4 +1,3 @@
+/home/ssmith/projects/Society/workspace/.metadata/.plugins/org.eclipse.jdt.core/1637768099.index
 /home/ssmith/projects/Society/workspace/.metadata/.plugins/org.eclipse.jdt.core/448866435.index
 /home/ssmith/projects/Society/workspace/.metadata/.plugins/org.eclipse.jdt.core/2844533990.index
-/home/ssmith/projects/Society/workspace/.metadata/.plugins/org.eclipse.jdt.core/1637768099.index
-/home/ssmith/projects/Society/workspace/.metadata/.plugins/org.eclipse.jdt.core/3703194086.index
