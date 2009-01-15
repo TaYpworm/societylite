@@ -3,20 +3,20 @@
 	<section name="ChooseWorkspaceDialogSettings">
 		<item value="535" key="DIALOG_WIDTH"/>
 		<item value="197" key="DIALOG_Y_ORIGIN"/>
-		<item value="252" key="DIALOG_X_ORIGIN"/>
 		<item value="285" key="DIALOG_HEIGHT"/>
+		<item value="252" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Sans Serif|9|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="TaskPropertiesDialogSettings">
+		<item value="728" key="DIALOG_WIDTH"/>
+		<item value="321" key="DIALOG_Y_ORIGIN"/>
+		<item value="341" key="DIALOG_X_ORIGIN"/>
+		<item value="284" key="DIALOG_HEIGHT"/>
 		<item value="1|Sans Serif|9|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="ExternalProjectImportWizard">
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
-	</section>
-	<section name="TaskPropertiesDialogSettings">
-		<item value="728" key="DIALOG_WIDTH"/>
-		<item value="321" key="DIALOG_Y_ORIGIN"/>
-		<item value="284" key="DIALOG_HEIGHT"/>
-		<item value="341" key="DIALOG_X_ORIGIN"/>
-		<item value="1|Sans Serif|9|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.views.problem">
 	</section>

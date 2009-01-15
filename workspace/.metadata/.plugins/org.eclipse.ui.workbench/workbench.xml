@@ -60,6 +60,8 @@
 <part id="25"/>
 <part id="26"/>
 <part id="27"/>
+<part id="28"/>
+<part id="29"/>
 </presentation>
 </folder>
 </info>
@@ -79,22 +81,19 @@
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Society.h" partName="Society.h" path="/home/ssmith/projects/Society/projectSociety++/Society.h" title="Society.h" tooltip="Society++/Society.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society++/Society.h"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BackboneHash.java" partName="BackboneHash.java" path="/home/ssmith/projects/Society/project/src/com/society/BackboneHash.java" title="BackboneHash.java" tooltip="Society/src/com/society/BackboneHash.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/BackboneHash.java"/>
-</editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SubscriberHash.java" partName="SubscriberHash.java" path="/home/ssmith/projects/Society/project/src/com/society/SubscriberHash.java" title="SubscriberHash.java" tooltip="Society/src/com/society/SubscriberHash.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/SubscriberHash.java"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CommonObjects.java" partName="CommonObjects.java" path="/home/ssmith/projects/Society/project/src/com/society/CommonObjects.java" title="CommonObjects.java" tooltip="Society/src/com/society/CommonObjects.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CommonObjects.java" partName="CommonObjects.java" path="/home/ssmith/projects/Society/java/project/src/com/society/CommonObjects.java" title="CommonObjects.java" tooltip="Society/src/com/society/CommonObjects.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/CommonObjects.java"/>
 </editor>
-<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Publish.java" partName="Publish.java" path="/home/ssmith/projects/Society/java/project/src/com/society/Publish.java" title="Publish.java" tooltip="Society/src/com/society/Publish.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Publish.java" partName="Publish.java" path="/home/ssmith/projects/Society/java/project/src/com/society/Publish.java" title="Publish.java" tooltip="Society/src/com/society/Publish.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Publish.java"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProcessorObjects.java" partName="ProcessorObjects.java" path="/home/ssmith/projects/Society/project/src/com/society/ProcessorObjects.java" title="ProcessorObjects.java" tooltip="Society/src/com/society/ProcessorObjects.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/ProcessorObjects.java"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Subscribe.java" partName="Subscribe.java" path="/home/ssmith/projects/Society/project/src/com/society/Subscribe.java" title="Subscribe.java" tooltip="Society/src/com/society/Subscribe.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Subscribe.java" partName="Subscribe.java" path="/home/ssmith/projects/Society/java/project/src/com/society/Subscribe.java" title="Subscribe.java" tooltip="Society/src/com/society/Subscribe.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Subscribe.java"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Unsubscribe.java" partName="Unsubscribe.java" path="/home/ssmith/projects/Society/project/src/com/society/Unsubscribe.java" title="Unsubscribe.java" tooltip="Society/src/com/society/Unsubscribe.java" workbook="DefaultEditorWorkbook">
@@ -103,7 +102,7 @@
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PacketProcessor.java" partName="PacketProcessor.java" path="/home/ssmith/projects/Society/project/src/com/society/PacketProcessor.java" title="PacketProcessor.java" tooltip="Society/src/com/society/PacketProcessor.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/PacketProcessor.java"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Society.java" partName="Society.java" path="/home/ssmith/projects/Society/project/src/com/society/Society.java" title="Society.java" tooltip="Society/src/com/society/Society.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Society.java" partName="Society.java" path="/home/ssmith/projects/Society/java/project/src/com/society/Society.java" title="Society.java" tooltip="Society/src/com/society/Society.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Society.java"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Addressing.java" partName="Addressing.java" path="/home/ssmith/projects/Society/project/src/com/society/Addressing.java" title="Addressing.java" tooltip="Society/src/com/society/Addressing.java" workbook="DefaultEditorWorkbook">
@@ -148,6 +147,15 @@
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SocketState.java" partName="SocketState.java" path="/home/ssmith/projects/Society/project/src/com/society/SocketState.java" title="SocketState.java" tooltip="Society/src/com/society/SocketState.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/SocketState.java"/>
 </editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VOSubscribe.java" partName="VOSubscribe.java" path="/home/ssmith/projects/Society/java/project/src/com/society/VOSubscribe.java" title="VOSubscribe.java" tooltip="Society/src/com/society/VOSubscribe.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/VOSubscribe.java"/>
+</editor>
+<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VOManager.java" partName="VOManager.java" path="/home/ssmith/projects/Society/java/project/src/com/society/VOManager.java" title="VOManager.java" tooltip="Society/src/com/society/VOManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/VOManager.java"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VOUnsubscribe.java" partName="VOUnsubscribe.java" path="/home/ssmith/projects/Society/java/project/src/com/society/VOUnsubscribe.java" title="VOUnsubscribe.java" tooltip="Society/src/com/society/VOUnsubscribe.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/VOUnsubscribe.java"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.junit.ResultView" partName="JUnit">
@@ -156,6 +164,7 @@
 <view id="org.eclipse.cdt.ui.CView" partName="C/C++ Projects">
 <viewState horizontalPosition="0" verticalPosition="0">
 <expanded/>
+<selection/>
 <customFilters userDefinedPatternsEnabled="false">
 <xmlDefinedFilters>
 <child filterId="org.eclipse.cdt.internal.ui.CView.ExecutableFilter" isEnabled="false"/>
@@ -414,58 +423,17 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Test/Btest.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/SocietyPacket.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/Publish.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/SocietyPacket.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/VO.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/VOManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/StreamSocketManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/Subscribe.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/VOSubscribe.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/VOUnsubscribe.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/Society.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/CommonObjects.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/BackboneHash.java"/>
 </editors>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position info="not_deleted" x="994" y="0"/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position info="not_deleted" x="1371" y="0"/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position info="not_deleted" x="1371" y="0"/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position info="not_deleted" x="1616" y="0"/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
-<item historyLabel="Btest.java" index="3">
-<position info="not_deleted" x="113" y="0"/>
-</item>
-<item historyLabel="Btest.java" index="3">
-<position info="not_deleted" x="216" y="0"/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
 <item historyLabel="Btest.java" index="3">
 <position info="not_deleted" x="214" y="0"/>
 </item>
@@ -562,8 +530,59 @@
 <item historyLabel="SocietyPacket.java" index="6">
 <position/>
 </item>
-<item active="true" historyLabel="Publish.java" index="7">
+<item historyLabel="Publish.java" index="7">
 <position info="not_deleted" x="864" y="0"/>
+</item>
+<item historyLabel="SocietyPacket.java" index="8">
+<position/>
+</item>
+<item historyLabel="VO.java" index="9">
+<position/>
+</item>
+<item historyLabel="VOManager.java" index="10">
+<position/>
+</item>
+<item historyLabel="StreamSocketManager.java" index="11">
+<position/>
+</item>
+<item historyLabel="VOManager.java" index="10">
+<position/>
+</item>
+<item historyLabel="Subscribe.java" index="12">
+<position/>
+</item>
+<item historyLabel="VOManager.java" index="10">
+<position info="not_deleted" x="35" y="0"/>
+</item>
+<item historyLabel="VO.java" index="9">
+<position/>
+</item>
+<item historyLabel="VOSubscribe.java" index="13">
+<position info="not_deleted" x="87" y="0"/>
+</item>
+<item historyLabel="VOUnsubscribe.java" index="14">
+<position/>
+</item>
+<item historyLabel="Society.java" index="15">
+<position/>
+</item>
+<item historyLabel="CommonObjects.java" index="16">
+<position/>
+</item>
+<item historyLabel="BackboneHash.java" index="17">
+<position/>
+</item>
+<item historyLabel="CommonObjects.java" index="16">
+<position/>
+</item>
+<item historyLabel="VOManager.java" index="10">
+<position info="not_deleted" x="35" y="0"/>
+</item>
+<item historyLabel="CommonObjects.java" index="16">
+<position info="not_deleted" x="1398" y="0"/>
+</item>
+<item active="true" historyLabel="VOManager.java" index="10">
+<position info="not_deleted" x="35" y="0"/>
 </item>
 </navigationHistory>
 <stickyState>
@@ -585,6 +604,15 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VOUnsubscribe.java" tooltip="Society/src/com/society/VOUnsubscribe.java">
+<persistable path="/Society/src/com/society/VOUnsubscribe.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VOManager.java" tooltip="Society/src/com/society/VOManager.java">
+<persistable path="/Society/src/com/society/VOManager.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VO.java" tooltip="Society/src/com/society/VO.java">
+<persistable path="/Society/src/com/society/VO.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Btest.java" tooltip="Test/Btest.java">
 <persistable path="/Test/Btest.java"/>
 </file>
@@ -620,15 +648,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PacketAccountant.java" tooltip="Society/src/com/society/PacketAccountant.java">
 <persistable path="/Society/src/com/society/PacketAccountant.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NULLConnection.java" tooltip="Society/src/com/society/NULLConnection.java">
-<persistable path="/Society/src/com/society/NULLConnection.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DevelUtils.java" tooltip="Society/src/com/society/DevelUtils.java">
-<persistable path="/Society/src/com/society/DevelUtils.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Connection.java" tooltip="Society/src/com/society/Connection.java">
-<persistable path="/Society/src/com/society/Connection.java"/>
 </file>
 </mruList>
 </workbench>

@@ -28,7 +28,7 @@ public class Society {
 		Option help = new Option( "help", "print this message" );
 		Option TCPPort = OptionBuilder.withArgName( "tcpport" )
 		.hasArg()
-		.withDescription( "listen on given port number for incoming communication" )
+		.withDescription( "set listen port" )
 		.create( "tcpport" );
 
 		Options options = new Options();

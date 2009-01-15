@@ -14,7 +14,6 @@ public class CommonObjects {
 	private boolean terminateFlag;
 	private boolean initialized = false;
 	
-	BackboneHash backbones;
 	SubscriberHash subscribers;
 	
 //	get rid of connection
@@ -34,7 +33,6 @@ public class CommonObjects {
 		if (!initialized) {
 			this.TCPListenPort = TCPListenPort;
 			terminateFlag = false;
-			backbones = new BackboneHash();
 			subscribers = new SubscriberHash();
 			societyMessageQueue = new PriorityBlockingQueue<Pair<SocietyPacket, SocketChannel>>();
 			activeConnections = new ArrayList<SocketChannel>();
