@@ -85,10 +85,10 @@
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SubscriberHash.java" partName="SubscriberHash.java" path="/home/ssmith/projects/Society/project/src/com/society/SubscriberHash.java" title="SubscriberHash.java" tooltip="Society/src/com/society/SubscriberHash.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/SubscriberHash.java"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CommonObjects.java" partName="CommonObjects.java" path="/home/ssmith/projects/Society/project/src/com/society/CommonObjects.java" title="CommonObjects.java" tooltip="Society/src/com/society/CommonObjects.java" workbook="DefaultEditorWorkbook">
+<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CommonObjects.java" partName="CommonObjects.java" path="/home/ssmith/projects/Society/java/project/src/com/society/CommonObjects.java" title="CommonObjects.java" tooltip="Society/src/com/society/CommonObjects.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/CommonObjects.java"/>
 </editor>
-<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Publish.java" partName="Publish.java" path="/home/ssmith/projects/Society/java/project/src/com/society/Publish.java" title="Publish.java" tooltip="Society/src/com/society/Publish.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Publish.java" partName="Publish.java" path="/home/ssmith/projects/Society/java/project/src/com/society/Publish.java" title="Publish.java" tooltip="Society/src/com/society/Publish.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Publish.java"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProcessorObjects.java" partName="ProcessorObjects.java" path="/home/ssmith/projects/Society/project/src/com/society/ProcessorObjects.java" title="ProcessorObjects.java" tooltip="Society/src/com/society/ProcessorObjects.java" workbook="DefaultEditorWorkbook">
@@ -414,13 +414,9 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Test/Btest.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/SocietyPacket.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/Publish.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/SocietyPacket.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/CommonObjects.java"/>
 </editors>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
-<item historyLabel="Publish.java" index="2">
-<position/>
-</item>
 <item historyLabel="Publish.java" index="2">
 <position/>
 </item>
@@ -562,8 +558,14 @@
 <item historyLabel="SocietyPacket.java" index="6">
 <position/>
 </item>
-<item active="true" historyLabel="Publish.java" index="7">
+<item historyLabel="Publish.java" index="7">
 <position info="not_deleted" x="864" y="0"/>
+</item>
+<item historyLabel="SocietyPacket.java" index="8">
+<position/>
+</item>
+<item active="true" historyLabel="CommonObjects.java" index="9">
+<position/>
 </item>
 </navigationHistory>
 <stickyState>
