@@ -16,28 +16,30 @@ public class Publish extends PacketProcessor {
 	}
 
 	@Override
-	public void process(SocietyPacket inPacket, SocketChannel conn) {
+	public void process(SocietyPacket inPacket, Connection conn) {
 		int sendBufferSize;
 		byte[] sendData;
 		ByteBuffer sendBuffer;
-		ArrayList<SocketChannel> subscribers;
+		ArrayList<Connection> subscribers;
+		SocketChannel tmpChannel;
 		
 		subscribers = shared.subscribers.getSubscribers(inPacket.source);
 		if (subscribers != null) {
 			try {
 				sendData = inPacket.serialize();
 				sendBuffer = ByteBuffer.wrap(sendData);
-				for (SocketChannel sub: subscribers) {
-					if (sub.isOpen()) {
+				for (Connection sub : subscribers) {
+					tmpChannel = sub.getChannel();
+					if (tmpChannel.isOpen()) {
 						sendBuffer.clear();
-						sendBufferSize = sub.socket().getSendBufferSize();
+						sendBufferSize = tmpChannel.socket().getSendBufferSize();
 						
 						if (sendBuffer.capacity() > sendBufferSize) {
 							sendBuffer.limit(sendBufferSize);
 						}						
 						while (sendBuffer.position() != sendBuffer.capacity()) {
 //							could send less bytes than buffer size
-							sub.write(sendBuffer);
+							tmpChannel.write(sendBuffer);
 							
 							if ((sendBuffer.limit() + sendBufferSize) <= sendBuffer.capacity()) {
 								sendBuffer.limit(sendBuffer.limit() + sendBufferSize);

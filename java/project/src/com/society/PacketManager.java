@@ -3,10 +3,7 @@ package com.society;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.nio.channels.SocketChannel;
-//import java.net.*;
 import java.util.*;
-//import java.util.concurrent.PriorityBlockingQueue;
 import java.security.NoSuchAlgorithmException;
 
 public class PacketManager implements Runnable {
@@ -21,7 +18,7 @@ public class PacketManager implements Runnable {
 
 	@SuppressWarnings("unchecked")
 	private void initPacketProcessors() throws ClassNotFoundException, InstantiationException, IllegalAccessException, SecurityException, NoSuchMethodException, IllegalArgumentException, InvocationTargetException {
-		Class processParams[] = { SocietyPacket.class, SocketChannel.class };
+		Class processParams[] = { SocietyPacket.class, Connection.class };
 		Class initParams[] = { CommonObjects.class };
 		Object initArgs[] = { shared };
 		for (int i = 0; i < PacketType.values().length; i++) {
@@ -35,7 +32,7 @@ public class PacketManager implements Runnable {
 	}
 	
 	public void run() {
-		Pair<SocietyPacket, SocketChannel> packet;
+		Pair<SocietyPacket, Connection> packet;
 		Pair<PacketProcessor, Method> packetProc;
 		Object[] args = new Object[2];
 		for ( ; ; ) {

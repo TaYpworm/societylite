@@ -1,11 +1,6 @@
 package com.society;
 
-import java.io.IOException;
-import java.nio.channels.SocketChannel;
-//import java.net.InetAddress;
-//import java.net.MulticastSocket;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
+import java.net.InetSocketAddress;
 import java.util.concurrent.PriorityBlockingQueue;
 
 public class CommonObjects {
@@ -13,12 +8,11 @@ public class CommonObjects {
 	private int TCPListenPort;
 	private boolean terminateFlag;
 	private boolean initialized = false;
+	private InetSocketAddress VOAddress; 
 	
 	SubscriberHash subscribers;
 	
-//	get rid of connection
-	PriorityBlockingQueue<Pair<SocietyPacket, SocketChannel>> societyMessageQueue;
-	ArrayList<SocketChannel> activeConnections;
+	PriorityBlockingQueue<Pair<SocietyPacket, Connection>> societyMessageQueue;
 	
 	protected CommonObjects() {}
 	
@@ -29,19 +23,29 @@ public class CommonObjects {
 		return instance;
 	}
 	
-	void initialize(int TCPListenPort) throws NoSuchAlgorithmException, IOException {
+	public static CommonObjects getInstance(int TCPListenPort, String VOServerHostname, int VOServerPort) {
+		CommonObjects tmp = getInstance();
+		tmp.initialize(TCPListenPort, VOServerHostname, VOServerPort);
+		return tmp;
+	}
+	
+	void initialize(int TCPListenPort, String VOServerHostname, int VOServerPort) {
 		if (!initialized) {
 			this.TCPListenPort = TCPListenPort;
+			this.VOAddress = new InetSocketAddress(VOServerHostname, VOServerPort);
 			terminateFlag = false;
 			subscribers = new SubscriberHash();
-			societyMessageQueue = new PriorityBlockingQueue<Pair<SocietyPacket, SocketChannel>>();
-			activeConnections = new ArrayList<SocketChannel>();
+			societyMessageQueue = new PriorityBlockingQueue<Pair<SocietyPacket, Connection>>();
 			initialized = true;
 		}
 	}
 	
 	int getTCPListenPort() {
 		return TCPListenPort;
+	}
+	
+	InetSocketAddress getVOAddress() {
+		return VOAddress;
 	}
 	
 	boolean getTerminateFlag() {

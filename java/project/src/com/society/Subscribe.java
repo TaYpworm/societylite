@@ -1,6 +1,5 @@
 package com.society;
 
-import java.nio.channels.SocketChannel;
 
 public class Subscribe extends PacketProcessor {
 
@@ -10,7 +9,7 @@ public class Subscribe extends PacketProcessor {
 	}
 
 	@Override
-	public void process(SocietyPacket inPacket, SocketChannel conn) {
+	public void process(SocietyPacket inPacket, Connection conn) {
 		byte[] service = new byte[20];
 		
 		if (inPacket.payloadSize % 20 == 0) {

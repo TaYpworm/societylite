@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class SubscriberHash {
-	private HashMap<ByteArray, ArrayList<SocketChannel>> subscriberHash;
-	private HashMap<SocketChannel, ArrayList<ByteArray>> removalHash;
+	private HashMap<ByteArray, ArrayList<Connection>> subscriberHash;
+	private HashMap<Connection, ArrayList<ByteArray>> removalHash;
 	
 	SubscriberHash() {
-		subscriberHash = new HashMap<ByteArray, ArrayList<SocketChannel>>();
-		removalHash = new HashMap<SocketChannel, ArrayList<ByteArray>>();
+		subscriberHash = new HashMap<ByteArray, ArrayList<Connection>>();
+		removalHash = new HashMap<Connection, ArrayList<ByteArray>>();
 	}
 	
 	@SuppressWarnings("unchecked")
-	synchronized void putSubscriber(byte[] source, SocketChannel sub) {
+	synchronized void putSubscriber(byte[] source, Connection sub) {
 		// check to see if subscriber is already inserted
 		ByteArray src = ByteArray.create(source);
 		if (!subscriberHash.containsKey(src)) {
@@ -44,7 +44,7 @@ public class SubscriberHash {
 //	}
 	
 	@SuppressWarnings("unchecked")
-	synchronized private ArrayList<SocketChannel> getConnections(byte[] source) {
+	synchronized private ArrayList<Connection> getConnections(byte[] source) {
 		ByteArray digest = ByteArray.create(source);
 		if (subscriberHash.containsKey(digest)) {
 			return subscriberHash.get(digest);
@@ -57,15 +57,15 @@ public class SubscriberHash {
 //	}
 	
 	@SuppressWarnings("unchecked")
-	synchronized ArrayList<SocketChannel> getSubscribers(byte[] source) {
+	synchronized ArrayList<Connection> getSubscribers(byte[] source) {
 		return getConnections(source);
 	}
 	
-	synchronized int removeSubscriber(SocketChannel sub) {
+	synchronized int removeSubscriber(Connection sub) {
 		int numRemoved = 0;
 		ArrayList<ByteArray> removeFrom = removalHash.remove(sub);
 		if (removeFrom != null) {
-			ArrayList<SocketChannel> connects;
+			ArrayList<Connection> connects;
 			for (ByteArray rem : removeFrom) {
 				connects = getConnections(rem.getArray());
 				while(connects.remove(sub)) {

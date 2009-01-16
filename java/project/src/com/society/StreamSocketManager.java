@@ -39,6 +39,7 @@ public class StreamSocketManager implements Runnable {
 		SelectionKey key, clientKey;
 		SocketChannel client;
 		SocketState tmpState;
+		SocietyPacket packet;
 
 		for ( ; ; ) {
 			try {
@@ -55,7 +56,6 @@ public class StreamSocketManager implements Runnable {
 							client.configureBlocking(false);
 							clientKey = client.register(selector, SelectionKey.OP_READ);
 							clientKey.attach(new SocketState());
-							shared.activeConnections.add(client);
 						}
 					} else {
 						if (key.isValid() && key.isReadable()) {
@@ -67,9 +67,6 @@ public class StreamSocketManager implements Runnable {
 
 							if (bytesRead == -1) {
 								// find client in tables and remove
-								System.out.println("num connections " + shared.activeConnections.size());
-								shared.activeConnections.remove(client);
-								System.out.println("num connections " + shared.activeConnections.size());
 								client.close();
 								key.cancel();
 							} else {
@@ -89,7 +86,8 @@ public class StreamSocketManager implements Runnable {
 								if (tmpState.bytesRemaining == 0) {
 									numPacks++;
 									System.out.println("numRecv: " + numPacks);
-									shared.societyMessageQueue.add(Pair.create(tmpState.clearPartial(), client));
+									packet = tmpState.clearPartial();
+									shared.societyMessageQueue.add(Pair.create(packet, new Connection(Protocol.TCP, packet.source, client)));
 								}
 							}
 						} 

@@ -1,7 +1,5 @@
 package com.society;
 
-import java.nio.channels.SocketChannel;
-
 
 abstract class PacketProcessor {
 	CommonObjects shared;
@@ -12,5 +10,5 @@ abstract class PacketProcessor {
 		this.shared = shared;
 	}
 
-	abstract public void process(SocietyPacket inPacket, SocketChannel connection);
+	abstract public void process(SocietyPacket inPacket, Connection connection);
 }

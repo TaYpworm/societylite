@@ -18,6 +18,10 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 	</section>
+	<section name="ResourceNavigator">
+		<item value="Aggregate for window 1228168539489" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
+		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+	</section>
 	<section name="org.eclipse.ui.views.problem">
 	</section>
 	<section name="NewWizardAction">

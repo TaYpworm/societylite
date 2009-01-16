@@ -1,0 +1,10 @@
+package com.society;
+
+public class VOManager implements Runnable {
+
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

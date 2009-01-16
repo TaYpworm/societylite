@@ -3,5 +3,7 @@ package com.society;
 public enum PacketType {
 	Subscribe,
 	Unsubscribe,
-	Publish;
+	Publish,
+	VOSubscribe,
+	VOUnsubscribe
 }

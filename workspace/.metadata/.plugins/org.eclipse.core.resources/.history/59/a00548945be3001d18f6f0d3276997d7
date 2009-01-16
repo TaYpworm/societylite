@@ -1,0 +1,6 @@
+package com.society;
+
+public enum ConnectionType {
+	TCP,
+	VO
+}

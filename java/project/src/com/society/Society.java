@@ -23,6 +23,8 @@ public class Society {
 	@SuppressWarnings("static-access")
 	public static void main(String[] args) throws IOException, NoSuchAlgorithmException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, IllegalArgumentException, InvocationTargetException {
 		int TCPPortNumber = 5555;
+		int VOServerPort = 4694;
+		String VOServerHostname = "localhost";
 //		int numWorkers = 3;
 		
 		Option help = new Option( "help", "print this message" );
@@ -30,10 +32,20 @@ public class Society {
 		.hasArg()
 		.withDescription( "set listen port" )
 		.create( "tcpport" );
-
+		Option VOHostname = OptionBuilder.withArgName( "vohost" )
+		.hasArg()
+		.withDescription( "set VO Server hostname" )
+		.create( "vohost" );
+		Option VOPort = OptionBuilder.withArgName( "voport" )
+		.hasArg()
+		.withDescription( "set VO Server port" )
+		.create( "voport" );		
+		
 		Options options = new Options();
 		options.addOption(help);
 		options.addOption(TCPPort);
+		options.addOption(VOHostname);
+		options.addOption(VOPort);
 
 		CommandLineParser parser = new GnuParser();
 	    try {
@@ -47,14 +59,19 @@ public class Society {
 	        if (line.hasOption("tcpport")) {
 	        	TCPPortNumber = Integer.parseInt(line.getOptionValue("tcpport"));
 	        }
+	        if (line.hasOption("vohost")) {
+	        	VOServerHostname = line.getOptionValue("vohost");
+	        }
+	        if (line.hasOption("VOPort")) {
+	        	VOServerPort = Integer.parseInt(line.getOptionValue("voport"));
+	        }
 	    }
 	    catch( ParseException exp ) {
 	        System.err.println( "Parsing failed.  Reason: " + exp.getMessage() );
 	    }
 
 	    ThreadGroup societyThreads = new ThreadGroup("Society Threads");
-		CommonObjects comObjs = CommonObjects.getInstance();
-		comObjs.initialize(TCPPortNumber);
+		CommonObjects comObjs = CommonObjects.getInstance(TCPPortNumber, VOServerHostname, VOServerPort);
 
 		PacketManager packetManager = new PacketManager(comObjs);
 		StreamSocketManager streamManager = new StreamSocketManager(comObjs);

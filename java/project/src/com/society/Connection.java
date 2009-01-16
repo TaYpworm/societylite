@@ -1,14 +1,18 @@
 package com.society;
 
-import java.net.InetSocketAddress;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.nio.channels.SocketChannel;
 
-public abstract class Connection {
+public class Connection {
 	Protocol type;
 	byte[] service;
+	SocketChannel channel;
 	
-	Connection(Protocol type, byte[] service) {
+	Connection(Protocol type, byte[] service, SocketChannel channel) {
 		this.type = type;
 		this.service = service;
+		this.channel = channel;
 	}
 	
 	Protocol getType() {
@@ -19,6 +23,14 @@ public abstract class Connection {
 		return service;
 	}
 	
-	abstract InetSocketAddress getAddress();
-	abstract void shutdown();
+	SocketChannel getChannel() {
+		return channel;
+	}
+	
+	InetAddress getAddress() {
+		return channel.socket().getInetAddress();
+	}
+	void shutdown() throws IOException {
+		channel.close();
+	}
 }

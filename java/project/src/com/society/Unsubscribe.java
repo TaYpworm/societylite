@@ -1,8 +1,5 @@
 package com.society;
 
-import java.nio.channels.SocketChannel;
-
-//import java.net.InetSocketAddress;
 
 public class Unsubscribe extends PacketProcessor {
 
@@ -12,7 +9,7 @@ public class Unsubscribe extends PacketProcessor {
 	}
 
 	@Override
-	public void process(SocietyPacket inPacket, SocketChannel conn) {
+	public void process(SocietyPacket inPacket, Connection conn) {
 		// TODO Auto-generated method stub
 		shared.subscribers.removeSubscriber(conn);
 	}
