@@ -187,9 +187,6 @@ public class SocietyPacket {
 		if (byteArray.length > headerSize) {
 			// Possible problem here
 			// ArrayIndexOutOfBoundsException?
-			System.out.println("byteArray length: " + byteArray.length);
-			System.out.println("to copy: " + (byteArray.length - headerSize));
-			System.out.println("payload size: " + payloadSize);
 			System.arraycopy(byteArray, headerSize, data, 0, byteArray.length - headerSize);
 			dataPosition += byteArray.length - headerSize;
 		}

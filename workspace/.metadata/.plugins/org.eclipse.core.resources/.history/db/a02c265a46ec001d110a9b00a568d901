@@ -74,8 +74,6 @@ public class StreamSocketManager implements Runnable {
 								client.close();
 								key.cancel();
 							} else {
-								// wrong!  If multiple packets are sent in the same buffer (small packets)
-								// then this receive algorithm will break.
 								recvBuffer.flip();
 								recvData = new byte[recvBuffer.remaining()];
 								recvBuffer.get(recvData, 0, recvData.length);

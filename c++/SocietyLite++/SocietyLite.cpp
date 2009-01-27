@@ -6,6 +6,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <netdb.h>
+#include <stdint.h>
 #include <netinet/in.h>
 #include <openssl/sha.h>
 #include <sys/select.h>
@@ -19,11 +20,12 @@ SocietyLite::SocietyLite(int port, string serverAddress) {
     initVars(port, serverAddress, true);
 }
 
+// remove priority
 SocietyLite::SocietyLite(int port, string serverAddress, string serviceName, int priority) {
     initVars(port, serverAddress, true);
     this->canPublish = true;
     this->serviceName = serviceName;
-    this->serviceHash = generateHash(&serviceName);
+    this->serviceHash = generateHash(serviceName);
     if (priority > 128) {
         throw NetworkException("Priority is too high");
     } else {
@@ -62,7 +64,7 @@ int  SocietyLite::publish(unsigned char *data, int size) {
     return -1;
 }
 
-void SocietyLite::subscribe(string *sub) {
+void SocietyLite::subscribe(string &sub) {
     SocietyPacket *packet;
     unsigned char *subHash;
     string *stringHash;
@@ -70,7 +72,7 @@ void SocietyLite::subscribe(string *sub) {
 
     subHash = generateHash(sub);
     stringHash = new string((char *)subHash, hashSize);
-    subIndex[*sub] = *stringHash;
+    subIndex[sub] = *stringHash;
     queue = new list<SocietyPacket *>;
     messageQueue[*stringHash] = *queue;
 
@@ -83,15 +85,42 @@ void SocietyLite::subscribe(string *sub) {
     delete stringHash;
 }
 
-int SocietyLite::unsubscribe(string *sub) {
-    if (subIndex.count(*sub) > 0) {
+void SocietyLite::voSubscribe(string &sub, ConnectionType type) {
+    int payloadSize;
+    SocietyPacket *packet;
+    unsigned char *subHash, connType=0;
+    string *stringHash;
+    list<SocietyPacket *> *queue;
+
+    subHash = generateHash(sub);
+    stringHash = new string((char *)subHash, hashSize);
+    subIndex[sub] = *stringHash;
+    queue = new list<SocietyPacket *>;
+    messageQueue[*stringHash] = *queue;
+
+    payloadSize = hashSize + sizeof(connType) + sub.size();
+    connType += type;
+
+    packet = new SocietyPacket(payloadSize, VOSUBSCRIBE, sequenceNumber, priority, serviceHash);
+    packet->appendPayload(subHash, hashSize);
+    packet->appendPayload((unsigned char*)&connType, sizeof(connType));
+    packet->appendPayload((unsigned char*)sub.c_str(), sub.size());
+    send(packet);
+    sequenceNumber++;
+    delete packet;
+    delete[] subHash;
+    delete stringHash;
+}
+
+int SocietyLite::unsubscribe(string &sub) {
+    if (subIndex.count(sub) > 0) {
         SocietyPacket *packet;
         unsigned char *subHash;
         string *stringHash;
 
         subHash = generateHash(sub);
         stringHash = new string((char *)subHash, hashSize);
-        subIndex.erase(*sub);
+        subIndex.erase(sub);
         messageQueue.erase(*stringHash);
 
         packet = new SocietyPacket(hashSize, UNSUBSCRIBE, sequenceNumber, priority, serviceHash);
@@ -162,12 +191,12 @@ unsigned char * SocietyLite::popMessage(string &sub, int &size) {
     return NULL;
 }
 
-int SocietyLite::clearMessageQueue(string *sub) {
+int SocietyLite::clearMessageQueue(string &sub) {
     int size;
     string stringHash;
     
-    if (subIndex.find(*sub) != subIndex.end()) {
-        stringHash = subIndex.find(*sub)->second;
+    if (subIndex.find(sub) != subIndex.end()) {
+        stringHash = subIndex.find(sub)->second;
         if (messageQueue.find(stringHash) != messageQueue.end()) {
             size = messageQueue.find(stringHash)->second.size();
             messageQueue.find(stringHash)->second.clear();
@@ -186,11 +215,11 @@ int SocietyLite::clearAllMessages() {
     return totalMessages;
 }
 
-int SocietyLite::getNumMessages(string *sub) {
+int SocietyLite::getNumMessages(string &sub) {
     string stringHash;
     
-    if (subIndex.find(*sub) != subIndex.end()) {
-        stringHash = subIndex.find(*sub)->second;
+    if (subIndex.find(sub) != subIndex.end()) {
+        stringHash = subIndex.find(sub)->second;
         return messageQueue.find(stringHash)->second.size();
     }
     return -1;
@@ -211,12 +240,12 @@ string SocietyLite::getServiceName() {
 void SocietyLite::setServiceName(string serviceName) {
     this->serviceName = serviceName;
     this->canPublish = true;
-    this->serviceHash = generateHash(&serviceName);
+    this->serviceHash = generateHash(serviceName);
 }
 
-unsigned char *SocietyLite::generateHash(string *inString) {
+unsigned char *SocietyLite::generateHash(string &inString) {
     unsigned char *hash = new unsigned char[20];
-    SHA1((unsigned char*)inString->c_str(), inString->size(), hash);
+    SHA1((unsigned char*)inString.c_str(), inString.size(), hash);
     return hash;
 }
 

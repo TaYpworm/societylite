@@ -56,7 +56,6 @@ public class StreamSocketManager implements Runnable {
 							client.configureBlocking(false);
 							clientKey = client.register(selector, SelectionKey.OP_READ);
 							// add VO
-							// not enough info here.  Done below.
 							clientKey.attach(new SocketState(Protocol.TCP, null, null));
 						}
 					} else {
@@ -65,7 +64,7 @@ public class StreamSocketManager implements Runnable {
 							tmpState = (SocketState) key.attachment();
 
 							// this process can be optimized for Society packets
-							// unfortunately, cannot because need to accept VO and Society packets
+							// unfortunately, will not work having to accept VO and Society packets
 							recvBuffer.clear();
 							bytesRead = client.read(recvBuffer);
 
@@ -74,8 +73,6 @@ public class StreamSocketManager implements Runnable {
 								client.close();
 								key.cancel();
 							} else {
-								// wrong!  If multiple packets are sent in the same buffer (small packets)
-								// then this receive algorithm will break.
 								recvBuffer.flip();
 								recvData = new byte[recvBuffer.remaining()];
 								recvBuffer.get(recvData, 0, recvData.length);
@@ -98,8 +95,6 @@ public class StreamSocketManager implements Runnable {
 										byte type;
 										byte[] source;
 										String sourceString;
-										VOConnectionType connType;
-										SocketChannel voClient;
 										
 										System.out.println("connect to VO and subscribe");
 										type = packet.data[offset];
@@ -113,18 +108,7 @@ public class StreamSocketManager implements Runnable {
 										System.out.println("Type2 = " + VOConnectionType.values()[(short)type]);
 										System.out.println("Size " + sourceString.length() + "sourceString = " + sourceString);
 										
-										connType = VOConnectionType.values()[(short)type];
-										voClient = createVOSocketChannel(sourceString, connType);
-										
-										tmpState.type = Protocol.VO;
-										tmpState.sourceHash = packet.source;
-										tmpState.sourceString = sourceString;
-										
-										if (connType == VOConnectionType.read) {
-											shared.societyMessageQueue.add(Pair.create(packet, new Connection(Protocol.VO, packet.source, client)));
-										} else if (connType == VOConnectionType.write) {
-											shared.societyMessageQueue.add(Pair.create(packet, new Connection(Protocol.VO, packet.source, voClient)));
-										}
+										createVOSocketChannel(sourceString, VOConnectionType.values()[(short)type]);
 										
 									} else if (packet.packetType == PacketType.VOUnsubscribe.ordinal()){
 									} else {

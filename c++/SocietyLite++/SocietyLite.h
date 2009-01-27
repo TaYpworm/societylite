@@ -15,21 +15,28 @@
 
 using namespace std;
 
+enum ConnectionType {
+    READ,
+    WRITE
+};
+
 class SocietyLite {
     public:
         SocietyLite(int port, string serverAddress);
         SocietyLite(int port, string serverAddress, string serviceName, int priority);
         ~SocietyLite();
         int publish(unsigned char *data, int size);
-        void subscribe(string *sub);
-        int unsubscribe(string *sub);
+        void subscribe(string &sub);
+        void voSubscribe(string &sub, ConnectionType type);
+        int unsubscribe(string &sub);
+        int voUnsubscribe(string &sub, ConnectionType type);
         int poll();
         int bpoll();
         //int popMessage(string &sub, unsigned char *&data, int &size);
         unsigned char *popMessage(string &sub, int &size);
-        int clearMessageQueue(string *sub);
+        int clearMessageQueue(string &sub);
         int clearAllMessages();
-        int getNumMessages(string *sub);
+        int getNumMessages(string &sub);
         int getMaxMessages();
         void setMaxMessages(int maxMessages);
         string getServiceName();
@@ -64,11 +71,13 @@ class SocietyLite {
         enum packetType {
             SUBSCRIBE,
             UNSUBSCRIBE,
-            PUBLISH
+            PUBLISH,
+            VOSUBSCRIBE,
+            VOUNSUBSCRIBE
         };
 
     private:
-        unsigned char *generateHash(string *inString);
+        unsigned char *generateHash(string &inString);
         SocietyPacket *recv();
         int send(SocietyPacket *packet);
         int checkReady(timeval *timeout);

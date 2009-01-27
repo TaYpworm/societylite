@@ -10,16 +10,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="conn" key="selection"/>
+		<item value="Type" key="selection"/>
 		<list key="findhistory">
+			<item value="type"/>
+			<item value="SocietyPacket"/>
 			<item value="conn"/>
 			<item value="tmpState"/>
 			<item value="system.out"/>
 			<item value="packetSize"/>
 			<item value="System"/>
 			<item value="System.out"/>
-			<item value="recvBuffer"/>
-			<item value="receiveBuffer"/>
 		</list>
 		<list key="replacehistory">
 			<item value="recvBuffer"/>

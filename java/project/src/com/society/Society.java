@@ -23,7 +23,9 @@ public class Society {
 	@SuppressWarnings("static-access")
 	public static void main(String[] args) throws IOException, NoSuchAlgorithmException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, IllegalArgumentException, InvocationTargetException {
 		int TCPPortNumber = 5555;
-		int VOServerPort = 4694;
+		// default VO port
+		// int VOServerPort = 4694;
+		int VOServerPort = 20001;
 		String VOServerHostname = "localhost";
 //		int numWorkers = 3;
 		
