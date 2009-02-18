@@ -1,6 +1,0 @@
-package com.society;
-
-public enum VOConnectionType {
-	READ,
-	WRITE
-}

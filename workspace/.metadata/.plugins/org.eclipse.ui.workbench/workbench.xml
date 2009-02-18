@@ -53,7 +53,7 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VOSubscribe.java" partName="VOSubscribe.java" path="/home/ssmith/projects/Society/java/project/src/com/society/VOSubscribe.java" title="VOSubscribe.java" tooltip="Society/src/com/society/VOSubscribe.java" workbook="DefaultEditorWorkbook">
+<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VOSubscribe.java" partName="VOSubscribe.java" path="/home/ssmith/projects/Society/java/project/src/com/society/VOSubscribe.java" title="VOSubscribe.java" tooltip="Society/src/com/society/VOSubscribe.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/VOSubscribe.java"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VOUnsubscribe.java" partName="VOUnsubscribe.java" path="/home/ssmith/projects/Society/java/project/src/com/society/VOUnsubscribe.java" title="VOUnsubscribe.java" tooltip="Society/src/com/society/VOUnsubscribe.java" workbook="DefaultEditorWorkbook">
@@ -77,7 +77,7 @@
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Connection.java" partName="Connection.java" path="/home/ssmith/projects/Society/java/project/src/com/society/Connection.java" title="Connection.java" tooltip="Society/src/com/society/Connection.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/Connection.java"/>
 </editor>
-<editor focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StreamSocketManager.java" partName="StreamSocketManager.java" path="/home/ssmith/projects/Society/java/project/src/com/society/StreamSocketManager.java" title="StreamSocketManager.java" tooltip="Society/src/com/society/StreamSocketManager.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StreamSocketManager.java" partName="StreamSocketManager.java" path="/home/ssmith/projects/Society/java/project/src/com/society/StreamSocketManager.java" title="StreamSocketManager.java" tooltip="Society/src/com/society/StreamSocketManager.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Society/src/com/society/StreamSocketManager.java"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Protocol.java" partName="Protocol.java" path="/home/ssmith/projects/Society/java/project/src/com/society/Protocol.java" title="Protocol.java" tooltip="Society/src/com/society/Protocol.java" workbook="DefaultEditorWorkbook">
@@ -175,7 +175,7 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -377,10 +377,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/SocietyPacket.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/Society.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/SocketState.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Society/src/com/society/VOSubscribe.java"/>
 </editors>
-<item historyLabel="PacketManager.java" index="1">
-<position/>
-</item>
 <item historyLabel="PacketProcessor.java" index="2">
 <position/>
 </item>
@@ -525,8 +523,11 @@
 <item historyLabel="SocketState.java" index="14">
 <position/>
 </item>
-<item active="true" historyLabel="StreamSocketManager.java" index="0">
+<item historyLabel="StreamSocketManager.java" index="0">
 <position info="not_deleted" x="4636" y="0"/>
+</item>
+<item active="true" historyLabel="VOSubscribe.java" index="15">
+<position/>
 </item>
 </navigationHistory>
 <stickyState>
