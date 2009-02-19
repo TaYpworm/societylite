@@ -9,6 +9,7 @@ using namespace std;
 int main() {
     string server("localhost");
     string sub("test");
+    string sub1("test1");
 
     try {
         int retval, msgSize; 
@@ -17,6 +18,7 @@ int main() {
         printf("max messages %d\n", test.getMaxMessages());
         unsigned char *message;
         test.subscribe(&sub);
+        test.subscribe(&sub1);
         char *conv;
         int totalPacks = 0;
 

@@ -15,8 +15,6 @@ public class StreamSocketManager implements Runnable {
 	private ServerSocketChannel server;
 	private Selector selector;
 	private SelectionKey serverKey;
-	private byte[] recvData;
-	private ByteBuffer recvBuffer;
 	
 	StreamSocketManager(CommonObjects shared) throws IOException {
 		this.shared = shared;
@@ -26,26 +24,39 @@ public class StreamSocketManager implements Runnable {
 		server.configureBlocking(false);
 		server.socket().bind(new InetSocketAddress(shared.getTCPListenPort()));
 		recvBufferSize = server.socket().getReceiveBufferSize();
-		
 		serverKey = server.register(selector, SelectionKey.OP_ACCEPT);
 		
-		recvData = new byte[recvBufferSize];
-		recvBuffer = ByteBuffer.wrap(recvData);
+//		recvData = new byte[recvBufferSize];
+//		recvBuffer = ByteBuffer.wrap(recvData);
+		
 	}
 
 	public void run() {
-		int bytesRead, numPacks=0;
+		int hdrBufferSize;
+		int bytesRead;
+		int numPacks=0;
+		byte[] tmpHeader;
+		byte[] recvData;
+		ByteBuffer recvBuffer;
+		ByteBuffer hdrBuffer;
 		Iterator iter;
 		SelectionKey key, clientKey;
 		SocketChannel client;
 		SocketState tmpState;
 
+		
+		hdrBufferSize = SocietyPacket.headerSize;
+		tmpHeader = new byte[hdrBufferSize];
+		recvBuffer = ByteBuffer.allocateDirect(recvBufferSize);
+		hdrBuffer = ByteBuffer.allocateDirect(hdrBufferSize);
+		
 		for ( ; ; ) {
 			try {
 				selector.select();
 				iter = selector.selectedKeys().iterator();
 
 				while (iter.hasNext()) {
+					
 					key = (SelectionKey) iter.next();
 					iter.remove();
 
@@ -62,37 +73,62 @@ public class StreamSocketManager implements Runnable {
 							client = (SocketChannel) key.channel();
 							tmpState = (SocketState) key.attachment();
 
-							recvBuffer.clear();
-							bytesRead = client.read(recvBuffer);
-
-							if (bytesRead == -1) {
-								// find client in tables and remove
-								System.out.println("num connections " + shared.activeConnections.size());
-								shared.activeConnections.remove(client);
-								System.out.println("num connections " + shared.activeConnections.size());
-								client.close();
-								key.cancel();
-							} else {
-								recvBuffer.flip();
-								recvData = new byte[recvBuffer.remaining()];
-								recvBuffer.get(recvData, 0, recvData.length);
-
-								if (!tmpState.partial) {
-									tmpState.packet = new SocietyPacket(recvData.length, recvData, Protocol.TCP);
-									tmpState.bytesRemaining = tmpState.packet.payloadSize - (recvData.length - SocietyPacket.headerSize);
+							if (!tmpState.isPartial()) {
+								hdrBuffer.clear();
+								bytesRead = client.read(hdrBuffer);
+								
+								if (bytesRead == -1) {
+									// find client in tables and remove
+									System.out.println("num connections " + shared.activeConnections.size());
+									shared.activeConnections.remove(client);
+									System.out.println("num connections " + shared.activeConnections.size());
+									client.close();
+									key.cancel();
+								} else if (bytesRead == SocietyPacket.headerSize) {
+									hdrBuffer.flip();
+									hdrBuffer.get(tmpHeader, 0, tmpHeader.length);
+									tmpState.packet = new SocietyPacket(tmpHeader, Protocol.TCP);
 									tmpState.setPartial();
+									tmpState.setBytesRemaining(tmpState.packet.payloadSize);
+								}
+							} else {
+								recvBuffer.clear();
+								if (tmpState.getBytesRemaining() < recvBuffer.capacity()) {
+									recvBuffer.limit(tmpState.getBytesRemaining());
+								}
+								bytesRead = client.read(recvBuffer);
+
+								if (bytesRead == -1) {
+									// find client in tables and remove
+									System.out.println("num connections " + shared.activeConnections.size());
+									shared.activeConnections.remove(client);
+									System.out.println("num connections " + shared.activeConnections.size());
+									client.close();
+									key.cancel();
 								} else {
+									recvBuffer.flip();
+									recvData = new byte[recvBuffer.remaining()];
+									recvBuffer.get(recvData, 0, recvData.length);
+
+//									if (!tmpState.partial) {
+//										tmpState.packet = new SocietyPacket(recvData.length, recvData, Protocol.TCP);
+//										tmpState.bytesRemaining = tmpState.packet.payloadSize - (recvData.length - SocietyPacket.headerSize);
+//										tmpState.setPartial();
+//									} else {
+//										tmpState.packet.appendToPayload(recvData);
+//										tmpState.bytesRemaining -= recvData.length;
+//									}
 									tmpState.packet.appendToPayload(recvData);
 									tmpState.bytesRemaining -= recvData.length;
-								}
 
-								if (tmpState.bytesRemaining == 0) {
-									numPacks++;
-									System.out.println("numRecv: " + numPacks);
-									shared.societyMessageQueue.add(Pair.create(tmpState.clearPartial(), client));
+									if (tmpState.bytesRemaining == 0) {
+										numPacks++;
+										System.out.println("numRecv: " + numPacks);
+										shared.societyMessageQueue.add(Pair.create(tmpState.clearPartial(), client));
+									}
 								}
 							}
-						} 
+						}
 					} 
 				}
 			} catch (IOException e) {
@@ -103,5 +139,5 @@ public class StreamSocketManager implements Runnable {
 				e.printStackTrace();
 			}
 		}
-	}	
+	}
 }

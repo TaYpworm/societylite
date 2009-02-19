@@ -21,4 +21,16 @@ public class SocketState {
 		partial = false;
 		return packet;
 	}
+	
+	boolean isPartial() {
+		return partial;
+	}
+	
+	void setBytesRemaining(int remaining) {
+		bytesRemaining = remaining;
+	}
+	
+	int getBytesRemaining(){
+		return bytesRemaining;
+	}
 }
